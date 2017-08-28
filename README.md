@@ -1,6 +1,6 @@
 # polaris-vue pre-release
 
-**Currently targeting**: _Shopify/polaris v1.3.1_
+**Currently targeting**: _Shopify/polaris `v1.3.1`_
 
 Clone the repo, run `npm run dev`, and visit `test/index.html` to view a listing
 of the implemented components.
