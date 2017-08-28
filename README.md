@@ -46,8 +46,8 @@ normal HTML tags (i.e. `Button`). This prefix can be changed in the config optio
                      |  Polaris        |  Polaris-Vue     |
                      +-----------------+------------------+
 Component            |  Banner         |  polaris-banner  |
-Attribute (in HTML)  |  helpText       |  help-text       |
-Attribute (in JS)    |  helpText       |  helpText        |
+Prop (HTML attr)     |  helpText       |  help-text       |
+Prop (JS)            |  helpText       |  helpText        |
 Event                |  onDismiss      |  @dismiss        |
 
 ```
