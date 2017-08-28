@@ -1,4 +1,9 @@
-## `polaris-vue`
+# polaris-vue pre-release
+
+Clone the repo, run `npm run dev`, and visit `test/index.html` to view a listing
+of the implemented components.
+
+**README WIP**
 
 Allows you to use Shopify Polaris components in Vue 2.
 
