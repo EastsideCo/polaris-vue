@@ -30,7 +30,7 @@ Vue.use(PolarisVue, {
 
 var root = new Vue({
   el: '#app',
-  template: '<polaris-layout><polaris-button>Hello world!</polaris-button></polaris-layout'>
+  template: '<polaris-layout><polaris-button>Hello world!</polaris-button></polaris-layout>'
 });
 ```
 
