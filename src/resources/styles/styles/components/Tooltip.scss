@@ -1,0 +1,70 @@
+$arrow-size: rem(14px);
+$visible-portion-of-arrow: rem(5px);
+$content-max-height: rem(100px);
+$content-max-width: rem(200px);
+
+.Polaris-Tooltip {
+  margin: $visible-portion-of-arrow spacing() spacing();
+  opacity: 1;
+  box-shadow: shadow(deep);
+  border-radius: border-radius();
+  pointer-events: none;
+  will-change: opacity, left, top;
+  transition: opacity duration() easing(in);
+}
+
+.Polaris-Tooltip--measuring {
+  opacity: 0;
+}
+
+.Polaris-Tooltip--positionedAbove {
+  margin: spacing() spacing() $visible-portion-of-arrow;
+
+  .Polaris-Tooltip__Tip {
+    top: inherit;
+    bottom: 0;
+  }
+}
+
+.Polaris-Tooltip--light {
+  .Polaris-Tooltip__Wrapper {
+    background: color(white);
+    color: color(ink);
+  }
+
+  .Polaris-Tooltip__Tip {
+    background: color(white);
+  }
+}
+
+.Polaris-Tooltip__Wrapper {
+  position: relative;
+  display: flex;
+  background-color: color(ink);
+  border-radius: border-radius();
+  color: color(white);
+  max-height: $content-max-height;
+}
+
+.Polaris-Tooltip__Content {
+  position: relative;
+  margin-top: spacing(extra-tight);
+  border-radius: border-radius();
+  max-width: $content-max-width;
+  max-height: $content-max-height;
+}
+
+.Polaris-Tooltip__Tip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  height: $arrow-size;
+  width: $arrow-size;
+  background: color(ink);
+  box-shadow: shadow(deep);
+}
+
+.Polaris-Tooltip__Label {
+  padding: 0 spacing(tight) spacing(extra-tight);
+}

@@ -1,0 +1,272 @@
+$stacking-order: (
+  link: 10,
+  content: 20,
+);
+
+$avatar-small-size: rem(32px);
+$avatar-medium-size: rem(40px);
+$avatar-large-size: rem(60px);
+
+$thumbnail-small-size: rem(40px);
+$thumbnail-medium-size: rem(60px);
+$thumbnail-large-size: rem(80px);
+
+$action-button-height: rem(30px);
+
+.Polaris-ResourceList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Polaris-ResourceList__ItemWrapper {
+  + .Polaris-ResourceList__ItemWrapper {
+    border-top: border();
+  }
+}
+
+.Polaris-ResourceList__Item {
+  position: relative;
+
+  &:not(.Polaris-ResourceList__Item--persistActions) {
+    .Polaris-ResourceList__Actions {
+      position: absolute;
+      right: spacing(tight);
+      display: none;
+      pointer-events: initial;
+    }
+
+    &.Polaris-ResourceList__Item--focused {
+      // Need this deeply nested selector to override the more specific :not()
+      // selector needed above.
+      // stylelint-disable-next-line selector-max-specificity
+      .Polaris-ResourceList__Actions {
+        display: flex;
+      }
+    }
+  }
+}
+
+.Polaris-ResourceList__Item--persistActions {
+  .Polaris-ResourceList__AttributeThree {
+    margin-left: 0;
+  }
+
+  .Polaris-ResourceList__Actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    margin-left: spacing();
+    pointer-events: initial;
+
+    @include page-content-when-partially-condensed {
+      display: none;
+    }
+  }
+}
+
+.Polaris-ResourceList__Item--link {
+  cursor: pointer;
+}
+
+.Polaris-ResourceList__Item--focused {
+  background: color(sky, lighter);
+}
+
+// Had min-height style below instead of height. Need height for IE11 vertical centering
+// to work with display: flex. Reference: http://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie
+.Polaris-ResourceList__Item--mediaAvatar {
+  &.Polaris-ResourceList__Item--sizeSmall {
+    .Polaris-ResourceList__Actions {
+      height: $avatar-small-size;
+    }
+  }
+
+  &.Polaris-ResourceList__Item--sizeMedium {
+    .Polaris-ResourceList__Actions {
+      height: $avatar-medium-size;
+    }
+  }
+
+  &.Polaris-ResourceList__Item--sizeLarge {
+    .Polaris-ResourceList__Actions {
+      height: $avatar-large-size;
+    }
+  }
+}
+
+.Polaris-ResourceList__Item--mediaThumbnail {
+  &.Polaris-ResourceList__Item--sizeSmall {
+    .Polaris-ResourceList__Actions {
+      height: $thumbnail-small-size;
+    }
+  }
+
+  &.Polaris-ResourceList__Item--sizeMedium {
+    .Polaris-ResourceList__Actions {
+      height: $thumbnail-medium-size;
+    }
+  }
+
+  &.Polaris-ResourceList__Item--sizeLarge {
+    .Polaris-ResourceList__Actions {
+      height: $thumbnail-large-size;
+    }
+  }
+}
+
+.Polaris-ResourceList__Media {
+  flex: 0 0 auto;
+  margin-right: spacing(loose);
+  color: inherit;
+  text-decoration: none;
+}
+
+.Polaris-ResourceList__Container {
+  position: relative;
+  z-index: z-index(content, $stacking-order);
+  display: flex;
+  pointer-events: none;
+  padding: (0.75 * spacing()) spacing(loose);
+}
+
+.Polaris-ResourceList__Content {
+  @include layout-flex-fix;
+  flex: 1 1 auto;
+  align-self: center;
+
+  // Adding with 100% for IE11 fix
+  width: 100%;
+}
+
+.Polaris-ResourceList__Attributes {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  hyphens: auto;
+  min-height: $action-button-height;
+
+  @include page-content-when-partially-condensed {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.Polaris-ResourceList__AttributeOne,
+.Polaris-ResourceList__AttributeTwo {
+  flex-shrink: 0;
+  margin-right: (0.75 * spacing());
+}
+
+.Polaris-ResourceList__AttributeOne {
+  font-weight: 600;
+}
+
+.Polaris-ResourceList__AttributeThree {
+  margin-left: auto;
+
+  @include page-content-when-partially-condensed {
+    margin-left: 0;
+  }
+}
+
+.Polaris-ResourceList__Badge {
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin-right: spacing();
+
+  @include page-content-when-partially-condensed {
+    order: 4;
+    align-self: auto;
+    margin-top: rem(4px);
+    margin-bottom: rem(4px);
+  }
+}
+
+.Polaris-ResourceList__Actions {
+  display: flex;
+  flex-basis: auto;
+  align-items: center;
+}
+
+.Polaris-ResourceList__Disclosure {
+  display: none;
+  pointer-events: initial;
+
+  @include page-content-when-partially-condensed {
+    display: block;
+  }
+}
+
+.Polaris-ResourceList__ExceptionList {
+  margin: spacing(extra-tight) 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Polaris-ResourceList__ExceptionItem {
+  @include text-emphasis-subdued;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    height: rem(6px);
+    width: rem(6px);
+    margin-right: spacing(tight);
+    background: color(ink, lightest);
+    border-radius: 100%;
+  }
+}
+
+.Polaris-ResourceList__ExceptionItem--statusWarning {
+  .Polaris-ResourceList__Title {
+    color: color(orange, dark);
+  }
+
+  &::before {
+    background: color(orange);
+  }
+}
+
+.Polaris-ResourceList__ExceptionItem--statusCritical {
+  .Polaris-ResourceList__Title {
+    color: color(red, dark);
+  }
+
+  &::before {
+    background: color(red);
+  }
+}
+
+.Polaris-ResourceList__Title {
+  @include text-emphasis-subdued;
+  white-space: nowrap;
+}
+
+.Polaris-ResourceList__Description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Polaris-ResourceList__Title + .Polaris-ResourceList__Description::before {
+  content: '\2013';
+  padding: 0 spacing(extra-tight);
+  color: color(ink, lighter);
+}
+
+.Polaris-ResourceList__Link {
+  position: absolute;
+  z-index: z-index(link, $stacking-order);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}

@@ -1,0 +1,159 @@
+$min-height: control-height();
+$vertical-padding: ($min-height - line-height(body) - rem(2px)) / 2;
+$difference-between-touch-area-and-backdrop: control-height() - control-slim-height();
+
+// This is the adjustment needed to get the icon to appear flush with other
+// content around it.
+$plain-horizontal-adjustment: spacing(tight);
+
+$stacking-order: (
+  item: 10,
+  focused: 20,
+);
+
+.Polaris-Pagination {
+  display: inline-flex;
+
+  &:not(.Polaris-Pagination--plain) {
+    @include page-content-when-fully-condensed {
+      display: flex;
+      width: 100%;
+
+      .Polaris-Pagination__Button {
+        flex: 1 0 auto;
+      }
+    }
+  }
+}
+
+.Polaris-Pagination--plain {
+  .Polaris-Pagination__Button {
+    position: relative;
+    margin-top: -0.5 * $difference-between-touch-area-and-backdrop;
+    margin-bottom: -0.5 * $difference-between-touch-area-and-backdrop;
+    padding-top: 0.5 * ($min-height - line-height(body));
+    padding-bottom: 0.5 * ($min-height - line-height(body));
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    box-shadow: none;
+
+    &:hover,
+    &:active {
+      @include recolor-icon(color(ink));
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+
+      &::after {
+        background: plain-button-background();
+      }
+    }
+
+    &:disabled {
+      @include recolor-icon(color(sky, dark));
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    &:not(:first-child) {
+      margin-left: rem(2px);
+    }
+
+    &:first-child {
+      margin-left: -1 * $plain-horizontal-adjustment;
+    }
+
+    &:last-child {
+      margin-right: -1 * $plain-horizontal-adjustment;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0.5 * $difference-between-touch-area-and-backdrop;
+      left: 0;
+      right: 0;
+      height: control-slim-height();
+      border-radius: border-radius();
+      will-change: background;
+      transition-property: background;
+      transition-duration: duration();
+      transition-timing-function: easing();
+    }
+  }
+}
+
+.Polaris-Pagination__Button {
+  @include recolor-icon(color(ink, lighter));
+  position: relative;
+  z-index: z-index(item, $stacking-order);
+  display: inline-block;
+  min-width: $min-height;
+  margin: 0;
+  padding: $vertical-padding spacing(tight);
+  background: linear-gradient(to bottom, color(white), color(sky, lighter));
+  border: border(dark);
+  border-radius: border-radius();
+  line-height: 1;
+  color: color(ink);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition-property: color, background, border, box-shadow;
+  transition-duration: duration();
+  transition-timing-function: easing();
+
+  &:hover {
+    background: linear-gradient(to bottom, color(sky, lighter), color(sky, light));
+    border-color: color(sky, dark);
+  }
+
+  &:focus {
+    z-index: z-index(focused, $stacking-order);
+    border-color: color(indigo);
+    outline: 0;
+    box-shadow: 0 0 0 1px color(indigo);
+  }
+
+  &:active {
+    // Same color gradient is necessary for background transitions
+    background: linear-gradient(to bottom, color(sky, light), color(sky, light));
+    border-color: color(sky, dark);
+    box-shadow:
+      0 0 0 0 transparent,
+      inset 0 1px 1px 0 rgba(color(ink, lighter), 0.1),
+      inset 0 1px 4px 0 rgba(color(ink, lighter), 0.2);
+  }
+
+  &:disabled {
+    @include recolor-icon(color(ink, lightest));
+    background: color(sky, light);
+    color: color(ink, lightest);
+    cursor: default;
+    box-shadow: none;
+  }
+
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

@@ -1,0 +1,44 @@
+$breakpoint: 550px;
+
+.Polaris-DescriptionList {
+  margin: 0;
+  padding: 0;
+
+  @include page-content-breakpoint-after($breakpoint) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.Polaris-DescriptionList__Term {
+  @include text-emphasis-strong;
+  padding: spacing() 0 spacing(tight);
+
+  @include page-content-breakpoint-after($breakpoint) {
+    flex: 0 1 25%;
+    padding: spacing() spacing() spacing() 0;
+
+    .Polaris-DescriptionList__Description + & + .Polaris-DescriptionList__Description {
+      border-top: border();
+    }
+  }
+}
+
+.Polaris-DescriptionList__Description {
+  margin-left: 0;
+  padding: 0 0 spacing();
+
+  + .Polaris-DescriptionList__Term {
+    border-top: border();
+  }
+
+  @include page-content-breakpoint-after($breakpoint) {
+    flex: 1 1 51%;
+    padding: spacing() 0;
+
+    + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description {
+      border-top: border();
+    }
+  }
+}

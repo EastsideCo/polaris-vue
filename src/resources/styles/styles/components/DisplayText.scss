@@ -1,0 +1,19 @@
+.Polaris-DisplayText {
+  margin: 0;
+}
+
+.Polaris-DisplayText--sizeSmall {
+  @include text-style-display-small;
+}
+
+.Polaris-DisplayText--sizeMedium {
+  @include text-style-display-medium;
+}
+
+.Polaris-DisplayText--sizeLarge {
+  @include text-style-display-large;
+}
+
+.Polaris-DisplayText--sizeExtraLarge {
+  @include text-style-display-x-large;
+}

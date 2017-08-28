@@ -1,0 +1,154 @@
+$border-bottom-height: rem(3px);
+$item-min-height: rem(16px);
+$item-vertical-padding: $item-min-height / 2;
+$focus-state-box-shadow-color: rgba(92, 106, 196, 0.8);
+
+.Polaris-Tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: border();
+  list-style: none;
+}
+
+.Polaris-Tabs--fitted {
+  .Polaris-Tabs__TabContainer {
+    flex: 1 1 auto;
+  }
+
+  .Polaris-Tabs__Tab {
+    padding: 0;
+  }
+
+  .Polaris-Tabs__Title {
+    width: 100%;
+    padding: spacing(tight) spacing();
+  }
+}
+
+.Polaris-Tabs--fillSpace {
+  .Polaris-Tabs__TabContainer {
+    flex: 1 1 auto;
+  }
+}
+
+.Polaris-Tabs__TabContainer {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.Polaris-Tabs__Tab {
+  @include unstyled-link;
+  @include unstyled-button;
+  @include text-style-body;
+  @include text-emphasis-subdued;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  min-width: 100%; // IE11 fix for overflowing flex items from parent container
+  margin-top: 1px;
+  margin-bottom: -1px;
+  padding: 0 spacing();
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    .Polaris-Tabs__Title {
+      @include text-emphasis-normal;
+      border-bottom: $border-bottom-height solid color(sky);
+    }
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 2px 0 $focus-state-box-shadow-color, 0 0 2px 0 $focus-state-box-shadow-color;
+
+    .Polaris-Tabs__Title {
+      @include text-emphasis-normal;
+      border-bottom: $border-bottom-height solid color(indigo, light);
+    }
+  }
+
+  &:visited {
+    color: color(ink, lighter);
+  }
+
+  &.Polaris-Tabs__Tab--selected {
+    .Polaris-Tabs__Title {
+      border-bottom: $border-bottom-height solid color(indigo);
+    }
+  }
+}
+
+.Polaris-Tabs__Tab--selected {
+  @include text-emphasis-normal;
+}
+
+.Polaris-Tabs__Title {
+  display: block;
+  padding: spacing(tight) 0 (spacing(tight) - $border-bottom-height) 0;
+  border-bottom: $border-bottom-height solid transparent;
+}
+
+.Polaris-Tabs__Panel {
+  display: block;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.Polaris-Tabs__List {
+  list-style: none;
+  margin: 0;
+  padding: spacing(tight) 0;
+}
+
+.Polaris-Tabs__Item {
+  @include unstyled-link;
+  @include unstyled-button;
+  display: block;
+  width: 100%;
+  min-height: $item-min-height;
+  padding: $item-vertical-padding spacing();
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: color(indigo);
+    outline: none;
+    color: color(white);
+  }
+}
+
+.Polaris-Tabs__DisclosureTab {
+  display: none;
+  padding-top: (0.625 * spacing());
+}
+
+.Polaris-Tabs__DisclosureTab--visible {
+  display: block;
+}
+
+.Polaris-Tabs__DisclosureActivator {
+  @include recolor-icon(color(ink, lighter));
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  padding: 0 spacing();
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.Polaris-Tabs__TabMeasurer {
+  display: flex;
+  visibility: hidden;
+  height: 0;
+}

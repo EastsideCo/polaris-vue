@@ -1,0 +1,76 @@
+$image-size: rem(20px);
+$item-min-height: rem(40px);
+$item-vertical-padding: ($item-min-height - line-height(body)) / 2;
+
+.Polaris-ActionList {
+  list-style: none;
+  margin: 0;
+  padding: spacing(tight) 0;
+}
+
+.Polaris-ActionList__Section--withoutTitle:not(:first-child) {
+  border-top: border();
+  margin-top: spacing(tight);
+  padding-top: spacing(tight);
+}
+
+.Polaris-ActionList__Actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Polaris-ActionList__Title {
+  @include text-style-subheading;
+  padding: (spacing(tight) * 1.5) spacing();
+  border-bottom: border();
+}
+
+.Polaris-ActionList__Item {
+  @include unstyled-button;
+  @include unstyled-link;
+  display: block;
+  width: 100%;
+  min-height: $item-min-height;
+  padding: $item-vertical-padding spacing();
+  text-align: left;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: color(indigo);
+    outline: none;
+    color: color(white);
+
+    .Polaris-ActionList__Image {
+      @include recolor-icon(color(sky));
+    }
+  }
+}
+
+.Polaris-ActionList__Content {
+  display: flex;
+  align-items: center;
+}
+
+.Polaris-ActionList__Image {
+  @include recolor-icon(color(ink, lightest));
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: $image-size;
+  width: $image-size;
+
+  // We need the negative margin to ensure that the image does not set
+  // the minimum height of the action item.
+  margin: (-0.5 * $image-size) spacing() (-0.5 * $image-size) 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.Polaris-ActionList__Text {
+  @include layout-flex-fix;
+  flex: 1 0 auto;
+}

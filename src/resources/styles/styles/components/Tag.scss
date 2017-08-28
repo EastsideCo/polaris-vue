@@ -1,0 +1,37 @@
+$height: rem(28px);
+$icon-size: rem(16px);
+
+.Polaris-Tag {
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  min-height: $height;
+  padding-left: spacing(tight);
+  background-color: color(sky);
+  border-radius: border-radius();
+  color: color(ink);
+}
+
+.Polaris-Tag__Button {
+  @include recolor-icon(color(ink, lighter));
+  @include unstyled-button;
+  display: block;
+  height: $height;
+  width: $height;
+  margin-left: spacing(extra-tight);
+  will-change: background, fill;
+  transition-property: background, fill;
+  transition-duration: duration();
+  transition-timing-function: easing();
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include recolor-icon(color(ink));
+    background: color(sky, dark);
+  }
+
+  &:active {
+    background: rgba(color(ink, lightest), 0.6);
+  }
+}

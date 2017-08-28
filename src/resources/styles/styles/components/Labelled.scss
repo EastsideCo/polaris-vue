@@ -1,0 +1,24 @@
+.Polaris-Labelled--hidden > .Polaris-Labelled__LabelWrapper {
+  @include visually-hidden;
+}
+
+.Polaris-Labelled__LabelWrapper {
+  margin-bottom: spacing(extra-tight);
+}
+
+.Polaris-Labelled__HelpText {
+  @include text-style-body;
+  @include text-emphasis-subdued;
+  margin-top: spacing(extra-tight);
+}
+
+.Polaris-Labelled__Error {
+  display: flex;
+  margin-top: spacing(extra-tight);
+  color: color(red, dark);
+}
+
+.Polaris-Labelled__ErrorIcon {
+  @include recolor-icon(color(red));
+  margin: 0 spacing(extra-tight) 0 -2px;
+}

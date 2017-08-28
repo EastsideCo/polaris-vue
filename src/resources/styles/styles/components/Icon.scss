@@ -1,0 +1,230 @@
+$stacking-order: (
+  backdrop: 1,
+  icon: 2,
+);
+
+.Polaris-Icon {
+  display: block;
+  height: rem(20px);
+  width: rem(20px);
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.Polaris-Icon--hasBackdrop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: spacing(tight);
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: z-index(backdrop, $stacking-order);
+    top: -1 * spacing(tight);
+    bottom: -1 * spacing(tight);
+    left: -1 * spacing(tight);
+    right: -1 * spacing(tight);
+    border-radius: 50%;
+  }
+}
+
+.Polaris-Icon--colorWhite {
+  fill: color(white);
+}
+
+.Polaris-Icon--colorBlack {
+  fill: color(black);
+}
+
+.Polaris-Icon--colorSkyLighter {
+  fill: color(sky, lighter);
+}
+
+.Polaris-Icon--colorSkyLight {
+  fill: color(sky, light);
+}
+
+.Polaris-Icon--colorSky {
+  fill: color(sky);
+}
+
+.Polaris-Icon--colorSkyDark {
+  fill: color(sky, dark);
+}
+
+.Polaris-Icon--colorInkLightest {
+  fill: color(ink, lightest);
+}
+
+.Polaris-Icon--colorInkLighter {
+  fill: color(ink, lighter);
+
+  &::after {
+    background-color: color(sky);
+  }
+}
+
+.Polaris-Icon--colorInkLight {
+  fill: color(ink, light);
+}
+
+.Polaris-Icon--colorInk {
+  fill: color(ink);
+
+  &::after {
+    background-color: color(sky);
+  }
+}
+
+.Polaris-Icon--colorBlueLighter {
+  fill: color(blue, lighter);
+}
+
+.Polaris-Icon--colorBlueLight {
+  fill: color(blue, light);
+}
+
+.Polaris-Icon--colorBlue {
+  fill: color(blue);
+}
+
+.Polaris-Icon--colorBlueDark {
+  fill: color(blue, dark);
+
+  &::after {
+    background-color: color(blue, light);
+  }
+}
+
+.Polaris-Icon--colorBlueDarker {
+  fill: color(blue, darker);
+}
+
+.Polaris-Icon--colorIndigoLighter {
+  fill: color(indigo, lighter);
+}
+
+.Polaris-Icon--colorIndigoLight {
+  fill: color(indigo, light);
+}
+
+.Polaris-Icon--colorIndigo {
+  fill: color(indigo);
+}
+
+.Polaris-Icon--colorIndigoDark {
+  fill: color(indigo, dark);
+}
+
+.Polaris-Icon--colorIndigoDarker {
+  fill: color(indigo, darker);
+}
+
+.Polaris-Icon--colorTealLighter {
+  fill: color(teal, lighter);
+}
+
+.Polaris-Icon--colorTealLight {
+  fill: color(teal, light);
+}
+
+.Polaris-Icon--colorTeal {
+  fill: color(teal);
+
+  &::after {
+    background-color: color(white);
+  }
+}
+
+.Polaris-Icon--colorTealDark {
+  fill: color(teal, dark);
+
+  &::after {
+    background-color: color(teal, light);
+  }
+}
+
+.Polaris-Icon--colorTealDarker {
+  fill: color(teal, darker);
+}
+
+.Polaris-Icon--colorGreenLighter {
+  fill: color(green, lighter);
+}
+
+.Polaris-Icon--colorGreen {
+  fill: color(green);
+
+  &::after {
+    background-color: color(green, lighter);
+  }
+}
+
+.Polaris-Icon--colorGreenDark {
+  fill: color(green, dark);
+
+  &::after {
+    background-color: color(green, light);
+  }
+}
+
+.Polaris-Icon--colorYellowLighter {
+  fill: color(yellow, lighter);
+}
+
+.Polaris-Icon--colorYellow {
+  fill: color(yellow);
+}
+
+.Polaris-Icon--colorYellowDark {
+  fill: color(yellow, dark);
+
+  &::after {
+    background-color: color(yellow, light);
+  }
+}
+
+.Polaris-Icon--colorOrange {
+  fill: color(orange);
+}
+
+.Polaris-Icon--colorOrangeDark {
+  fill: color(orange, dark);
+}
+
+.Polaris-Icon--colorRedLighter {
+  fill: color(red, lighter);
+}
+
+.Polaris-Icon--colorRed {
+  fill: color(red);
+}
+
+.Polaris-Icon--colorRedDark {
+  fill: color(red, dark);
+
+  &::after {
+    background-color: color(red, light);
+  }
+}
+
+.Polaris-Icon--colorPurple {
+  fill: color(purple);
+}
+
+.Polaris-Icon__Svg {
+  position: relative;
+  z-index: z-index(icon, $stacking-order);
+  display: block;
+  width: 100%;
+  color: color(white);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Polaris-Icon__Placeholder {
+  padding-bottom: 100%;
+  background: currentColor;
+}

@@ -1,0 +1,68 @@
+.Polaris-RadioButton {
+  position: relative;
+}
+
+.Polaris-RadioButton__Input {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  appearance: none;
+
+  &:focus,
+  &:active,
+  &:checked {
+    + .Polaris-RadioButton__Backdrop {
+      background: color(indigo);
+    }
+  }
+
+  &:checked {
+    ~ .Polaris-RadioButton__Icon {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &:focus,
+  &:active {
+    + .Polaris-RadioButton__Backdrop {
+      @include control-backdrop(focused);
+    }
+  }
+
+  &:disabled {
+    + .Polaris-RadioButton__Backdrop {
+      @include control-backdrop(disabled);
+    }
+
+    ~ .Polaris-RadioButton__Icon {
+      background-color: color(sky, dark);
+    }
+  }
+}
+
+.Polaris-RadioButton__Backdrop {
+  @include control-backdrop;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+
+  &::after {
+    border-radius: 50%;
+  }
+}
+
+.Polaris-RadioButton__Icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: 50% 50%;
+  height: 50%;
+  width: 50%;
+  background: color(indigo);
+  border-radius: 50%;
+  transition: control-icon-transition();
+}

@@ -1,0 +1,78 @@
+.Polaris-Checkbox {
+  position: relative;
+}
+
+.Polaris-Checkbox--error {
+  // The basic checked styles have more specificity than this, so need to
+  // basically duplicate that selector here, too.
+  // stylelint-disable-next-line selector-max-specificity
+  .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop,
+  .Polaris-Checkbox__Backdrop {
+    @include control-backdrop(error);
+  }
+
+  // We need to know if the input is focusing to change the border color.
+  // stylelint-disable-next-line selector-max-specificity
+  .Polaris-Checkbox__Input:focus + .Polaris-Checkbox__Backdrop,
+  .Polaris-Checkbox__Input:active + .Polaris-Checkbox__Backdrop {
+    @include control-backdrop(focused-error);
+  }
+
+  .Polaris-Checkbox__Icon {
+    @include recolor-icon(color(red, dark));
+  }
+}
+
+.Polaris-Checkbox__Input {
+  @include visually-hidden;
+
+  &:focus,
+  &:active,
+  &:checked {
+    + .Polaris-Checkbox__Backdrop {
+      background: color(indigo);
+    }
+  }
+
+  &:checked {
+    ~ .Polaris-Checkbox__Icon {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &:focus,
+  &:active {
+    + .Polaris-Checkbox__Backdrop {
+      @include control-backdrop(focused);
+    }
+  }
+
+  &:disabled {
+    + .Polaris-Checkbox__Backdrop {
+      @include control-backdrop(disabled);
+    }
+
+    ~ .Polaris-Checkbox__Icon {
+      @include recolor-icon(color(ink, lightest));
+    }
+  }
+}
+
+.Polaris-Checkbox__Backdrop {
+  @include control-backdrop;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Polaris-Checkbox__Icon {
+  @include recolor-icon(color(indigo));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: 50% 50%;
+  transition: control-icon-transition();
+}

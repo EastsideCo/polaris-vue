@@ -1,0 +1,35 @@
+// reduces the radii of the circle to half the size of the smallest side
+$border-radius: 999px;
+
+.Polaris-FooterHelp {
+  display: flex;
+  justify-content: center;
+  margin: spacing(loose) 0;
+  width: 100%;
+
+  @include page-content-when-not-fully-condensed() {
+    margin: spacing(loose);
+    width: auto;
+  }
+}
+
+.Polaris-FooterHelp__Content {
+  display: inline-flex;
+  align-items: center;
+  padding: spacing() spacing(loose) spacing() spacing();
+  border-top: border();
+  border-bottom: border();
+
+  @include page-content-when-not-fully-condensed() {
+    border: border();
+    border-radius: $border-radius;
+  }
+}
+
+.Polaris-FooterHelp__Icon {
+  margin-right: spacing(tight);
+}
+
+.Polaris-FooterHelp__Text {
+  @include text-style-input;
+}

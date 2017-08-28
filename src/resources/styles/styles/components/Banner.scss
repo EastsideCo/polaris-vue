@@ -1,0 +1,141 @@
+$accent-height: 3px;
+$dismiss-size: rem(16px);
+$ribbon-flex-basis: rem(32px);
+$secondary-action-vertical-padding: 0.5 * (control-height() - line-height(body));
+$secondary-action-horizontal-padding: 1.5 * spacing(tight);
+
+@mixin banner-colors($highlight, $background) {
+  background-color: $background;
+  box-shadow:
+    inset 0 $accent-height 0 0 $highlight,
+    inset shadow(transparent),
+    shadow();
+
+  &:focus {
+    box-shadow:
+      inset 0 $accent-height 0 0 $highlight,
+      inset 0 0 0 $accent-height $highlight,
+      shadow();
+  }
+}
+
+.Polaris-Banner {
+  @include banner-colors(color(ink, lighter), color(sky, light));
+  position: relative;
+  display: flex;
+  padding: spacing();
+  border-radius: 0 0 border-radius() border-radius();
+  transition: box-shadow duration() easing();
+  transition-delay: duration(fast);
+
+  + .Polaris-Banner {
+    margin-top: spacing(loose);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.Polaris-Banner--hasDismiss {
+  padding-right: $dismiss-size + (2 * spacing());
+}
+
+.Polaris-Banner--statusSuccess {
+  @include banner-colors(color(green), color(green, lighter));
+}
+
+.Polaris-Banner--statusInfo {
+  @include banner-colors(color(teal), color(teal, lighter));
+}
+
+.Polaris-Banner--statusWarning {
+  @include banner-colors(color(yellow), color(yellow, lighter));
+}
+
+.Polaris-Banner--statusCritical {
+  @include banner-colors(color(red), color(red, lighter));
+}
+
+.Polaris-Banner__Ribbon {
+  flex: 0 0 $ribbon-flex-basis;
+  margin-right: spacing();
+}
+
+.Polaris-Banner__Heading {
+  margin-top: spacing(extra-tight);
+}
+
+.Polaris-Banner__Actions {
+  margin-top: spacing();
+}
+
+.Polaris-Banner__Content {
+  margin: spacing(tight) 0;
+}
+
+// We need pretty high specificity to do the descendant selectors
+// onto the text, which needs to be the relative positioned wrapper
+// so that the borders/ backgrounds do not extend outside of it.
+// stylelint-disable selector-max-specificity
+
+.Polaris-Banner__SecondaryAction {
+  @include unstyled-button;
+  @include unstyled-link;
+  margin: (-1 * $secondary-action-vertical-padding) (-0.5 * $secondary-action-horizontal-padding);
+  padding: $secondary-action-vertical-padding $secondary-action-horizontal-padding;
+  color: color(ink);
+
+  &:hover > .Polaris-Banner__Text::after {
+    opacity: 0.75;
+  }
+
+  &:active > .Polaris-Banner__Text::after {
+    opacity: 0;
+  }
+
+  &:focus > .Polaris-Banner__Text {
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+// stylelint-enable selector-max-specificity
+
+.Polaris-Banner__Text {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    @include plain-button-backdrop;
+    opacity: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    border: 1px solid currentColor;
+    opacity: 0.25;
+    will-change: opacity;
+    transition: opacity duration() easing();
+  }
+}
+
+.Polaris-Banner__Dismiss {
+  position: absolute;
+  top: $accent-height;
+  right: 0;
+  padding: (spacing(tight) * 1.5);
+}

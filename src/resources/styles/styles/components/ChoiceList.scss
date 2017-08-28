@@ -1,0 +1,22 @@
+.Polaris-ChoiceList {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.Polaris-ChoiceList--titleHidden > .Polaris-ChoiceList__Title {
+  @include visually-hidden;
+}
+
+.Polaris-ChoiceList__Choices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Polaris-ChoiceList__Title {
+  @include text-style-body;
+  display: block;
+  margin: 0 0 spacing(extra-tight);
+  padding: 0;
+}

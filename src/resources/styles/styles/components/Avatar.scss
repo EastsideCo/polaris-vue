@@ -1,0 +1,70 @@
+$small-size: rem(32px);
+$medium-size: rem(40px);
+$large-size: rem(60px);
+
+.Polaris-Avatar {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: color(teal);
+  border-radius: 50%;
+  user-select: none;
+}
+
+.Polaris-Avatar--sizeSmall {
+  height: $small-size;
+  width: $small-size;
+  font-size: rem(14px);
+}
+
+.Polaris-Avatar--sizeMedium {
+  height: $medium-size;
+  width: $medium-size;
+  font-size: rem(18px);
+}
+
+.Polaris-Avatar--sizeLarge {
+  height: $large-size;
+  width: $large-size;
+  font-size: rem(26px);
+}
+
+.Polaris-Avatar--styleOne {
+  background: color(teal);
+}
+
+.Polaris-Avatar--styleTwo {
+  background: color(red);
+}
+
+.Polaris-Avatar--styleThree {
+  background: color(orange);
+}
+
+.Polaris-Avatar--styleFour {
+  background: color(green);
+}
+
+.Polaris-Avatar--styleFive {
+  background: color(blue);
+}
+
+.Polaris-Avatar--styleSix {
+  background: color(purple);
+}
+
+.Polaris-Avatar--hasImage {
+  background: transparent;
+}
+
+.Polaris-Avatar__Image {
+  width: 100%;
+}
+
+.Polaris-Avatar__Initials {
+  line-height: 0;
+  color: color(white);
+  text-transform: uppercase;
+}

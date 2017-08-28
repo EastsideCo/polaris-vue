@@ -1,0 +1,227 @@
+$min-height: control-height();
+$vertical-padding: ($min-height - line-height(body) - rem(2px)) / 2;
+$slim-min-height: rem(30px);
+$slim-vertical-padding: ($slim-min-height - line-height(body) - rem(2px)) / 2;
+$large-min-height: rem(44px);
+$large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
+
+.Polaris-Button {
+  @include recolor-icon(color(ink, lighter));
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: $min-height;
+  min-width: $min-height;
+  margin: 0;
+  padding: $vertical-padding spacing();
+  background: linear-gradient(to bottom, color(white), color(sky, lighter));
+  border: border(dark);
+  box-shadow: shadow(faint);
+  border-radius: border-radius();
+  line-height: 1;
+  color: color(ink);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition-property: background, border, box-shadow;
+  transition-duration: duration();
+  transition-timing-function: easing();
+
+  &:hover {
+    background: linear-gradient(to bottom, color(sky, lighter), color(sky, light));
+    border-color: color(sky, dark);
+  }
+
+  &:focus {
+    border-color: color(indigo);
+    outline: 0;
+    box-shadow: 0 0 0 1px color(indigo);
+  }
+
+  &:active {
+    // Same color gradient is necessary for background transitions
+    background: linear-gradient(to bottom, color(sky, light), color(sky, light));
+    border-color: color(sky, dark);
+    box-shadow:
+      0 0 0 0 transparent,
+      inset 0 1px 1px 0 rgba(color(ink, lighter), 0.1),
+      inset 0 1px 4px 0 rgba(color(ink, lighter), 0.2);
+  }
+
+  &.Polaris-Button--disabled {
+    @include recolor-icon(color(ink, lightest));
+    background: color(sky, light);
+    color: color(ink, lightest);
+  }
+}
+
+.Polaris-Button--primary {
+  @include button-filled(color(indigo), color(indigo, dark));
+  @include recolor-icon(color(white));
+
+  &.Polaris-Button--disabled {
+    @include recolor-icon(color(white));
+    background: color(indigo, light);
+    border-color: color(indigo, light);
+    box-shadow: none;
+    color: color(white);
+  }
+}
+
+.Polaris-Button--destructive {
+  @include button-filled(color(red), color(red, dark));
+  @include recolor-icon(color(white));
+}
+
+.Polaris-Button--outline {
+  @include button-outline(color(ink, lighter));
+
+  &.Polaris-Button--disabled {
+    background-color: color(white);
+    border-color: color(sky, dark);
+    color: color(ink, lightest);
+  }
+}
+
+.Polaris-Button--destructive.Polaris-Button--outline {
+  @include button-outline(color(red));
+  @include recolor-icon(color(red, dark));
+}
+
+.Polaris-Button--disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+// The way the designs work, we need to do lots of reaching down to
+// target the content in pseudo-selectors, so we need higher specificity
+// in this case.
+// stylelint-disable selector-max-specificity
+
+.Polaris-Button--plain {
+  @include recolor-icon(color(blue));
+  margin: (-1 * $vertical-padding) (-1 * spacing());
+  background: transparent;
+  border: border(transparent);
+  box-shadow: none;
+  color: color(blue);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include recolor-icon(color(blue, dark));
+    background: transparent;
+    border: border(transparent);
+    box-shadow: none;
+    color: color(blue, dark);
+  }
+
+  &:focus > .Polaris-Button__Content::after {
+    opacity: 1;
+  }
+
+  &.Polaris-Button--disabled {
+    background: none;
+  }
+
+  &.Polaris-Button--sizeSlim {
+    margin-top: (-1 * $slim-vertical-padding);
+    margin-bottom: (-1 * $slim-vertical-padding);
+  }
+
+  &.Polaris-Button--sizeLarge {
+    margin: (-1 * $large-vertical-padding) (-1 * spacing(loose));
+  }
+
+  > .Polaris-Button__Content::after {
+    @include plain-button-backdrop;
+    content: '';
+    opacity: 0;
+  }
+
+  &.Polaris-Button--iconOnly {
+    @include recolor-icon(color(ink, lighter));
+    margin: -0.5 * ($min-height - icon-size());
+
+    &:focus,
+    &:active {
+      @include recolor-icon(color(ink, lighter));
+      background: plain-button-background();
+    }
+
+    &:hover,
+    &:active {
+      @include recolor-icon(color(ink));
+    }
+
+    > .Polaris-Button__Content::after {
+      display: none;
+    }
+
+    &.Polaris-Button--disabled {
+      @include recolor-icon(color(sky, dark));
+    }
+  }
+}
+
+// stylelint-enable selector-max-specificity
+
+.Polaris-Button--iconOnly {
+  padding-left: spacing(tight);
+  padding-right: spacing(tight);
+}
+
+.Polaris-Button--sizeSlim {
+  min-height: $slim-min-height;
+  min-width: $slim-min-height;
+  padding: $slim-vertical-padding spacing();
+}
+
+.Polaris-Button--sizeLarge {
+  min-height: $large-min-height;
+  min-width: $large-min-height;
+  padding: $large-vertical-padding rem(24px);
+
+  .Polaris-Button__Content {
+    @include text-style-button-large;
+  }
+}
+
+.Polaris-Button--fullWidth {
+  display: block;
+  width: 100%;
+}
+
+.Polaris-Button__Content {
+  @include text-style-button;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Polaris-Button__Icon {
+  @include text-style-body;
+  transition: color duration() easing();
+
+  &:first-child {
+    // This compensates for the typical icon used in buttons being
+    // inset within its bounding box.
+    margin-left: -2px;
+    margin-right: spacing(extra-tight);
+  }
+
+  &:last-child {
+    margin-left: spacing(extra-tight);
+
+    // This compensates for the disclosure icon, which is substantially
+    // inset within the viewbox (and makes it look like there is too much
+    // spacing on the right of the button)
+    margin-right: -5px;
+  }
+
+  &:only-child {
+    margin: 0;
+  }
+}

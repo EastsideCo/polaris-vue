@@ -1,0 +1,238 @@
+$navigation-elements-height: rem(36px);
+$title-height: line-height(display-large, large-screen);
+$actions-vertical-spacing: spacing(tight);
+$action-horizontal-padding: (1.5 * spacing(tight));
+
+$difference-between-touch-area-and-backdrop: control-height() - control-slim-height();
+
+$stacking-order: (
+  title: 10,
+  breadcrumbs: 20,
+);
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+.Polaris-Page {
+  margin: 0 auto;
+  padding: 0;
+  max-width: layout-width(primary, max) + layout-width(secondary, max) + layout-width(inner-spacing);
+
+  @include page-content-when-not-fully-condensed {
+    padding: 0 spacing(loose);
+  }
+
+  @include page-content-when-not-partially-condensed {
+    padding: 0 spacing(extra-loose);
+  }
+}
+
+.Polaris-Page--fullWidth {
+  max-width: none;
+}
+
+.Polaris-Page__Content {
+  margin: 0 0 spacing(loose);
+}
+
+.Polaris-Page__Header {
+  padding: spacing(loose);
+
+  @include page-content-when-not-fully-condensed {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include page-content-when-not-partially-condensed {
+    padding-top: spacing(extra-loose);
+    padding-bottom: spacing(extra-loose);
+  }
+}
+
+.Polaris-Page__Header--hasPagination,
+.Polaris-Page__Header--hasBreadcrumbs {
+  padding-top: spacing(loose);
+  padding-bottom: rem(24px);
+
+  &.Polaris-Page__Header--hasSecondaryActions {
+    padding-bottom: spacing(loose);
+  }
+}
+
+.Polaris-Page__Header--hasSecondaryActions {
+  padding-top: rem(24px);
+  padding-bottom: spacing(loose);
+}
+
+.Polaris-Page__Header--hasSeparator {
+  border-bottom: border();
+
+  + .Polaris-Page__Content {
+    margin-top: spacing(loose);
+  }
+}
+
+.Polaris-Page__Header--hasRollup {
+  .Polaris-Page__IndividualActions {
+    display: none;
+  }
+
+  @include page-content-when-not-partially-condensed {
+    .Polaris-Page__Rollup {
+      display: none;
+    }
+
+    .Polaris-Page__IndividualActions {
+      display: flex;
+    }
+  }
+}
+
+.Polaris-Page__Navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: spacing(extra-tight);
+}
+
+.Polaris-Page__Pagination {
+  margin-left: auto;
+}
+
+.Polaris-Page__MainContent {
+  display: flex;
+  align-items: center;
+}
+
+.Polaris-Page__TitleAndActions {
+  flex: 1 1 0%;
+}
+
+.Polaris-Page__Title {
+  @include layout-flex-fix;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.Polaris-Page__Actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2 * $actions-vertical-spacing;
+
+  @include page-content-when-not-fully-condensed {
+    margin-top: $actions-vertical-spacing;
+  }
+}
+
+.Polaris-Page__SecondaryActions {
+  flex: 1;
+}
+
+.Polaris-Page__IndividualActions {
+  display: flex;
+  align-items: flex-start;
+
+  > .Polaris-Page__Action,
+  > .Polaris-Page__ActionGroup {
+    &:first-child {
+      // Compensates for the fact that we push the icon slightly to the left
+      margin-left: -1 * $action-horizontal-padding;
+    }
+
+    &:last-child {
+      margin-right: -1 * $action-horizontal-padding;
+    }
+  }
+}
+
+.Polaris-Page__PrimaryAction {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+
+  .Polaris-Page__MainContent > & {
+    display: none;
+    margin-left: spacing(loose);
+  }
+
+  @include page-content-when-not-partially-condensed {
+    display: none;
+
+    .Polaris-Page__MainContent > & {
+      display: flex;
+    }
+  }
+}
+
+.Polaris-Page__Action {
+  @include unstyled-button;
+  @include text-style-body;
+  position: relative;
+  min-height: control-height();
+
+  // Negative margin vertically for the amount that is not covered by
+  // the focus overlay
+  margin-top: -0.5 * $difference-between-touch-area-and-backdrop;
+  margin-bottom: -0.5 * $difference-between-touch-area-and-backdrop;
+  padding: 0 $action-horizontal-padding;
+  color: color(ink, lighter);
+
+  &:hover,
+  &:active {
+    color: color(ink);
+
+    .Polaris-Page__ActionIcon {
+      @include recolor-icon(color(ink));
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::after {
+      background: plain-button-background();
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: spacing(extra-tight);
+    right: spacing(extra-tight);
+    top: 0.5 * $difference-between-touch-area-and-backdrop;
+    height: control-slim-height();
+    border-radius: border-radius();
+    background: transparent;
+    will-change: background;
+    transition-property: background;
+    transition-duration: duration();
+    transition-timing-function: easing();
+  }
+}
+
+.Polaris-Page__ActionContent {
+  display: flex;
+  align-items: center;
+  min-height: control-height();
+}
+
+.Polaris-Page__ActionIcon {
+  @include recolor-icon(color(ink, lighter));
+  display: inline-block;
+
+  &:first-child {
+    margin-right: spacing(extra-tight);
+  }
+
+  &:last-child {
+    margin-left: spacing(extra-tight);
+
+    // This compensates for the disclosure icon, which is substantially
+    // inset within the viewbox (and makes it look like there is too much
+    // spacing on the right of the button)
+    margin-right: -3px;
+  }
+}

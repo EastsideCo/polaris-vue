@@ -1,0 +1,27 @@
+.Polaris-CalloutCard {
+  display: flex;
+  align-items: center;
+}
+
+.Polaris-CalloutCard__Image {
+  display: none;
+  flex: 0 0 auto;
+  width: rem(100px);
+
+  @include page-content-when-not-fully-condensed {
+    display: block;
+    margin-left: spacing(loose);
+  }
+}
+
+.Polaris-CalloutCard__Content {
+  flex: 1 1 auto;
+}
+
+.Polaris-CalloutCard__Title {
+  margin-bottom: spacing(loose);
+}
+
+.Polaris-CalloutCard__Buttons {
+  margin-top: spacing(loose);
+}

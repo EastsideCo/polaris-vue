@@ -1,0 +1,43 @@
+.Polaris-Card {
+  overflow: hidden;
+  background-color: color(white);
+  box-shadow: shadow();
+
+  + .Polaris-Card {
+    margin-top: spacing(loose);
+  }
+
+  @include page-content-when-not-partially-condensed {
+    border-radius: border-radius();
+  }
+}
+
+.Polaris-Card--subdued {
+  background-color: color(sky, lighter);
+}
+
+.Polaris-Card__Header {
+  padding: spacing(loose) spacing(loose) 0;
+}
+
+.Polaris-Card__Section {
+  padding: spacing(loose);
+
+  + .Polaris-Card__Section {
+    border-top: 1px solid color(sky);
+  }
+}
+
+.Polaris-Card__Section--subdued {
+  background-color: color(sky, lighter);
+}
+
+.Polaris-Card__SectionHeader {
+  padding-bottom: spacing(tight);
+}
+
+.Polaris-Card__Footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 spacing(loose) spacing(loose);
+}
