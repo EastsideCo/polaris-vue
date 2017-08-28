@@ -21,7 +21,11 @@ import Vue from 'vue';
 import PolarisVue from 'polaris-vue';
 
 Vue.use(PolarisVue, {
-  componentPrefix: 'polaris-',   // Components will be named PolarisButton, PolarisFormLayout, etc.
+    // Components will be named polaris-button, poolaris-form-layout, etc.
+    // (using the change-case library)
+    componentNameFormat: (polarisName) => {
+        return 'polaris-'+changeCase.paramCase(polarisName);
+    },
 });
 
 var root = new Vue({
