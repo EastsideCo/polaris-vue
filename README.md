@@ -43,10 +43,13 @@ By default  names are prefixed with 'polaris-' to ensure they  don't clash with
 normal HTML tags (i.e. `Button`). This prefix can be changed in the config options.
 
 ```
-           |  Polaris-React  |  Polaris-Vue
-Component  |  Banner         |  polaris-banner
-Attribute  |  title          |  title
-Event      |  onDismiss      |  @dismiss
+                     |  Polaris        |  Polaris-Vue     |
+                     +-----------------+------------------+
+Component            |  Banner         |  polaris-banner  |
+Attribute (in HTML)  |  helpText       |  help-text       |
+Attribute (in JS)    |  helpText       |  helpText        |
+Event                |  onDismiss      |  @dismiss        |
+
 ```
 
 There are other changes for some of the more complex components (i.e. tabs), 
