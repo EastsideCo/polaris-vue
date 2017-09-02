@@ -2,7 +2,7 @@
   "name": "webpack-library-starter",
   "version": "0.3.0",
   "description": "Produce universal library with webpack and es6",
-  "main": "lib/library.js",
+  "main": "lib/polaris-vue.js",
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
