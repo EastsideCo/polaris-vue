@@ -52,7 +52,7 @@ export default {
     methods: {
         handleAction(action) {
             if (action.onAction) {
-                actin.onAction();
+                action.onAction();
             }
         }
     }
