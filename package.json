@@ -1,7 +1,7 @@
 {
-  "name": "webpack-library-starter",
-  "version": "0.3.0",
-  "description": "Produce universal library with webpack and es6",
+  "name": "@eastsideco/polaris-vue",
+  "version": "0.0.1",
+  "description": "Shopify Polaris for Vue 2",
   "main": "lib/polaris-vue.js",
   "scripts": {
     "build": "webpack --env build",
@@ -31,23 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krasimir/webpack-library-starter.git"
+    "url": "https://bitbucket.org/sigapps/polaris-vue.git"
   },
   "keywords": [
-    "webpack",
-    "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
   ],
-  "author": "Krasimir Tsonev",
+  "author": "Kiran Price",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/krasimir/webpack-library-starter/issues"
-  },
-  "homepage": "https://github.com/krasimir/webpack-library-starter",
   "dependencies": {
     "change-case": "^3.0.1"
   }

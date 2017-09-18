@@ -1,3 +1,5 @@
+import changeCase from 'change-case';
+
 class ComponentHelpers {
     constructor() {
         this.componentNameFormat = name => name;
@@ -36,7 +38,7 @@ class ComponentHelpers {
     }
     
     getComponentName(polarisName) {
-        return this.componentNameFormat(polarisName);
+        return this.componentNameFormat(polarisName, changeCase);
     }
     
     wrapNodesWithComponent(createElement, nodes, component, ignoredComponents = []) {

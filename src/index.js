@@ -1,4 +1,3 @@
-import changeCase from 'change-case';
 
 import styles from './resources/styles/styles.css'; // eslint-disable-line no-unused-vars
 
@@ -75,7 +74,7 @@ import ComponentHelpers from './ComponentHelpers.js';
 export default {
     install(Vue, options) {
         const defaults = {
-            componentNameFormat: (polarisName) => {
+            componentNameFormat: (polarisName, changeCase) => {
                 return 'polaris-'+changeCase.paramCase(polarisName);
             }
         };
