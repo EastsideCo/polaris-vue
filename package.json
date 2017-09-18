@@ -1,8 +1,8 @@
 {
   "name": "@eastsideco/polaris-vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Shopify Polaris for Vue 2",
-  "main": "lib/polaris-vue.js",
+  "main": "lib/polaris-vue.min.js",
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
