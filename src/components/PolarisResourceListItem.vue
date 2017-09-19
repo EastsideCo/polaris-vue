@@ -78,17 +78,21 @@
             <template v-if="persistActions">
                 <div class="Polaris-ResourceList__Actions">
                     <polaris-button-group>
-                        <polaris-button
+                        <polaris-button-group-item
                             v-for="action in actions"
-                            @click="handleAction(action)" 
-                            :primary="!connected" 
-                            :url="action.url"
-                            :destructive="action.destructive"
-                            :disabled="action.disabled"
-                            :icon="action.icon"
-                            :accessibility-label="action.accessibilityLabel">
-                            {{ action.content }}
-                        </polaris-button>
+                            plain>
+                            <polaris-button
+                                @click="handleAction(action)" 
+                                :url="action.url"
+                                :destructive="action.destructive"
+                                :disabled="action.disabled"
+                                :icon="action.icon"
+                                :accessibility-label="action.accessibilityLabel"
+                                size="slim"
+                                plain>
+                                {{ action.content }}
+                            </polaris-button>
+                        </polaris-button-group-item>
                     </polaris-button-group>
                 </div>
                 <div class="Polaris-ResourceList__Disclosure">
@@ -133,6 +137,7 @@
 import PolarisUnstyledLink from './PolarisUnstyledLink.vue';
 import PolarisThumbnail from './PolarisThumbnail.vue';
 import PolarisButtonGroup from './PolarisButtonGroup.vue';
+import PolarisButtonGroupItem from './PolarisButtonGroupItem.vue';
 import PolarisButton from './PolarisButton.vue';
 import PolarisPopover from './PolarisPopover.vue';
 import PolarisBadge from './PolarisBadge.vue';
@@ -144,6 +149,7 @@ export default {
         PolarisUnstyledLink,
         PolarisThumbnail,
         PolarisButtonGroup,
+        PolarisButtonGroupItem,
         PolarisButton,
         PolarisPopover,
         PolarisBadge,

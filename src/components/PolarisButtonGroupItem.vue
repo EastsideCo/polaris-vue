@@ -16,10 +16,14 @@ export default {
             focused: false
         };
     },
+    props: {
+        plain: Boolean,
+    },
     computed: {
         classes() {
             return ComponentHelpers.makeComponentClass('Polaris-ButtonGroup__Item', [
-            'focused',
+                'focused',
+                'plain',
             ], this);
         }
     }
