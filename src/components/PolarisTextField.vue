@@ -29,7 +29,7 @@
                 :name="name"
                 :id="realId"
                 :type="type"
-                :disable="disabled"
+                :disabled="disabled"
                 :readonly="readOnly"
                 :autofocus="autoFocus"
                 :value="value"
