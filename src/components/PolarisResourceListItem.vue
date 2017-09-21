@@ -225,7 +225,12 @@ export default {
             if (!this.$refs.element || !this.$refs.element.contains(e.relatedTarget)) {
                 this.focused = false;
             }
-        }
+        },
+        handleAction(action) {
+            if (action.onAction) {
+                action.onAction();
+            }
+        },
     }
 };
 </script>
