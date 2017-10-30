@@ -2593,8 +2593,6 @@
                                         attributeOne: 'How to Get Value from Wireframes',
                                         attributeTwo: 'by Jonathan Mangrove',
                                         attributeThree: 'Today, 7:14pm',
-                                        actions: [{ content: 'Action 1' }, { content: 'Action 2' }],
-                                        persistActions: true,
                                     },
                                     {
                                         url: '#',
@@ -2615,8 +2613,6 @@
                     attributeOne: &#x27;How to Get Value from Wireframes&#x27;,
                     attributeTwo: &#x27;by Jonathan Mangrove&#x27;,
                     attributeThree: &#x27;Today, 7:14pm&#x27;,
-                    actions: [{ content: &#x27;Action 1&#x27; }, { content: &#x27;Action 2&#x27; }],
-                    persistActions: true,
                 },
                 {
                     url: &#x27;#&#x27;,
@@ -2878,7 +2874,23 @@
                         </template>
                     </polaris-popover>
                 </div>
-                <pre class="code"><code class="html"></code></pre>
+                <pre class="code"><code class="html">&lt;polaris-popover 
+    :active=&quot;value9&quot; 
+    @close=&quot;value9 = false&quot;&gt;
+    &lt;template slot=&quot;activator&quot; scope=&quot;props&quot;&gt;
+        &lt;polaris-button @click=&quot;value9 = !value9&quot;&gt;
+            More actions
+        &lt;/polaris-button&gt;
+    &lt;/template&gt;
+    &lt;template slot=&quot;content&quot; scope=&quot;props&quot;&gt;
+        &lt;polaris-action-list
+            :items=&quot;[
+                {content: 'Import'},
+                {content: 'Export'}
+            ]&quot;&gt;
+        &lt;/polaris-action-list&gt;
+    &lt;/template&gt;
+&lt;/polaris-popover&gt;</code></pre>
             </div>
             
             

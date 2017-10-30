@@ -75,6 +75,11 @@ export default {
             return closest || document;
         }
     },
+    watch: {
+        active() {
+            this.$nextTick(this.handleMeasurement);
+        },
+    },
     mounted() {
         window.addEventListener('resize', this.handleMeasurement);
         window.addEventListener('scroll', this.handleMeasurement);
