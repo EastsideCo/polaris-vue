@@ -2810,11 +2810,38 @@
             <div class="testHeader">&lt;polaris-tabs&gt;</div>
             <div class="testCase">
                 <div class="example">
+                    <polaris-tabs v-model="value10">
+                        <template slot="Tab 1">
+                            Tab 1 Test
+                        </template>
+                        <template slot="Tab 2">
+                            Tab 2 Test
+                        </template>
+                        <template slot="Tab 3">
+                            Tab 3 Test
+                        </template>
+                    </polaris-tabs>
                 </div>
                 <pre class="code"><code class="html"></code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
+                    <polaris-tabs v-model="value10">
+                        <template slot="Tab 1">
+                            Tab 1 Test
+                        </template>
+                        <template slot="Tab 2">
+                            Tab 2 Test
+                        </template>
+                        <template slot="Tab 3">
+                            Tab 3 Test
+                        </template>
+                    </polaris-tabs>
+                    <select v-model="value10">
+                        <option>Tab 1</option>
+                        <option>Tab 2</option>
+                        <option>Tab 3</option>
+                    </select>
                 </div>
                 <pre class="code"><code class="html"></code></pre>
             </div>

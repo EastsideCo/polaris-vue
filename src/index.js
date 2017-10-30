@@ -52,6 +52,7 @@ import PolarisResourceListItem from './components/PolarisResourceListItem.vue';
 
 import PolarisLink from './components/PolarisLink.vue';
 import PolarisPagination from './components/PolarisPagination.vue';
+import PolarisTabs from './components/PolarisTabs.vue';
 
 import PolarisPopover from './components/PolarisPopover.vue';
 
@@ -137,6 +138,7 @@ export default {
             
             Link:                   PolarisLink,
             Pagination:             PolarisPagination,
+            Tabs:                   PolarisTabs,
             
             Popover:                PolarisPopover,
             
