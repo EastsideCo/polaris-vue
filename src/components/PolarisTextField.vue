@@ -184,7 +184,8 @@ export default {
         },
         handleChange(e) {
             console.log('newValue', e);
-            this.$emit('change', e.srcElement.value);
+            var target = e.target || e.srcElement;
+            this.$emit('change', target.value);
         },
         handleInputFocus() {
             this.$refs.input.focus();

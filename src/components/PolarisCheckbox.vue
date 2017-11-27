@@ -104,7 +104,8 @@ export default {
     },
     methods: {
         onChange(e) {
-            this.$emit('change', e.srcElement.checked);
+            var target = e.target || e.srcElement;
+            this.$emit('change', target.checked);
         },
         onFocus(e) {
             this.$emit('focus', e);

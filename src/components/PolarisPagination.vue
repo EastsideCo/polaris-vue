@@ -77,7 +77,8 @@ export default {
     },
     methods: {
         handleMouseUp(e) {
-            e.srcElement.blur();
+            var target = e.target || e.srcElement;
+            target.blur();
         },
         onNext() {
             this.$emit('next');
