@@ -5,7 +5,7 @@
             <polaris-breadcrumbs v-if="breadcrumbs.length > 0"
                                  :breadcrumbs="breadcrumbs">
             </polaris-breadcrumbs>
-            
+
             <div v-if="pagination" class="Polaris-Page__Pagination">
                 <polaris-pagination></polaris-pagination>
             </div>
@@ -16,13 +16,14 @@
         <div v-if="primaryAction || secondaryActions.length > 0"
              class="Polaris-Page__Actions">
             <div v-if="primaryAction" class="Polaris-Page__PrimaryAction">
-                <polaris-button primary>
+                <polaris-button primary
+                    @click="handleAction(primaryAction, true)">
                     {{ primaryAction.content }}
                 </polaris-button>
             </div>
             <div v-if="secondaryActions.length > 0" class="Polaris-Page__SecondaryActions">
                 <div class="Polaris-Page__IndividualActions">
-                    <button v-for="action in secondaryActions" 
+                    <button v-for="action in secondaryActions"
                             class="Polaris-Page__Action"
                             @click="handleAction(action, true)">
                         {{ action.content }}
@@ -81,7 +82,7 @@ export default {
             if (this.pagination) {
                 r['Polaris-Page__Header--hasPagination'] = true;
             }
-            
+
             return r;
         }
     },
