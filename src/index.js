@@ -72,6 +72,22 @@ import PolarisLayoutAnnotatedSection from './components/PolarisLayoutAnnotatedSe
 
 import ComponentHelpers from './ComponentHelpers.js';
 
+import config from 'config/config.js';
+import log from 'util/log.js';
+import ConsoleLogger from 'util/loggers/ConsoleLogger.js';
+
+const TAG = 'Bootstrap';
+
+// Configure logging
+const logger = new ConsoleLogger;
+if (!config.debug) {
+    logger.setLogLevel(log.WARN)
+}
+log.addLogger(logger);
+log.send(log.DEBUG, TAG, 'Initialized logging.');
+
+
+
 export default {
     install(Vue, options) {
         const defaults = {
@@ -80,11 +96,12 @@ export default {
             }
         };
         options = Object.assign(defaults, options);
-        
+
         ComponentHelpers.setComponentNameFormat(options.componentNameFormat);
-        
-        console.log('installing...');
-        
+
+
+        log.send(log.DEBUG, TAG, 'Installing...');
+
         const components = {
             // Main components
             AccountConnection:      PolarisAccountConnection,
@@ -92,15 +109,15 @@ export default {
             Button:                 PolarisButton,
             ButtonGroup:            PolarisButtonGroup,
             SettingToggle:          PolarisSettingToggle,
-            
+
             Avatar:                 PolarisAvatar,
             Badge:                  PolarisBadge,
             Icon:                   PolarisIcon,
             KeyboardKey:            PolarisKeyboardKey,
             Thumbnail:              PolarisThumbnail,
-            
+
             Banner:                 PolarisBanner,
-            
+
             CalloutCard:            PolarisCalloutCard,
             Card:                   PolarisCard,
             EmptyState:             PolarisEmptyState,
@@ -108,14 +125,14 @@ export default {
             Page:                   PolarisPage,
             PageActions:            PolarisPageActions,
             Stack:                  PolarisStack,
-            
+
             Heading:                PolarisHeading,
             Subheading:             PolarisSubheading,
             Caption:                PolarisCaption,
             DisplayText:            PolarisDisplayText,
             FooterHelp:             PolarisFooterHelp,
             VisuallyHidden:         PolarisVisuallyHidden,
-            
+
             Checkbox:               PolarisCheckbox,
             ChoiceList:             PolarisChoiceList,
             ColorPicker:            PolarisColorPicker,
@@ -126,23 +143,23 @@ export default {
             Select:                 PolarisSelect,
             Tag:                    PolarisTag,
             TextField:              PolarisTextField,
-            
+
             Collapsible:            PolarisCollapsible,
             Scrollable:             PolarisScrollable,
-            
+
             DescriptionList:        PolarisDescriptionList,
             List:                   PolarisList,
             ListItem:               PolarisListItem,
             ResourceList:           PolarisResourceList,
             ResourceListItem:       PolarisResourceListItem,
-            
+
             Link:                   PolarisLink,
             Pagination:             PolarisPagination,
             Tabs:                   PolarisTabs,
-            
+
             Popover:                PolarisPopover,
-            
-            
+
+
             // Not in main docs
             TextStyle:              PolarisTextStyle,
             SettingAction:          PolarisSettingAction,
@@ -150,7 +167,7 @@ export default {
             TextContainer:          PolarisTextContainer,
             Breadcrumbs:            PolarisBreadcrumbs,
             UnstyledLink:           PolarisUnstyledLink,
-            
+
             // Added by polaris-vue
             StackItem:              PolarisStackItem,
             CardSection:            PolarisCardSection,
@@ -158,14 +175,14 @@ export default {
             LayoutAnnotatedSection: PolarisLayoutAnnotatedSection,
             ButtonGroupItem:        PolarisButtonGroupItem,
         };
-        
+
+        var count = 0;
         for (var polarisName in components) {
             var componentName = ComponentHelpers.getComponentName(polarisName);
-            // in Vue2, component names are always lowercase
-            
-            console.log('registered: '+componentName+' -> '+polarisName);
             Vue.component(componentName, components[polarisName]);
+            count++;
         }
+
+        log.send(log.DEBUG, TAG, 'Installed '+count+' components.');
     }
 };
- 

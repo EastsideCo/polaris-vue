@@ -33,8 +33,7 @@
     "type": "git",
     "url": "https://bitbucket.org/sigapps/polaris-vue.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Kiran Price",
   "license": "MIT",
   "dependencies": {
