@@ -78,6 +78,7 @@ export default {
     watch: {
         active() {
             this.$nextTick(this.handleMeasurement);
+            setTimeout(this.handleMeasurement, 500);
         },
     },
     mounted() {
