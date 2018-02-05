@@ -3,6 +3,9 @@ export default {
     render(createElement) {
         return createElement(this.tag, {
             on: this.on,
+            domProps: {
+                value: this.value,
+            },
             ref: 'element'
         }, this.$slots.default)
     },
@@ -16,7 +19,10 @@ export default {
             default() {
                 return {};
             }
-        }
+        },
+        value: {
+            type: [String, Number],
+        },
     },
     methods: {
         blur() {

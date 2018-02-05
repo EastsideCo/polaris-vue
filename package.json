@@ -1,6 +1,6 @@
 {
   "name": "@eastsideco/polaris-vue",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Shopify Polaris for Vue 2",
   "main": "lib/polaris-vue.min.js",
   "scripts": {
