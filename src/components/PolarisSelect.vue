@@ -34,13 +34,13 @@
                 <template v-for="option in options">
                     <option 
                         v-if="typeof option == 'string'"
-                        key="option"
+                        :key="option"
                         :value="option">
                         {{ option }}
                     </option>
                     <option
                         v-if="typeof option != 'string'"
-                        key="option.value"
+                        :key="option.value"
                         :value="option.value"
                         :disabled="option.disabled">
                         {{ option.label }}
@@ -53,13 +53,13 @@
                         <template v-for="option in group">
                             <option 
                                 v-if="typeof option == 'string'"
-                                key="option"
+                                :key="option"
                                 :value="option">
                                 {{ option }}
                             </option>
                             <option
                                 v-if="typeof option != 'string'"
-                                key="option.value"
+                                :key="option.value"
                                 :value="option.value"
                                 :disabled="option.disabled">
                                 {{ option.label }}
@@ -69,17 +69,17 @@
                     <template v-if="group.hasOwnProperty('title')">
                         <optgroup
                             :label="group.title"
-                            key="group.title">
+                            :key="group.title">
                             <template v-for="option in group.options">
                                 <option 
                                     v-if="typeof option == 'string'"
-                                    key="option"
+                                    :key="option"
                                     :value="option">
                                     {{ option }}
                                 </option>
                                 <option
                                     v-if="typeof option != 'string'"
-                                    key="option.value"
+                                    :key="option.value"
                                     :value="option.value"
                                     :disabled="option.disabled">
                                     {{ option.label }}
