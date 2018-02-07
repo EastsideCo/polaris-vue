@@ -19,6 +19,10 @@
   align-items: stretch;
 }
 
+.Polaris-Stack--noWrap {
+  flex-wrap: nowrap;
+}
+
 .Polaris-Stack--vertical {
   flex-direction: column;
 }

@@ -1,10 +1,107 @@
 <template>
-<span :class="classes" v-html="finalSource" :aria-label="accessibilityLabel"></span>
+<span :class="classes" aria-label="accessibilityLabel">
+    <div v-if="source == 'placeholder'" class="Polaris-Icon__Placeholder"></div>
+    <svg 
+        v-if="source != 'placeholder'"
+        class="Polaris-Icon__Svg"
+        :viewBox="finalSource.viewBox"
+        v-html="finalSource.body"/>
+</span>
 </template>
 
 
 <script>
 import SvgSource from '../SvgSource.js';
+
+import {
+    add,
+    alert,
+    arrowDown,
+    arrowLeft,
+    arrowRight,
+    arrowUp,
+    arrowUpDown,
+    calendar,
+    cancel,
+    cancelSmall,
+    caretDown,
+    caretUp,
+    checkmark,
+    chevronDown,
+    chevronLeft,
+    chevronRight,
+    chevronUp,
+    circleCancel,
+    circleChevronDown,
+    circleChevronLeft,
+    circleChevronRight,
+    circleChevronUp,
+    circlePlus,
+    conversation,
+    delete as deleteIcon,
+    disable,
+    dispute,
+    duplicate,
+    embed,
+    export as exportIcon,
+    external,
+    help,
+    horizontalDots,
+    import as importIcon,
+    notes,
+    print,
+    refresh,
+    risk,
+    save,
+    search,
+    subtract,
+    view,
+} from '../resources/icons/';
+
+export const BUNDLED_ICONS = {
+    add,
+    alert,
+    arrowDown,
+    arrowLeft,
+    arrowRight,
+    arrowUp,
+    arrowUpDown,
+    calendar,
+    cancel,
+    cancelSmall,
+    caretDown,
+    caretUp,
+    checkmark,
+    chevronDown,
+    chevronLeft,
+    chevronRight,
+    chevronUp,
+    circleCancel,
+    circleChevronDown,
+    circleChevronLeft,
+    circleChevronRight,
+    circleChevronUp,
+    circlePlus,
+    conversation,
+    delete: deleteIcon,
+    disable,
+    dispute,
+    duplicate,
+    embed,
+    export: exportIcon,
+    external,
+    help,
+    horizontalDots,
+    import: importIcon,
+    notes,
+    print,
+    refresh,
+    risk,
+    save,
+    search,
+    subtract,
+    view,
+};
 
 export default {
     props: {
@@ -22,7 +119,16 @@ export default {
     },
     computed: {
         finalSource() {
-            return SvgSource.create(this.source, 'Polaris-Icon__Svg');
+            var svgSource = this.source;
+            if (typeof this.source == 'string') {
+                const bundled = BUNDLED_ICONS[this.source];
+                if (bundled) {
+                    svgSource = bundled;
+                }
+            }
+
+            var svgObject = SvgSource.parseSVG(svgSource);
+            return svgObject;
         },
         classes() {
             var r = {

@@ -11,6 +11,7 @@
                 :value="choice.value"
                 :label="choice.label"
                 :helpText="choice.helpText"
+                :disabled="disabled"
                 :checked="choiceIsSelected(choice)"
                 @change="handleChange($event, choice)">
             </polaris-checkbox>
@@ -19,7 +20,8 @@
                 :name="finalName"
                 :value="choice.value"
                 :label="choice.label"
-                :helpText="choice.helpText"
+                :helpText="choice.helpText" 
+                :disabled="disabled"
                 :checked="choiceIsSelected(choice)"
                 @change="handleChange($event, choice)">
             </polaris-radio-button>
@@ -55,7 +57,8 @@ export default {
             default() { return []; }
         },
         name: String,
-        allowMultiple: Boolean
+        allowMultiple: Boolean,
+        disabled: Boolean,
     },
     computed: {
         finalName() {

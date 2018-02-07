@@ -23,6 +23,11 @@
                 value9: null,
                 value10: null,
                 
+
+                test0: false,
+                test1: false,
+                test2: false,
+
                 pickerMonth: 4,
                 pickerYear: 2017,
                 

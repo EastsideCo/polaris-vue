@@ -22,8 +22,8 @@ $content-max-width: rem(400px);
   }
 }
 
-.Polaris-Popover--measuring:not(.Polaris-Popover--leaving),
-.Polaris-Popover--leaving {
+.Polaris-Popover--measuring:not(.Polaris-Popover--exiting),
+.Polaris-Popover--exiting {
   opacity: 0;
 }
 
@@ -33,7 +33,7 @@ $content-max-width: rem(400px);
   }
 }
 
-.Polaris-Popover--leaving {
+.Polaris-Popover--exiting {
   transition-timing-function: easing(out);
 }
 

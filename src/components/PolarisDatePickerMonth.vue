@@ -1,13 +1,14 @@
 <template>
 <div role="grid" class="Polaris-DatePicker__Month">
-    <div class="Polaris-DatePicker__Title">
+    <div :class="titleClasses">
         {{ realMonthName }} {{ year }}
     </div>
     <div role="rowheader" class="Polaris-DatePicker__WeekHeadings">
         <polaris-date-picker-weekday 
-            v-for="dayName in weekdays"
-            key="dayName"
+            v-for="dayName, dayIndex in weekdays"
+            :key="dayIndex"
             :title="abbreviateWeekday(dayName)"
+            :current="current && new Date().getDay() === dayIndex"
             :label="dayName">
         </polaris-date-picker-weekday>
     </div>
@@ -16,7 +17,7 @@
             <template v-for="day, dayIndex in week">
                 <polaris-date-picker-day
                     v-if="!day"
-                    key="dayIndex"
+                    :key="dayIndex"
                     @hover="handleHoverEmptyDay">
                 </polaris-date-picker-day>
                 <polaris-date-picker-day
@@ -39,6 +40,7 @@
 
 
 <script>
+import ComponentHelpers from '../ComponentHelpers.js';
 import PolarisDatePickerWeekday from './PolarisDatePickerWeekday.vue';
 import PolarisDatePickerDay from './PolarisDatePickerDay.vue';
 import dateUtils from '../data/date-utils.js';
@@ -66,6 +68,15 @@ export default {
         weekdayName: String,
     },
     computed: {
+        titleClasses() {
+            return {
+                'Polaris-DatePicker__Title': 1,
+                'Polaris-DatePicker__Month--current': this.current
+            };
+        },
+        current() {
+            return new Date().getMonth() === this.month;
+        },
         weeks() {
             const firstOfMonth = new Date(this.year, this.month, 1);
             const firstDayOfWeek = firstOfMonth.getDay();

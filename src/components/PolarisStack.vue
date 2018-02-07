@@ -14,6 +14,7 @@ export default {
     },
     props: {
         vertical: Boolean,
+        wrap: Boolean,
         spacing: {
             type: String,
             default: 'tight',
@@ -54,16 +55,18 @@ export default {
                     'fillEvenly'
                 ].indexOf(v) != -1;
             }
-        }
+        },
     },
     computed: {
         classes() {
-            return ComponentHelpers.makeComponentClass('Polaris-Stack', [
+            var r = ComponentHelpers.makeComponentClass('Polaris-Stack', [
                 'vertical',
                 'spacing',
                 'alignment',
                 'distribution'
             ], this);
+            r['Polaris-Stack--noWrap'] = !this.wrap;
+            return r;
         }
     }
 };

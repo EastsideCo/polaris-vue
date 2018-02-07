@@ -11,16 +11,21 @@
         :class="classes"
         :data-polaris-unstyled="url ? 'true' : ''"
         :href="url"
-        :disabled="disabled"
-        :target="external ? '_blank' : ''">
+        :disabled="isDisabled"
+        :target="external ? '_blank' : ''"
+        :role="loading ? 'alert' : null"
+        :aria-busy="loading ? true : null">
+    <span v-if="loading" class="Polaris-Button__Spinner">
+        <polaris-spinner size="small" :color="spinnerColor" accessibility-label="Loading"/>
+    </span>
+    <span v-if="icon" class="Polaris-Button__Icon">
+        <polaris-icon :source="realIcon"></polaris-icon>
+    </span>
     <span v-if="$slots.default" class="Polaris-Button__Content">
         <slot></slot>
     </span>
     <span v-if="disclosure" class="Polaris-Button__Icon">
         <polaris-icon :source="disclosureIcon"></polaris-icon>
-    </span>
-    <span v-if="!disclosure && icon" class="Polaris-Button__Icon">
-        <polaris-icon :source="icon"></polaris-icon>
     </span>
 </dynamic-tag>
 </template>
@@ -29,17 +34,17 @@
 <script>
 import DynamicTag from './DynamicTag.vue';
 import PolarisIcon from './PolarisIcon.vue';
+import PolarisSpinner from './PolarisSpinner.vue';
 import ComponentHelpers from '../ComponentHelpers.js';
-import disclosureIcon from '../resources/disclosure.svg';
 
 export default {
     components: {
         DynamicTag,
-        PolarisIcon
+        PolarisIcon,
+        PolarisSpinner,
     },
     data: () => {
         return {
-            disclosureIcon: disclosureIcon
         };
     },
     props: {
@@ -48,6 +53,7 @@ export default {
         outline: Boolean,
         destructive: Boolean,
         disabled: Boolean,
+        loading: Boolean,
         size: {
             type: String,
             default: 'default',
@@ -69,18 +75,33 @@ export default {
         iconOnly: Boolean,
     },
     computed: {
-      classes() {
-          return ComponentHelpers.makeComponentClass('Polaris-Button', [
-              'primary',
-              'outline',
-              'destructive',
-              'disabled',
-              'fullWidth',
-              'plain',
-              'size',
-              'iconOnly',
-          ], this);
-      }  
+        disclosureIcon() {
+            return this.loading ? 'placeholder' : 'caretDown';
+        },
+        isDisabled() {
+            return this.disabled || this.loading;
+        },
+        realIcon() {
+            return this.loading ? 'placeholder' : this.icon;
+        },
+        spinnerColor() {
+            return (this.primary || this.destructive) ? 'white' : 'inkLightest';
+        },
+        classes() {
+            var r = ComponentHelpers.makeComponentClass('Polaris-Button', [
+                'primary',
+                'outline',
+                'destructive',
+                'fullWidth',
+                'plain',
+                'size',
+                'iconOnly',
+            ], this);
+            if (this.isDisabled) {
+                r['Polaris-Button--disabled'] = true;
+            }
+            return r;
+        }  
     },
     methods: {
         onClick(e) {

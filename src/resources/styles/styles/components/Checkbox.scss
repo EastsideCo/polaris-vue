@@ -6,7 +6,8 @@
   // The basic checked styles have more specificity than this, so need to
   // basically duplicate that selector here, too.
   // stylelint-disable-next-line selector-max-specificity
-  .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop,
+  .Polaris-Checkbox__Input.Polaris-Checkbox__Input--checked + .Polaris-Checkbox__Backdrop,
+  .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate + .Polaris-Checkbox__Backdrop,
   .Polaris-Checkbox__Backdrop {
     @include control-backdrop(error);
   }
@@ -28,13 +29,15 @@
 
   &:focus,
   &:active,
-  &:checked {
+  &.Polaris-Checkbox__Input--checked,
+  &.Polaris-Checkbox__Input--indeterminate {
     + .Polaris-Checkbox__Backdrop {
       background: color(indigo);
     }
   }
 
-  &:checked {
+  &.Polaris-Checkbox__Input--checked,
+  &.Polaris-Checkbox__Input--indeterminate {
     ~ .Polaris-Checkbox__Icon {
       transform: translate(-50%, -50%) scale(1);
     }

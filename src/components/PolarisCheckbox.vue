@@ -7,9 +7,11 @@
                        :id="realId" 
                        :name="name"
                        :value="value"
-                       class="Polaris-Checkbox__Input"
+                       :class="inputClasses"
                        :aria-invald="error == true"
                        :aria-describedBy="helpTextId+' '+errorId"
+                       role="checkbox"
+                       :aria-checked="indeterminate ? 'mixed' : (checked ? 'true' : null)"
                        :checked="checked"
                        :disabled="disabled"
                        @change="onChange"
@@ -59,7 +61,14 @@ export default {
     props: {
         label: String,
         labelHidden: Boolean,
-        checked: Boolean,
+        checked: {
+            type: [Boolean, String],
+            default: false,
+            validator(v) {
+                console.log({v});
+                return (v && typeof v === 'string') ? (v === 'indeterminate') : true;
+            }
+        },
         helpText: String,
         id: String,
         name: String,
@@ -69,11 +78,16 @@ export default {
     },
     data() {
         return {
-            checkIcon: checkIcon,
             checkboxErrorIcon: checkboxErrorIcon,
         }
     },
     computed: {
+        checkIcon() {
+            return this.indeterminate ? 'subtract' : 'checkmark';
+        },
+        indeterminate() {
+            return this.checked == 'indeterminate';
+        },
         realId() {
             return this.id || 'Checkbox' + this._uid;    
         },
@@ -88,6 +102,13 @@ export default {
                 return null;
             }
             return this.realId + 'Error';
+        },
+        inputClasses() {
+            return {
+                'Polaris-Checkbox__Input': true,
+                'Polaris-Checkbox__Input--checked': this.checked,
+                'Polaris-Checkbox__Input--indeterminate': this.indeterminate,
+            };
         },
         labelClasses() {
             return {

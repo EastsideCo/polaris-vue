@@ -65,10 +65,6 @@ export default {
                 'size'
             ], this);
             
-            if (this.source) {
-                r['Polaris-Avatar--hasImage'] = true;
-            }
-            
             var styleClass = this.styleClass(this.name || this.initials);
             r['Polaris-Avatar--'+styleClass] = true;
             

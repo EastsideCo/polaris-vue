@@ -1,5 +1,7 @@
 <template>
-<span :class="classes">
+<nav 
+    :class="classes"
+    :aria-label="accessibilityLabel || 'Pagination'">
     <polaris-unstyled-link
         v-if="previousURL"
         class="Polaris-Pagination__Button"
@@ -37,7 +39,7 @@
         <polaris-icon :source="arrowRight">
         </polaris-icon>
     </polaris-button>
-</span>
+</nav>
 </template>
 
 
@@ -61,13 +63,14 @@ export default {
         nextURL: String,
         previousURL: String,
         plain: Boolean,
+        accessibilityLabel: String,
     },
     computed:{
         classes() {
             return ComponentHelpers.makeComponentClass('Polaris-Pagination', [
                 'plain',
             ], this);
-        }
+        },
     },
     data() {
         return {

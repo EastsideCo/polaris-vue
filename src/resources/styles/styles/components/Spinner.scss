@@ -1,0 +1,38 @@
+$small-size: rem(20px);
+$large-size: rem(44px);
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin spinnerSize($size) {
+  height: $size;
+  width: $size;
+}
+
+.Polaris-Spinner {
+  animation: loading duration(slowest) linear infinite;
+  color: transparent;
+}
+
+.Polaris-Spinner--sizeSmall {
+  @include spinnerSize($small-size);
+}
+
+.Polaris-Spinner--sizeLarge {
+  @include spinnerSize($large-size);
+}
+
+.Polaris-Spinner--colorWhite {
+  fill: color(white);
+}
+
+.Polaris-Spinner--colorTeal {
+  fill: color(teal);
+}
+
+.Polaris-Spinner--colorInkLightest {
+  fill: color(ink, lightest);
+}

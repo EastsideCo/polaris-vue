@@ -212,7 +212,6 @@ export default {
             ], ex);
         },
         onMouseEnter() {
-            console.log('mouse enter, focus');
             this.focused = true;
         },
         onMouseLeave() {

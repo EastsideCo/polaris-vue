@@ -28,6 +28,10 @@ $in-range-border-color: #9ca6de;
   min-width: rem(230px);
 }
 
+.Polaris-DatePicker__Month--current {
+  font-weight: bold;
+}
+
 .Polaris-DatePicker__Week,
 .Polaris-DatePicker__WeekHeadings {
   display: flex;
@@ -45,6 +49,7 @@ $in-range-border-color: #9ca6de;
   padding: spacing(tight);
   background: transparent;
   border: border();
+  border-radius: 0;
   outline: none;
   font-size: $font-size;
   text-align: center;
@@ -62,6 +67,10 @@ $in-range-border-color: #9ca6de;
   + .Polaris-DatePicker__EmptyDay {
     margin-left: -1px;
   }
+}
+
+.Polaris-DatePicker__Day--today {
+  font-weight: bold;
 }
 
 .Polaris-DatePicker__Day--inRange {
@@ -129,6 +138,11 @@ $in-range-border-color: #9ca6de;
   + .Polaris-DatePicker__Weekday {
     margin-left: -1px;
   }
+}
+
+.Polaris-DatePicker__Weekday--current {
+  font-weight: bold;
+  color: color(black, base);
 }
 
 .Polaris-DatePicker__Header {

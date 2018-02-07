@@ -1,0 +1,30 @@
+$skeleton-display-text-max-width: rem(120px);
+
+@mixin skeleton-display-text-height($size){
+  height: line-height($size);
+  @include when-typography-not-condensed {
+    height: line-height($size, large-screen);
+  }
+}
+
+.Polaris-SkeletonDisplayText__DisplayText {
+  max-width: $skeleton-display-text-max-width;
+  @include skeleton-shimmer;
+  @include skeleton-content;
+}
+
+.Polaris-SkeletonDisplayText--sizeSmall {
+  @include skeleton-display-text-height('display-small');
+}
+
+.Polaris-SkeletonDisplayText--sizeMedium {
+  @include skeleton-display-text-height('display-medium');
+}
+
+.Polaris-SkeletonDisplayText--sizeLarge {
+  @include skeleton-display-text-height('display-large');
+}
+
+.Polaris-SkeletonDisplayText--sizeExtraLarge {
+  @include skeleton-display-text-height('display-x-large');
+}

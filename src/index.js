@@ -14,6 +14,8 @@ import PolarisKeyboardKey from './components/PolarisKeyboardKey.vue';
 import PolarisThumbnail from './components/PolarisThumbnail.vue';
 
 import PolarisBanner from './components/PolarisBanner.vue';
+import PolarisSpinner from './components/PolarisSpinner.vue';
+import PolarisProgressBar from './components/PolarisProgressBar.vue';
 
 import PolarisCalloutCard from './components/PolarisCalloutCard.vue';
 import PolarisCard from './components/PolarisCard.vue';
@@ -29,6 +31,10 @@ import PolarisFooterHelp from './components/PolarisFooterHelp.vue';
 import PolarisHeading from './components/PolarisHeading.vue';
 import PolarisSubheading from './components/PolarisSubheading.vue';
 import PolarisVisuallyHidden from './components/PolarisVisuallyHidden.vue';
+
+import PolarisSkeletonBodyText from './components/PolarisSkeletonBodyText.vue';
+import PolarisSkeletonDisplayText from './components/PolarisSkeletonDisplayText.vue';
+import PolarisSkeletonPage from './components/PolarisSkeletonPage.vue';
 
 import PolarisCheckbox from './components/PolarisCheckbox.vue';
 import PolarisChoiceList from './components/PolarisChoiceList.vue';
@@ -69,6 +75,11 @@ import PolarisCardSection from './components/PolarisCardSection.vue';
 import PolarisLayoutSection from './components/PolarisLayoutSection.vue';
 import PolarisButtonGroupItem from './components/PolarisButtonGroupItem.vue';
 import PolarisLayoutAnnotatedSection from './components/PolarisLayoutAnnotatedSection.vue';
+
+
+import PolarisVueFadeTransition from './components/transitions/FadeTransition.vue';
+import PolarisVueFadeUpTransition from './components/transitions/FadeUpTransition.vue';
+import PolarisVueCollapseTransition from './components/transitions/CollapseTransition.vue';
 
 import ComponentHelpers from './ComponentHelpers.js';
 
@@ -117,6 +128,8 @@ export default {
             Thumbnail:              PolarisThumbnail,
 
             Banner:                 PolarisBanner,
+            Spinner:                PolarisSpinner,
+            ProgressBar:            PolarisProgressBar,
 
             CalloutCard:            PolarisCalloutCard,
             Card:                   PolarisCard,
@@ -132,6 +145,10 @@ export default {
             DisplayText:            PolarisDisplayText,
             FooterHelp:             PolarisFooterHelp,
             VisuallyHidden:         PolarisVisuallyHidden,
+
+            SkeletonBodyText:       PolarisSkeletonBodyText,
+            SkeletonDisplayText:    PolarisSkeletonDisplayText,
+            SkeletonPage:           PolarisSkeletonPage,
 
             Checkbox:               PolarisCheckbox,
             ChoiceList:             PolarisChoiceList,
@@ -174,6 +191,10 @@ export default {
             LayoutSection:          PolarisLayoutSection,
             LayoutAnnotatedSection: PolarisLayoutAnnotatedSection,
             ButtonGroupItem:        PolarisButtonGroupItem,
+
+            VueFadeTransition:      PolarisVueFadeTransition,
+            VueFadeUpTransition:    PolarisVueFadeUpTransition,
+            VueCollapseTransition:  PolarisVueCollapseTransition,
         };
 
         var count = 0;
@@ -181,6 +202,7 @@ export default {
             var componentName = ComponentHelpers.getComponentName(polarisName);
             Vue.component(componentName, components[polarisName]);
             count++;
+            console.log(componentName + ' -> ' + polarisName);
         }
 
         log.send(log.DEBUG, TAG, 'Installed '+count+' components.');

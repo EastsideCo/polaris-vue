@@ -14,6 +14,7 @@ $stacking-order: (
   align-items: center;
   padding: 0 $backdrop-horizontal-spacing;
   color: color(ink, lightest);
+  cursor: text;
 }
 
 .Polaris-TextField--multiline {
@@ -29,6 +30,18 @@ $stacking-order: (
 
 .Polaris-TextField--hasValue {
   color: color(ink);
+}
+
+.Polaris-TextField--focus > .Polaris-TextField__Input,
+.Polaris-TextField__Input:focus {
+  outline: none;
+
+  ~ .Polaris-TextField__Backdrop {
+    border-color: color(indigo);
+    box-shadow:
+      inset shadow(transparent),
+      0 0 0 1px color(indigo);
+  }
 }
 
 .Polaris-TextField--error {
@@ -60,6 +73,7 @@ $stacking-order: (
 
 .Polaris-TextField--disabled {
   color: color(ink, lightest);
+  cursor: initial;
 
   > .Polaris-TextField__Backdrop {
     background-color: color(sky, lighter);
@@ -92,15 +106,9 @@ $stacking-order: (
     -webkit-text-fill-color: currentColor;
   }
 
-  &:focus {
-    outline: none;
-
-    ~ .Polaris-TextField__Backdrop {
-      border-color: color(indigo);
-      box-shadow:
-        inset shadow(transparent),
-        0 0 0 1px color(indigo);
-    }
+  //remove the box shadow in Firefox when the input is invalid
+  &:invalid {
+    box-shadow: none;
   }
 
   &::placeholder {
@@ -131,8 +139,10 @@ $stacking-order: (
   border: border(dark);
   box-shadow: inset 0 1px 0 0 rgba(color(ink, lighter), 0.05);
   border-radius: border-radius();
-  will-change: box-shadow;
-  transition: box-shadow duration() easing();
+  will-change: box-shadow, border-color;
+  transition-property: box-shadow, border-color;
+  transition-duration: duration();
+  transition-timing-function: easing();
 }
 
 .Polaris-TextField__Prefix {
@@ -141,6 +151,7 @@ $stacking-order: (
   flex: 0 0 auto;
   margin-right: $addon-horizontal-spacing;
   color: currentColor;
+  pointer-events: none;
 }
 
 .Polaris-TextField__Suffix {
@@ -149,6 +160,7 @@ $stacking-order: (
   flex: 0 0 auto;
   margin-left: $addon-horizontal-spacing;
   color: currentColor;
+  pointer-events: none;
 }
 
 .Polaris-TextField__Spinner {
@@ -159,6 +171,7 @@ $stacking-order: (
   width: rem(22px);
   margin: 1px calc(-#{$backdrop-horizontal-spacing} + 1px) 1px $backdrop-horizontal-spacing;
   color: color(ink);
+  cursor: pointer;
 }
 
 .Polaris-TextField__SpinnerIcon {

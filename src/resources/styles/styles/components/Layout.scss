@@ -21,6 +21,10 @@ $relative-size: $primary-basis / $secondary-basis;
   min-width: 0;
 }
 
+.Polaris-Layout__Section--fullWidth {
+  flex: 1 1 100%;
+}
+
 .Polaris-Layout__AnnotatedSection {
   min-width: 0;
   flex: 1 1 100%;

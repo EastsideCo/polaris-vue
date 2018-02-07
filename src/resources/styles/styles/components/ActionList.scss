@@ -35,6 +35,8 @@ $item-vertical-padding: ($item-min-height - line-height(body)) / 2;
   padding: $item-vertical-padding spacing();
   text-align: left;
   cursor: pointer;
+  border-radius: 0;
+  color: color(ink, light);
 
   &:hover,
   &:focus,
@@ -47,6 +49,16 @@ $item-vertical-padding: ($item-min-height - line-height(body)) / 2;
       @include recolor-icon(color(sky));
     }
   }
+
+  &.Polaris-ActionList--disabled {
+    color: color(ink, lightest);
+    cursor: default;
+    pointer-events: none;
+
+    .Polaris-ActionList__Image {
+      @include recolor-icon(color(ink, lightest));
+    }
+  }
 }
 
 .Polaris-ActionList__Content {
@@ -55,13 +67,14 @@ $item-vertical-padding: ($item-min-height - line-height(body)) / 2;
 }
 
 .Polaris-ActionList__Image {
-  @include recolor-icon(color(ink, lightest));
+  @include recolor-icon(color(ink, light));
   display: flex;
   flex: 0 0 auto;
   justify-content: center;
   align-items: center;
   height: $image-size;
   width: $image-size;
+  border-radius: border-radius();
 
   // We need the negative margin to ensure that the image does not set
   // the minimum height of the action item.

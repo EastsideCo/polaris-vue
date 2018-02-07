@@ -12,8 +12,12 @@
 
 <script>
 import ComponentHelpers from '../ComponentHelpers.js';
+import PolarisVueCollapseTransition from './transitions/CollapseTransition.vue';
 
 export default {
+    components: {
+        PolarisVueCollapseTransition,
+    },
     props: {
         open: Boolean
     },

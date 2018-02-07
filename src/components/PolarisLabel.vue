@@ -7,17 +7,6 @@
         <slot v-if="!$slots.children">{{ children }}</slot>
         <slot name="children"></slot>
     </label>
-    <polaris-button 
-        v-if="action"
-        @click="handleAction(action)" 
-        :primary="!connected" 
-        :url="action.url"
-        :destructive="action.destructive"
-        :disabled="action.disabled"
-        :icon="action.icon"
-        :accessibility-label="action.accessibilityLabel">
-        {{ action.content }}
-    </polaris-button>
 </div>
 </template>
 
@@ -27,7 +16,6 @@ export default {
     props: {
         children: String,
         id: String,
-        action: Object,
         hidden: Boolean
     },
     computed: {

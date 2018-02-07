@@ -1,6 +1,5 @@
 $navigation-elements-height: rem(36px);
 $title-height: line-height(display-large, large-screen);
-$actions-vertical-spacing: spacing(tight);
 $action-horizontal-padding: (1.5 * spacing(tight));
 
 $difference-between-touch-area-and-backdrop: control-height() - control-slim-height();
@@ -16,57 +15,36 @@ html, body {
 }
 
 .Polaris-Page {
-  margin: 0 auto;
-  padding: 0;
-  max-width: layout-width(primary, max) + layout-width(secondary, max) + layout-width(inner-spacing);
-
-  @include page-content-when-not-fully-condensed {
-    padding: 0 spacing(loose);
-  }
-
-  @include page-content-when-not-partially-condensed {
-    padding: 0 spacing(extra-loose);
-  }
+  @include page-layout;
 }
 
 .Polaris-Page--fullWidth {
   max-width: none;
 }
 
+.Polaris-Page--singleColumn {
+  max-width: layout-width(primary, max);
+}
+
 .Polaris-Page__Content {
-  margin: 0 0 spacing(loose);
+  @include page-content-layout;
 }
 
 .Polaris-Page__Header {
-  padding: spacing(loose);
-
-  @include page-content-when-not-fully-condensed {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  @include page-content-when-not-partially-condensed {
-    padding-top: spacing(extra-loose);
-    padding-bottom: spacing(extra-loose);
-  }
+  @include page-header-layout;
 }
 
 .Polaris-Page__Header--hasPagination,
 .Polaris-Page__Header--hasBreadcrumbs {
   padding-top: spacing(loose);
-  padding-bottom: rem(24px);
-
-  &.Polaris-Page__Header--hasSecondaryActions {
-    padding-bottom: spacing(loose);
-  }
 }
 
 .Polaris-Page__Header--hasSecondaryActions {
-  padding-top: rem(24px);
-  padding-bottom: spacing(loose);
+  @include page-header-has-secondaryactions;
 }
 
 .Polaris-Page__Header--hasSeparator {
+  padding-bottom: spacing();
   border-bottom: border();
 
   + .Polaris-Page__Content {
@@ -116,15 +94,7 @@ html, body {
 }
 
 .Polaris-Page__Actions {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 2 * $actions-vertical-spacing;
-
-  @include page-content-when-not-fully-condensed {
-    margin-top: $actions-vertical-spacing;
-  }
+  @include page-actions-layout;
 }
 
 .Polaris-Page__SecondaryActions {
@@ -170,15 +140,18 @@ html, body {
 .Polaris-Page__Action {
   @include unstyled-button;
   @include text-style-body;
+  display: inline-flex;
+  align-items: center;
   position: relative;
   min-height: control-height();
+  text-decoration: none;
 
   // Negative margin vertically for the amount that is not covered by
   // the focus overlay
   margin-top: -0.5 * $difference-between-touch-area-and-backdrop;
   margin-bottom: -0.5 * $difference-between-touch-area-and-backdrop;
   padding: 0 $action-horizontal-padding;
-  color: color(ink, lighter);
+  color: color(ink, light);
 
   &:hover,
   &:active {
@@ -211,12 +184,21 @@ html, body {
     transition-duration: duration();
     transition-timing-function: easing();
   }
+
+  &.Polaris-Page--disabled {
+    color: color(ink, lightest);
+    cursor: default;
+    pointer-events: none;
+
+    .Polaris-Page__ActionIcon {
+      @include recolor-icon(color(ink, lightest));
+    }
+  }
 }
 
 .Polaris-Page__ActionContent {
   display: flex;
   align-items: center;
-  min-height: control-height();
 }
 
 .Polaris-Page__ActionIcon {
@@ -235,4 +217,14 @@ html, body {
     // spacing on the right of the button)
     margin-right: -3px;
   }
+
+  &.Polaris-Page--disabled {
+    @include recolor-icon(color(ink, lightest));
+  }
+}
+
+.Polaris-Page__Details {
+  padding: spacing();
+  margin-top: -1 * spacing(tight);
+  border-top: border();
 }

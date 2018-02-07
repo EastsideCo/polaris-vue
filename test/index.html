@@ -88,9 +88,9 @@
         </style>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         
-        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
         
-        <script src="../lib/polaris-vue.min.js"></script>
+        <script src="../lib/polaris-vue.js"></script>
         <link rel="stylesheet" href="../lib/polaris-vue.css"></link>
         
         <script src="test.js"></script>
@@ -198,7 +198,7 @@
                 Esc/polaris-vue pre-release
             </div>
             <div class="testSubtitle">
-                Current target: Shopify/polaris v1.3.1
+                Current target: Shopify/polaris v1.9.1
             </div>
             <div class="testDescription">
                 <p>
@@ -236,6 +236,52 @@
                     In the React library, it accepts an item render function as a prop --
                     in Polaris-Vue we use a scoped slot instead.
                 </p>
+            </div>
+
+            <div class="testSection">
+                PolarisVue-specific
+            </div>
+
+            <div class="testHeader">&lt;polaris-vue-fade-transition&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-vue-fade-transition>
+                        <div v-if="test0">
+                            Hi!
+                        </div>
+                    </polaris-vue-fade-transition>
+                    <button @click="test0 = !test0">
+                        Toggle
+                    </button>
+                </div>
+            </div>
+
+            <div class="testHeader">&lt;polaris-vue-fade-up-transition&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-vue-fade-up-transition>
+                        <div v-if="test0">
+                            Hi!
+                        </div>
+                    </polaris-vue-fade-up-transition>
+                    <button @click="test0 = !test0">
+                        Toggle
+                    </button>
+                </div>
+            </div>
+                
+            <div class="testHeader">&lt;polaris-vue-collapse-transition&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-vue-collapse-transition>
+                        <div v-if="test0">
+                            Hi!
+                        </div>
+                    </polaris-vue-collapse-transition>
+                    <button @click="test0 = !test0">
+                        Toggle
+                    </button>
+                </div>
             </div>
             
             <div class="testSection">
@@ -351,11 +397,21 @@
             <div class="testCase">
                 <div class="example">
                     <polaris-text-container>
-                        Text container
+                         Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text containerText container
                     </polaris-text-container>
                 </div>
                 <pre class="code"><code class="html">&lt;polaris-text-container&gt;
-    Text container
+     Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text containerText container
+&lt;/polaris-text-container&gt;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-text-container spacing="loose">
+                         Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text containerText container
+                    </polaris-text-container>
+                </div>
+                <pre class="code"><code class="html">&lt;polaris-text-container spacing="loose"&gt;
+     Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text containerText container
 &lt;/polaris-text-container&gt;</code></pre>
             </div>
             
@@ -671,6 +727,26 @@
                     </polaris-button>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-button destructive&#x3E;
+    &#x3C;b&#x3E;&#x3C;i&#x3E;HTML&#x3C;/i&#x3E;&#x3C;/b&#x3E; Content
+&#x3C;/polaris-button&#x3E;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-button loading>
+                        <b><i>HTML</i></b> Content
+                    </polaris-button>
+                </div>
+                <pre class="code"><code class="html">&#x3C;polaris-button loading&#x3E;
+    &#x3C;b&#x3E;&#x3C;i&#x3E;HTML&#x3C;/i&#x3E;&#x3C;/b&#x3E; Content
+&#x3C;/polaris-button&#x3E;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-button loading primary>
+                        <b><i>HTML</i></b> Content
+                    </polaris-button>
+                </div>
+                <pre class="code"><code class="html">&#x3C;polaris-button loading primary&#x3E;
     &#x3C;b&#x3E;&#x3C;i&#x3E;HTML&#x3C;/i&#x3E;&#x3C;/b&#x3E; Content
 &#x3C;/polaris-button&#x3E;</code></pre>
             </div>
@@ -1069,8 +1145,63 @@
 &#x3C;/polaris-banner&#x3E;</code></pre>
             </div>
             
+
+            <div class="testHeader">&lt;polaris-spinner&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-spinner
+                        size="large"
+                        color="teal"/>
+                </div>
+                <pre class="code"><code class="html">&lt;polaris-spinner
+    size="large"
+    color="teal"/&gt;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-spinner
+                        accessibility-label="Loading products"
+                        size="large"
+                        color="teal"/>
+                </div>
+                <pre class="code"><code class="html">&lt;polaris-spinner
+    accessibility-label="Loading products"
+    size="large"
+    color="teal"/&gt;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-spinner
+                        size="small"
+                        color="teal"/>
+                </div>
+                <pre class="code"><code class="html">&lt;polaris-spinner
+    size="small"
+    color="teal"/&gt;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-spinner
+                        size="large"
+                        color="white"/>
+                </div>
+                <pre class="code"><code class="html">&lt;polaris-spinner
+    size="large"
+    color="white"/&gt;</code></pre>
+            </div>
             
             
+            <div class="testHeader">&lt;polaris-progress-bar&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-progress-bar :progress="75"/>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-progress-bar :progress="30" size="small">
+                </div>
+            </div>
             
             
             
@@ -1238,6 +1369,28 @@
                                 <p>View a summary of your order.</p>
                             </polaris-card>
                         </polaris-layout-section>
+                    </polaris-layout>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-layout>
+                        <polaris-layout-section full-width>
+                            <polaris-card title="Order details" sectioned>
+                                <p>View a summary of your order.</p>
+                            </polaris-card>
+                        </polaris-layout-section>
+                    </polaris-layout>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-layout>
+                        <polaris-layout-section>
+                            <polaris-card title="Order details" sectioned>
+                                <p>View a summary of your order.</p>
+                            </polaris-card>
+                        </polaris-layout-section>
                         <polaris-layout-section secondary>
                             <polaris-card title="Tags" sectioned>
                                 <p>Add tags to your order.</p>
@@ -1324,7 +1477,7 @@
                         :primary-action="{content: 'Save', disabled: true}"
                         :secondary-actions="[
                             {content: 'Duplicate', onAction: testAlert},
-                            {content: 'View on your store'},
+                            {content: 'View on your store', url: 'https://google.com/'},
                         ]"
                         :pagination="{hasNext: true, hasPrevious: false}">
                         <p>Page content</p>
@@ -1367,6 +1520,44 @@
     full-width&#x3E;
     &#x3C;p&#x3E;Page content&#x3C;/p&#x3E;
 &#x3C;/polaris-page&#x3E;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-page
+                        title="Jar with lock-lid"
+                        :primary-action="{content: 'Save'}"
+                        :secondary-actions="[
+                            {content: 'Duplicate', onAction: testAlert},
+                        ]"
+                        :action-groups="[
+                            {
+                                title: 'Promote',
+                                actions: [
+                                    { 
+                                        content: 'Share on Facebook',
+                                        onAction: testAlert
+                                    },
+                                ]
+                            },
+                            { 
+                                title: 'Test A',
+                                actions: [
+                                    { 
+                                        content: 'A',
+                                        onAction: testAlert,
+                                    },
+                                    { 
+                                        content: 'B',
+                                        onAction: testAlert,
+                                    },
+                                ]
+                            },
+                        ]"
+                        :pagination="{hasNext: true, hasPrevious: false}"
+                        full-width>
+                        <p>Page content</p>
+                    </polaris-page>
+                </div>
             </div>
             
             <div class="testHeader">&lt;polaris-page-actions&gt;</div>
@@ -1450,6 +1641,32 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-stack alighment=&#x22;center&#x22;&#x3E;
     &#x3C;polaris-heading&#x3E;Order #1136&#x3C;/polaris-heading&#x3E;
+    &#x3C;polaris-badge&#x3E;Paid&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
+&#x3C;/polaris-stack&#x3E;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-stack wrap>
+                        <polaris-badge>Paid</polaris-badge>
+                        <polaris-badge>Fulfilled</polaris-badge>
+                        <polaris-badge>Paid</polaris-badge>
+                        <polaris-badge>Fulfilled</polaris-badge>
+                        <polaris-badge>Paid</polaris-badge>
+                        <polaris-badge>Fulfilled</polaris-badge>
+                        <polaris-badge>Paid</polaris-badge>
+                        <polaris-badge>Fulfilled</polaris-badge>
+                        <polaris-badge>Paid</polaris-badge>
+                        <polaris-badge>Fulfilled</polaris-badge>
+                    </polaris-stack>
+                </div>
+                <pre class="code"><code class="html">&#x3C;polaris-stack wrap&#x3E;
+    &#x3C;polaris-badge&#x3E;Paid&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Paid&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Paid&#x3C;/polaris-badge&#x3E;
+    &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
     &#x3C;polaris-badge&#x3E;Paid&#x3C;/polaris-badge&#x3E;
     &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
 &#x3C;/polaris-stack&#x3E;</code></pre>
@@ -1657,6 +1874,41 @@
         Hidden text for screen readers
 &#x3C;/polaris-visually-hidden&#x3E;</code></pre>
             </div>
+
+
+            <div class="testHeader">&lt;polaris-skeleton-body-text&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-skeleton-body-text :lines="5"/>
+                </div>
+            </div>
+
+            <div class="testHeader">&lt;polaris-skeleton-display-text&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-skeleton-display-text size="large"/>
+                </div>
+            </div>
+
+            <div class="testHeader">&lt;polaris-skeleton-page&gt;</div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-skeleton-page/>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-skeleton-page title="Products"/>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-skeleton-page 
+                        title="Products"
+                        full-width
+                        :secondary-actions="[ {content: 'View inventory', url: 'https://google.com/'} ]"/>
+                </div>
+            </div>
             
             
             <div class="testSection">
@@ -1681,6 +1933,14 @@
                     </polaris-checkbox>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-checkbox label=&#x22;Basic checkbox&#x22; label-hidden&#x3E;
+&#x3C;/polaris-checkbox&#x3E;</code></pre>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-checkbox label="Basic checkbox" checked="indeterminate">
+                    </polaris-checkbox>
+                </div>
+                <pre class="code"><code class="html">&#x3C;polaris-checkbox label=&#x22;Basic checkbox&#x22; indeterminate&#x3E;
 &#x3C;/polaris-checkbox&#x3E;</code></pre>
             </div>
             <div class="testCase">

@@ -16,9 +16,12 @@
         <template slot="right">
             <slot name="connectedRight">{{ connectedRight }}</slot>
         </template>
-        <div :class="classes">
+        <div 
+            :class="classes"
+            @focus="onFocus"
+            @blur="onBlur"
+            @click="onClick">
             <div v-if="prefix"
-                 @click="handleInputFocus"
                  class="Polaris-TextField__Prefix"
                  :id="realId+'Prefix'">
                 {{ prefix}}
@@ -34,9 +37,7 @@
                 :autofocus="autoFocus"
                 :value="value"
                 :placeholder="placeholder"
-                :on="{
-                    focus: onFocus,
-                    blur: onBlur,
+                :on="{ 
                     change: handleChange
                 }"
                 :style="{ height: (multiline && height) ? height+'px' : null }"
@@ -49,7 +50,6 @@
             </dynamic-tag>
             
             <div v-if="suffix"
-                 @click="handleInputFocus"
                  class="Polaris-TextField__Suffix"
                  :id="realId+'Suffix'">
                 {{ suffix }}
@@ -57,7 +57,6 @@
             
             <polaris-text-field-spinner
                 v-if="type === 'number' && !disabled"
-                @click="handleInputFocus"
                 @change="handleNumberChange">
             </polaris-text-field-spinner>
             
@@ -123,12 +122,23 @@ export default {
         min: Number,
         minLength: Number,
         pattern: String,
-        spellCheck: Boolean
+        spellCheck: Boolean,
+        focused: Boolean,
     },
     data() {
         return {
             height: null,
+            focus: false,
         };
+    },
+    watch: {
+        focused() {
+            if (this.focused && !this.focus) {
+                this.$refs.input.focus();
+            } else if (!this.focused && this.focus) {
+                this.$refs.input.blur();
+            }
+        }
     },
     computed: {
         realId() {
@@ -158,7 +168,8 @@ export default {
             var r = ComponentHelpers.makeComponentClass('Polaris-TextField', [
                 'disabled',
                 'readOnly',
-                'multiline'
+                'multiline',
+                'focus',
             ], this);
             
             if (this.error) {
@@ -174,10 +185,15 @@ export default {
     },
     methods: {
         onFocus() {
+            this.focus = true;
             this.$emit('focus');
         },
         onBlur() {
+            this.focus = false;
             this.$emit('blur');
+        },
+        onClick() {
+            this.$refs.input.focus();
         },
         handleExpandingResize(e) {
             this.height = e;

@@ -20,7 +20,11 @@ export default {
             }, children);
         }
         return createElement(PolarisScrollable, {
-            'class': this.classes
+            'class': this.classes,
+            props: {
+                hint: true,
+                shadow: true,
+            }
         }, children);
     },
     props: {

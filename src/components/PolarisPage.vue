@@ -1,37 +1,14 @@
 <template>
 <div :class="classes">
-    <div :class="headerClasses">
-        <div v-if="breadcrumbs.length > 0 || pagination" class="Polaris-Page__Navigation">
-            <polaris-breadcrumbs v-if="breadcrumbs.length > 0"
-                                 :breadcrumbs="breadcrumbs">
-            </polaris-breadcrumbs>
+    <polaris-page-header
+        :title="title"
+        :icon="icon"
+        :separator="separator"
+        :primary-action="primaryAction"
+        :secondary-actions="secondaryActions"
+        :pagination="pagination"
+        :action-groups="actionGroups"/>
 
-            <div v-if="pagination" class="Polaris-Page__Pagination">
-                <polaris-pagination></polaris-pagination>
-            </div>
-        </div>
-        <polaris-display-text size="large">
-            {{ title }}
-        </polaris-display-text>
-        <div v-if="primaryAction || secondaryActions.length > 0"
-             class="Polaris-Page__Actions">
-            <div v-if="primaryAction" class="Polaris-Page__PrimaryAction">
-                <polaris-button primary
-                    @click="handleAction(primaryAction, true)">
-                    {{ primaryAction.content }}
-                </polaris-button>
-            </div>
-            <div v-if="secondaryActions.length > 0" class="Polaris-Page__SecondaryActions">
-                <div class="Polaris-Page__IndividualActions">
-                    <button v-for="action in secondaryActions"
-                            class="Polaris-Page__Action"
-                            @click="handleAction(action, true)">
-                        {{ action.content }}
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="Polaris-Page__Content">
         <slot></slot>
     </div>
@@ -40,9 +17,11 @@
 
 <script>
 import ComponentHelpers from '../ComponentHelpers.js';
+import PolarisPageHeader from './PolarisPageHeader.vue';
 
 export default {
     components: {
+        PolarisPageHeader,
     },
     props: {
         title: {
@@ -57,14 +36,17 @@ export default {
             }
         },
         fullWidth: Boolean,
+        singleColumn: Boolean,
         secondaryActions: {
             type: Array,
             default() {
                 return [];
             }
         },
+        separator: Boolean,
         primaryAction: Object,
-        pagination: Object
+        pagination: Object,
+        actionGroups: Array,
     },
     computed: {
         classes() {

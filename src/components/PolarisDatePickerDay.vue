@@ -25,15 +25,23 @@ export default {
         selected: Boolean,
         inRange: Boolean,
         inHoveringRange: Boolean,
-        disabled: Boolean
+        disabled: Boolean,
     },
     computed: {
         dayNumber() {
             return this.day ? this.day.getDate() : null;
         },
+        today() {
+            return dateUtils.isSameDay(this.day, new Date());
+        },
         accessibilityLabel() {
             if (!this.day) { return null; }
-            return dateUtils.months[this.day.getMonth()] + ' ' + this.day.getFullYear();
+            return [
+                this.today ? 'Today' : '',
+                dateUtils.months[this.day.getMonth()],
+                this.day.getDate(),
+                this.day.getFullYear()
+            ].join(' ');
         },
         classes() {
             if (!this.day) {
@@ -42,6 +50,7 @@ export default {
             var r = ComponentHelpers.makeComponentClass('Polaris-DatePicker__Day', [
                 'selected',
                 'disabled',
+                'today',
             ], this);
             
             if ((this.inRange || this.inHoveringRange) && !this.disabled) {

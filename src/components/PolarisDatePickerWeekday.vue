@@ -1,11 +1,13 @@
 <template>
-<div :aria-label="label" class="Polaris-DatePicker__Weekday">
+<div :aria-label="label" :class="classes">
     {{ title }}
 </div>
 </template>
 
 
 <script>
+import ComponentHelpers from '../ComponentHelpers.js';
+
 export default {
     props: {
         label: {
@@ -22,7 +24,15 @@ export default {
                 ].indexOf(v) > -1;
             }
         },
-        title: String
+        title: String,
+        current: Boolean,
+    },
+    computed: {
+        classes() {
+            return ComponentHelpers.makeComponentClass('Polaris-DatePicker__Weekday', [
+                'current'
+            ], this);
+        },
     }
 }
 </script>

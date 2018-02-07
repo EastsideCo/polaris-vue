@@ -4,12 +4,14 @@ $slim-min-height: rem(30px);
 $slim-vertical-padding: ($slim-min-height - line-height(body) - rem(2px)) / 2;
 $large-min-height: rem(44px);
 $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
+$spinner-size: rem(20px);
 
 .Polaris-Button {
   @include recolor-icon(color(ink, lighter));
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: $min-height;
   min-width: $min-height;
   margin: 0;
@@ -51,9 +53,49 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
 
   &.Polaris-Button--disabled {
     @include recolor-icon(color(ink, lightest));
-    background: color(sky, light);
+    transition: none;
+    background: linear-gradient(to bottom, color(sky, light), color(sky, light));
     color: color(ink, lightest);
   }
+}
+
+.Polaris-Button__Content {
+  @include text-style-button;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.Polaris-Button__Icon {
+  transition: color duration() easing();
+
+  &:first-child {
+    // This compensates for the typical icon used in buttons being
+    // inset within its bounding box.
+    margin-left: rem(-4px);
+  }
+
+  &:last-child {
+    // This compensates for the disclosure icon, which is substantially
+    // inset within the viewbox (and makes it look like there is too much
+    // spacing on the right of the button)
+    margin-right: rem(-8px);
+  }
+
+  & + *:not(.Polaris-Button__Icon) {
+    margin-left: rem(4px);
+  }
+}
+
+.Polaris-Button__Spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($spinner-size / 2);
+  margin-left: -($spinner-size / 2);
 }
 
 .Polaris-Button--primary {
@@ -61,24 +103,23 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
   @include recolor-icon(color(white));
 
   &.Polaris-Button--disabled {
-    @include recolor-icon(color(white));
-    background: color(indigo, light);
-    border-color: color(indigo, light);
-    box-shadow: none;
-    color: color(white);
+    @include button-filled-disabled(color(indigo));
   }
 }
 
 .Polaris-Button--destructive {
   @include button-filled(color(red), color(red, dark));
   @include recolor-icon(color(white));
+
+  &.Polaris-Button--disabled {
+    @include button-filled-disabled(color(red));
+  }
 }
 
 .Polaris-Button--outline {
   @include button-outline(color(ink, lighter));
 
   &.Polaris-Button--disabled {
-    background-color: color(white);
     border-color: color(sky, dark);
     color: color(ink, lightest);
   }
@@ -94,6 +135,23 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
   pointer-events: none;
 }
 
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Polaris-Button--loading {
+  position: relative;
+  transition: border-color duration() easing();
+
+  &,
+  &:hover,
+  &.Polaris-Button--disabled {
+    color: transparent;
+  }
+}
+
 // The way the designs work, we need to do lots of reaching down to
 // target the content in pseudo-selectors, so we need higher specificity
 // in this case.
@@ -101,7 +159,9 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
 
 .Polaris-Button--plain {
   @include recolor-icon(color(blue));
-  margin: (-1 * $vertical-padding) (-1 * spacing());
+  margin: (-1 * $vertical-padding) rem(-8px);
+  padding-left: rem(8px);
+  padding-right: rem(8px);
   background: transparent;
   border: border(transparent);
   box-shadow: none;
@@ -121,6 +181,11 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
     opacity: 1;
   }
 
+  &.Polaris-Button--fullWidth {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &.Polaris-Button--disabled {
     background: none;
   }
@@ -132,12 +197,6 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
 
   &.Polaris-Button--sizeLarge {
     margin: (-1 * $large-vertical-padding) (-1 * spacing(loose));
-  }
-
-  > .Polaris-Button__Content::after {
-    @include plain-button-backdrop;
-    content: '';
-    opacity: 0;
   }
 
   &.Polaris-Button--iconOnly {
@@ -163,19 +222,24 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
       @include recolor-icon(color(sky, dark));
     }
   }
+
+  > .Polaris-Button__Content::after {
+    @include plain-button-backdrop;
+    content: '';
+    opacity: 0;
+  }
+
+  .Polaris-Button__Icon {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 // stylelint-enable selector-max-specificity
 
-.Polaris-Button--iconOnly {
-  padding-left: spacing(tight);
-  padding-right: spacing(tight);
-}
-
 .Polaris-Button--sizeSlim {
   min-height: $slim-min-height;
-  min-width: $slim-min-height;
-  padding: $slim-vertical-padding spacing();
+  padding: $slim-vertical-padding rem(12px);
 }
 
 .Polaris-Button--sizeLarge {
@@ -193,35 +257,24 @@ $large-vertical-padding: ($large-min-height - line-height(body) - rem(2px)) / 2;
   width: 100%;
 }
 
-.Polaris-Button__Content {
-  @include text-style-button;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.Polaris-Button--iconOnly {
+  padding-left: rem(8px);
+  padding-right: rem(8px);
 
-.Polaris-Button__Icon {
-  @include text-style-body;
-  transition: color duration() easing();
-
-  &:first-child {
-    // This compensates for the typical icon used in buttons being
-    // inset within its bounding box.
-    margin-left: -2px;
-    margin-right: spacing(extra-tight);
+  &.Polaris-Button--sizeLarge {
+    padding-left: rem(12px);
+    padding-right: rem(12px);
   }
 
-  &:last-child {
-    margin-left: spacing(extra-tight);
-
-    // This compensates for the disclosure icon, which is substantially
-    // inset within the viewbox (and makes it look like there is too much
-    // spacing on the right of the button)
-    margin-right: -5px;
+  .Polaris-Button__Icon:first-child {
+    margin-left: 0;
   }
 
-  &:only-child {
-    margin: 0;
+  .Polaris-Button__Icon:last-child {
+    margin-right: rem(-4px);
+  }
+
+  .Polaris-Button__Icon:only-child {
+    margin-right: 0;
   }
 }

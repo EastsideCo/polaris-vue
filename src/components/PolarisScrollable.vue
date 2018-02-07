@@ -6,6 +6,12 @@
 
 
 <script>
+const MAX_SCROLL_DISTANCE = 100;
+const DELTA_THRESHOLD = 0.2;
+const DELTA_PERCENTAGE = 0.2;
+const EVENTS_TO_LOCK = ['scroll', 'touchmove', 'wheel'];
+const PREFERS_REDUCED_MOTION = false;
+
 export default {
     props: {
         vertical: {
@@ -13,7 +19,8 @@ export default {
             default: true
         },
         horizontal: Boolean,
-        shadow: Boolean
+        shadow: Boolean,
+        hint: Boolean,
     },
     computed: {
         topShadow() {

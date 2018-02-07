@@ -2,6 +2,8 @@ $small-size: rem(32px);
 $medium-size: rem(40px);
 $large-size: rem(60px);
 
+$avatar-initial-offset: 2px;
+
 .Polaris-Avatar {
   position: relative;
   display: flex;
@@ -55,16 +57,15 @@ $large-size: rem(60px);
   background: color(purple);
 }
 
-.Polaris-Avatar--hasImage {
-  background: transparent;
-}
-
 .Polaris-Avatar__Image {
   width: 100%;
+  position: absolute;
 }
 
 .Polaris-Avatar__Initials {
   line-height: 0;
   color: color(white);
   text-transform: uppercase;
+  margin-left: $avatar-initial-offset;
+  letter-spacing: $avatar-initial-offset;
 }

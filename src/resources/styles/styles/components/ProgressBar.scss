@@ -1,0 +1,49 @@
+@function progress-bar-height($height: base) {
+  $base: 16px;
+  $data: (
+    small: rem($base / 2),
+    base: rem($base),
+    large: rem($base * 2),
+  );
+
+  @return map-get($data, $height);
+}
+
+@keyframes fillup {
+  0% {
+    width: 0;
+  }
+}
+
+.Polaris-ProgressBar {
+  overflow: hidden;
+  width: 100%;
+  background-color: color(sky, base);
+  border-radius: border-radius();
+}
+
+.Polaris-ProgressBar--sizeSmall {
+  height: progress-bar-height(small);
+}
+
+.Polaris-ProgressBar--sizeMedium {
+  height: progress-bar-height();
+}
+
+.Polaris-ProgressBar--sizeLarge {
+  height: progress-bar-height(large);
+}
+
+.Polaris-ProgressBar__Indicator {
+  height: inherit;
+  width: 0;
+  will-change: width;
+  background-color: color(teal);
+  animation: fillup duration(slowest) easing();
+  transition: width duration(slowest) easing();
+}
+
+.Polaris-ProgressBar__Progress,
+.Polaris-ProgressBar__Label {
+  @include visually-hidden;
+}

@@ -1,0 +1,44 @@
+$action-text-spacing: rem(24px);
+
+.Polaris-SkeletonPage__Page {
+  @include page-layout;
+}
+
+.Polaris-SkeletonPage--fullWidth {
+  max-width: none;
+}
+
+.Polaris-SkeletonPage__Content {
+  @include page-content-layout;
+}
+
+.Polaris-SkeletonPage__Header {
+  @include page-header-layout;
+}
+
+.Polaris-SkeletonPage__Header--hasSecondaryActions {
+  @include page-header-has-secondaryactions;
+}
+
+.Polaris-SkeletonPage__Actions {
+  @include page-actions-layout;
+}
+
+.Polaris-SkeletonPage__Action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: control-height();
+  padding-right: $action-text-spacing;
+  margin-bottom: (-1 * spacing(extra-tight));
+
+  &:first-child{
+    padding-right: 0;
+  }
+
+  @include page-content-when-partially-condensed {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+}
