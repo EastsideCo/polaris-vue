@@ -69,7 +69,7 @@
                     <template v-if="group.hasOwnProperty('title')">
                         <optgroup
                             :label="group.title"
-                            key="group.title">
+                            :key="group.title">
                             <template v-for="option in group.options">
                                 <option 
                                     v-if="typeof option == 'string'"
