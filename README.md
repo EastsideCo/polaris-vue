@@ -2,7 +2,7 @@
 
 Allows you to use Shopify Polaris components in Vue 2.
 
-**Current target**: _Shopify/polaris `v1.3.1`_
+**Current target**: _Shopify/polaris `v1.9.1`_
 
 Clone the repo, run `npm run dev`, and visit `test/index.html` to view a listing
 of the implemented components.
