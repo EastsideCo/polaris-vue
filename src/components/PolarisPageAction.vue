@@ -95,6 +95,7 @@ export default {
         },
         onAction() {
             this.$emit('click');
+            this.$emit('action');
         }
     },
 }
