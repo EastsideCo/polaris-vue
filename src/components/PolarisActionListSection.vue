@@ -46,13 +46,14 @@ export default {
     methods: {
         wrapAction(action) {
             var _old = action.onAction;
+            var newAction = Object.assign({}, action);
             if (_old) {
-                action.onAction = () => {
+                newAction.onAction = () => {
                     _old();
                     this.$emit('action-any-item', action);
                 };
             }
-            return action;
+            return newAction;
         },
         handleAction(action) {
             var res = true;
