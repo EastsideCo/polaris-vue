@@ -52,12 +52,10 @@
                                         Actions
                                     </polaris-button>
                                 </template>
-                                <template slot="content">
-                                    <polaris-action-list
-                                        :items="secondaryActions"
-                                        :sections="actionGroupsAsListSections"
-                                        @action-any-item="handleRollupToggle"/>
-                                </template>
+                                <polaris-action-list
+                                    :items="secondaryActions"
+                                    :sections="actionGroupsAsListSections"
+                                    @action-any-item="handleRollupToggle"/>
                             </polaris-popover>
                         </div>                               
                         <div class="Polaris-Page__IndividualActions">
@@ -138,12 +136,10 @@
                                 Actions
                             </polaris-button>
                         </template>
-                        <template slot="content">
-                            <polaris-action-list
-                                :items="secondaryActions"
-                                :sections="actionGroupsAsListSections"
-                                @action-any-item="handleRollupToggle"/>
-                        </template>
+                        <polaris-action-list
+                            :items="secondaryActions"
+                            :sections="actionGroupsAsListSections"
+                            @action-any-item="handleRollupToggle"/>
                     </polaris-popover>
                 </div>                               
                 <div class="Polaris-Page__IndividualActions">
