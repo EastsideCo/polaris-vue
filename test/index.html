@@ -1474,6 +1474,22 @@
                             {content: 'Products', accessibilityLabel: 'Test', url: 'http://google.com/'}
                         ]"
                         title="Jar with lock-lid"
+                        :secondary-actions="[
+                            {content: 'Duplicate', onAction: testAlert},
+                            {content: 'View on your store', url: 'https://google.com/'},
+                        ]"
+                        :pagination="{hasNext: true, hasPrevious: false}">
+                        <p>Page content</p>
+                    </polaris-page>
+                </div>
+            </div>
+            <div class="testCase">
+                <div class="example">
+                    <polaris-page
+                        :breadcrumbs="[
+                            {content: 'Products', accessibilityLabel: 'Test', url: 'http://google.com/'}
+                        ]"
+                        title="Jar with lock-lid"
                         :primary-action="{content: 'Save', disabled: true}"
                         :secondary-actions="[
                             {content: 'Duplicate', onAction: testAlert},
