@@ -94,7 +94,7 @@ export default {
             console.log('todo');
         },
         onAction() {
-            this.$emit('action');
+            this.$emit('click');
         }
     },
 }

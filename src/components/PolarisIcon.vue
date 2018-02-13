@@ -1,8 +1,8 @@
 <template>
 <span :class="classes" aria-label="accessibilityLabel">
-    <div v-if="source == 'placeholder'" class="Polaris-Icon__Placeholder"></div>
+    <div v-if="source == 'placeholder' || !finalSource" class="Polaris-Icon__Placeholder"></div>
     <svg 
-        v-if="source != 'placeholder'"
+        v-if="source != 'placeholder' && finalSource"
         class="Polaris-Icon__Svg"
         :viewBox="finalSource.viewBox"
         v-html="finalSource.body"/>
@@ -126,9 +126,12 @@ export default {
                     svgSource = bundled;
                 }
             }
-
-            var svgObject = SvgSource.parseSVG(svgSource);
-            return svgObject;
+            try {
+                var svgObject = SvgSource.parseSVG(svgSource);
+                return svgObject;
+            } catch (e) {
+                return null;
+            }
         },
         classes() {
             var r = {
