@@ -1,6 +1,6 @@
 {
   "name": "@eastsideco/polaris-vue",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Shopify Polaris for Vue 2",
   "main": "lib/polaris-vue.min.js",
   "scripts": {
@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/sigapps/polaris-vue.git"
+    "url": "https://github.com/EastsideCo/polaris-vue.git"
   },
   "keywords": [],
-  "author": "Kiran Price",
+  "author": "ESC Apps Team <apps@eastsideco.com>",
   "license": "MIT",
   "dependencies": {
     "change-case": "^3.0.1",
