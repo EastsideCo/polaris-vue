@@ -38,6 +38,8 @@ The demo page contains code examples of almost all the functionality in the libr
 
 To view the demo, open up `node_modules/@eastsideco/polaris-vue/test/index.html` after installing the library.
 
+Online version: http://demo.polaris-vue.eastsideco.io/
+
 Or to create a standalone copy: clone the repo, run `npm run dev`, then open the file at `test/index.html`.
 
 
