@@ -3,6 +3,7 @@
     <polaris-page-header
         :title="title"
         :icon="icon"
+        :breadcrumbs="breadcrumbs"
         :separator="separator"
         :primary-action="primaryAction"
         :secondary-actions="secondaryActions"
