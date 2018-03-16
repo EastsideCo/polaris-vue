@@ -43,7 +43,7 @@
                 <div v-if="badges" class="Polaris-ResourceList__Badge">
                     <polaris-badge
                         v-for="badge in badges"
-                        key="badge"
+                        :key="badge"
                         :status="badge.status">
                         {{ badge.content }}
                     </polaris-badge>
