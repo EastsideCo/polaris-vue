@@ -42,8 +42,8 @@
                 
                 <div v-if="badges" class="Polaris-ResourceList__Badge">
                     <polaris-badge
-                        v-for="badge in badges"
-                        :key="badge"
+                        v-for="(badge, i) in badges"
+                        :key="`badge_${i + badge.content + badge.status}`"
                         :status="badge.status">
                         {{ badge.content }}
                     </polaris-badge>
