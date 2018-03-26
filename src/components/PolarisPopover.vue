@@ -6,6 +6,7 @@
         :id="realId+'Overlay'"
         :active="active"
         :activator-id="activatorId"
+        :preferred-position="preferredPosition"
         @close="onClose">
         <template slot="overlay" scope="props">
             <div :class="classes" ref="content">
