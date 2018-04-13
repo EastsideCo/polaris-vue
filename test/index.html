@@ -2937,6 +2937,23 @@
                 {
                     url: &#x27;#&#x27;,
                     attributeOne: &#x27;How to Get Value from Wireframes&#x27;,
+                        :items="[
+                                    {
+                                        url: '#',
+                                        attributeOne: 'How to Get Value from Wireframes',
+                                        attributeTwo: 'by Jonathan Mangrove',
+                                        attributeThree: 'Today, 7:14pm',
+                                    },
+                                    {
+                                        url: '#',
+                                        attributeOne: 'Test blog post',
+                                        attributeTwo: 'by Jonathan Mangrove',
+                                        attributeThree: 'Jan 14, 2016, 8:24am',
+                                        badges: [
+                                            {content: 'Hidden'},
+                                        ],
+                                    },
+                                ]">
                     attributeTwo: &#x27;by Jonathan Mangrove&#x27;,
                     attributeThree: &#x27;Today, 7:14pm&#x27;,
                 },
@@ -3030,6 +3047,30 @@
         &#x3C;/polaris-resource-list-item&#x3E;
     &#x3C;/template&#x3E;
 &#x3C;/polaris-resource-list&#x3E;</code></pre>
+            </div>
+
+            <div class="testCase">
+                <div class="exmaple">
+                    <polaris-resource-list
+                        :items="[
+                                    {
+                                        attributeOne: 'How to Get Value from Wireframes',
+                                        actions: [
+                                            {content: 'Process', onAction: testAlert},
+                                        ],
+                                    },
+                                    {
+                                        attributeOne: 'Test blog post',
+                                        badges: [
+                                            {content: 'Hidden'},
+                                        ],
+                                        actions: [
+                                            {content: 'Process', onAction: testAlert},
+                                        ],
+                                        persistActions: true,
+                                    },
+                                ]"/>
+                </div>
             </div>
             
             

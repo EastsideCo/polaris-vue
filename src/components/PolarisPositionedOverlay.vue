@@ -120,6 +120,11 @@ export default {
                 height: window.innerHeight,
                 width: window.innerWidth
             };
+
+            console.log({
+                containerRect,
+                test: 'b'
+            });
             
             const zIndexForLayer = 10;
             const verticalPosition = this.calculateVerticalPosition(activatorRect,
@@ -194,6 +199,11 @@ export default {
                 top: activatorBottom + containerRect.top,
                 positioning: 'bottom'
             };
+
+            console.log({
+                activatorBottom,
+                containerRect,
+            });
             
             if (preferredPosition === 'above') {
                 return ((enoughSpaceFromTopScroll || (distanceToTopScroll >= distanceToBottomScroll && !enoughSpaceFromBottomScroll)) &&

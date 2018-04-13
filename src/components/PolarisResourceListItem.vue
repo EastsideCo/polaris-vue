@@ -97,31 +97,34 @@
                 </div>
                 <div class="Polaris-ResourceList__Disclosure">
                     <polaris-popover 
-                        @click="onCloseRequest"
+                        @click="onCloseActions"
                         :active="actionsMenuVisible">
                         <polaris-button
                             slot="activator"
                             aria-label="Actions dropdown"
-                            @click="onClick"
+                            @click="onExpandActions"
                             plain
-                            :icon="horizontalDots">
+                            icon="horizontalDots">
                         </polaris-button>
                         <polaris-action-list :items="actions">
                         </polaris-action-list>
                     </polaris-popover>
                 </div>
             </template>
-            <div v-if="!persistActions">
+            <div 
+                v-if="!persistActions"
+                class="Polaris-ResourceList__Actions">
                 <polaris-button-group segmented>
                     <polaris-button
                         v-for="action in actions"
                         key="action"
                         @click="handleAction(action)" 
-                        :primary="!connected" 
+                        :primary="action.primary" 
                         :url="action.url"
                         :destructive="action.destructive"
                         :disabled="action.disabled"
                         :icon="action.icon"
+                        size="slim"
                         :accessibility-label="action.accessibilityLabel">
                         {{ action.content }}
                     </polaris-button>
@@ -224,6 +227,12 @@ export default {
             if (!this.$refs.element || !this.$refs.element.contains(e.relatedTarget)) {
                 this.focused = false;
             }
+        },
+        onExpandActions() {
+            this.actionsMenuVisible = !this.actionsMenuVisible;
+        },
+        onCloseActions() {
+            this.actionsMenuVisible = false;
         },
         handleAction(action) {
             if (action.onAction) {
