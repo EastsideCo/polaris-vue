@@ -1,5 +1,5 @@
 <template>
-<span :class="classes" aria-label="accessibilityLabel">
+<span :class="classes" :aria-label="accessibilityLabel">
     <div v-if="source == 'placeholder' || !finalSource" class="Polaris-Icon__Placeholder"></div>
     <svg 
         v-if="source != 'placeholder' && finalSource"
