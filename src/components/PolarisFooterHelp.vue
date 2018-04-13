@@ -2,7 +2,7 @@
 <div class="Polaris-FooterHelp">
     <div class="Polaris-FooterHelp__Content">
         <div class="Polaris-FooterHelp__Icon">
-            <polaris-icon :source="helpIcon" color="teal" backdrop></polaris-icon>
+            <polaris-icon source="help" color="teal" backdrop></polaris-icon>
             </span>
         </div>
         <div class="Polaris-FooterHelp__Text">
