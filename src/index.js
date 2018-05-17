@@ -202,7 +202,7 @@ export default {
             var componentName = ComponentHelpers.getComponentName(polarisName);
             Vue.component(componentName, components[polarisName]);
             count++;
-            log.send(log.DEBUG, TAG, 'componentName + ' -> ' + polarisName');
+            log.send(log.DEBUG, TAG, componentName + ' -> ' + polarisName);
         }
 
         log.send(log.DEBUG, TAG, 'Installed '+count+' components.');
