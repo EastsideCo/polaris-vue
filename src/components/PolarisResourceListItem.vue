@@ -19,7 +19,7 @@
             <div class="Polaris-ResourceList__Media">
                 <slot name="media">
                     <polaris-thumbnail
-                        :source="media.source"
+                        :source="media.src"
                         :alt="media.alt"
                         :size="media.size">
                     </polaris-thumbnail>
