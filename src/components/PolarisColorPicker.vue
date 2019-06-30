@@ -63,7 +63,7 @@ export default {
             return Math.max(0, Math.min(this.pickerSize, this.pickerSize - (this.color.brightness * this.pickerSize)));
         },
         colorLayerStyle() {
-            var hsbColor = new HSBColor(this.color.hue, 1, 1, this.color.alpha);
+            var hsbColor = new HSBColor(this.color.hue, this.color.saturation, this.color.brightness, this.color.alpha);
             var rgbColor = hsbColor.toRGB();
             return {
                 background: rgbColor.toCssString()
