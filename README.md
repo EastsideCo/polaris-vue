@@ -1,6 +1,6 @@
 Allows you to use [Shopify Polaris](http://polaris.shopify.com/) components in [Vue 2](http://vuejs.org/).
 
-This library currently contains components up-to-date with: _@shopify/polaris `v1.9.1`_
+This library currently contains components up-to-date with: _@shopify/polaris `v3.18.0`_
 
 `polaris-vue` has been used in production and been exposed to thousands of merchants, but please note that there may still be some rough edges. If you notice any bugs, please submit a PR or issue. You can also contact apps@eastsideco.com.
 
@@ -48,7 +48,7 @@ Or to create a standalone copy: clone the repo, run `npm run dev`, then open the
 
 There are a few differences from the official react version you should be aware of:
 
-#### 1. Naming for some attributes has been adjusted to be more Vue-like. 
+#### 1. Naming for some attributes has been adjusted to be more Vue-like.
 i.e. `Button` is `<polaris-button>`, `helpText` is `:help-text`, and `onDismiss` is `@dismiss`.
 
 ```
@@ -80,9 +80,9 @@ Event                |  onDismiss      |  @dismiss        |
 Check out the `<polaris-resource-list>` examples on the demo page for examples.
 
 #### 4. No support for the Polaris EASDK integrations.
-This library doesn't currently support complete integration with the EASDK. 
+This library doesn't currently support complete integration with the EASDK.
 
-You can still use this library in EASDK apps, but the page header will not be automatically hidden and synced with the EASDK header. 
+You can still use this library in EASDK apps, but the page header will not be automatically hidden and synced with the EASDK header.
 
 Support for the official behavior is planned.
 
@@ -98,7 +98,7 @@ Vue.use(PolarisVue, {
     componentNameFormat: (polarisName, changeCase) => {
         // polarisName is the name of the component as it appears in Shopfiy/polaris
         // changeCase is an instance of the `change-case` library.
-        
+
         // By default the library takes 'FormLayout' and turns it into
         // the tag name polaris-form-layout, etc.
         return 'polaris-' + changeCase.paramCase(polarisName);
