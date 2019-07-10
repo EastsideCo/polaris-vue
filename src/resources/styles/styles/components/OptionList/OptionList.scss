@@ -1,0 +1,22 @@
+.Polaris-OptionList{
+  margin:0;
+  padding:0;
+  list-style:none; }
+
+.Polaris-OptionList__Options{
+  margin:0;
+  padding:0;
+  list-style:none; }
+
+.Polaris-OptionList__Title{
+  font-size:1.3rem;
+  font-weight:700;
+  line-height:1.6rem;
+  text-transform:uppercase;
+  padding:0.8rem 1.6rem;
+  border-bottom:0.1rem solid #dfe3e8;
+  font-weight:400;
+  color:#637381; }
+  @media (min-width: 40em){
+    .Polaris-OptionList__Title{
+      font-size:1.2rem; } }

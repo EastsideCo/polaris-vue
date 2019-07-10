@@ -1,0 +1,81 @@
+.Polaris-Layout{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start;
+  margin-top:-2rem;
+  margin-left:-2rem; }
+
+.Polaris-Layout__Section{
+  flex:2 2 48rem;
+  min-width:51%; }
+
+.Polaris-Layout__Section--secondary{
+  flex:1 1 24rem;
+  min-width:0; }
+
+.Polaris-Layout__Section--fullWidth{
+  flex:1 1 100%; }
+
+.Polaris-Layout__Section--oneHalf{
+  flex:1 1 45rem;
+  min-width:0; }
+
+.Polaris-Layout__Section--oneThird{
+  flex:1 1 24rem;
+  min-width:0; }
+
+.Polaris-Layout__AnnotatedSection{
+  min-width:0;
+  flex:1 1 100%; }
+
+.Polaris-Layout__Section,
+.Polaris-Layout__AnnotatedSection{
+  max-width:calc(100% - 2rem);
+  margin-top:2rem;
+  margin-left:2rem; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-Layout__Section + .Polaris-Layout__AnnotatedSection, [data-has-navigation]
+    .Polaris-Layout__AnnotatedSection + .Polaris-Layout__AnnotatedSection{
+      padding-top:2rem;
+      border-top:0.1rem solid #dfe3e8; } }
+  @media (min-width: 30.625em){
+    .Polaris-Layout__Section + .Polaris-Layout__AnnotatedSection,
+    .Polaris-Layout__AnnotatedSection + .Polaris-Layout__AnnotatedSection{
+      padding-top:2rem;
+      border-top:0.1rem solid #dfe3e8; } }
+
+.Polaris-Layout__AnnotationWrapper{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:-2rem;
+  margin-left:-2rem; }
+
+.Polaris-Layout__AnnotationContent{
+  flex:2 2 48rem; }
+
+.Polaris-Layout__Annotation{
+  flex:1 1 24rem;
+  padding:1.6rem 2rem 0; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-Layout__Annotation{
+      padding:1.6rem 0 0; } }
+  @media (min-width: 30.625em){
+    .Polaris-Layout__Annotation{
+      padding:1.6rem 0 0; } }
+  @media (max-width: 48.0625em) and (min-width: 50em), (min-width: 65em){
+    [data-has-navigation] .Polaris-Layout__Annotation{
+      padding:2rem 2rem 2rem 0; } }
+  @media (min-width: 50em){
+    .Polaris-Layout__Annotation{
+      padding:2rem 2rem 2rem 0; } }
+
+.Polaris-Layout__Annotation,
+.Polaris-Layout__AnnotationContent{
+  min-width:0;
+  max-width:calc(100% - 2rem);
+  margin-top:2rem;
+  margin-left:2rem; }
+
+.Polaris-Layout__AnnotationDescription{
+  color:#637381; }

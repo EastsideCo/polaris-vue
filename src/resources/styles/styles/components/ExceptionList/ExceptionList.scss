@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.Polaris-ExceptionList{
+  margin:0;
+  padding:0;
+  list-style:none; }
+
+.Polaris-ExceptionList__Item{
+  position:relative;
+  padding-left:2.4rem;
+  color:#637381; }
+  .Polaris-ExceptionList__Item + .Polaris-ExceptionList__Item{
+    margin-top:0.4rem; }
+
+.Polaris-ExceptionList__Icon{
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:2rem;
+  height:2rem;
+  margin-right:0.4rem; }
+  .Polaris-ExceptionList__Icon svg{
+    fill:#919eab; }
+  .Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Icon svg{
+    fill:#8a6116; }
+  .Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Icon svg{
+    fill:#bf0711; }
+
+.Polaris-ExceptionList__Bullet{
+  width:0.6rem;
+  height:0.6rem;
+  border-radius:100%;
+  background-color:#919eab; }
+  .Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Bullet{
+    background-color:#8a6116; }
+  .Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Bullet{
+    background-color:#bf0711; }
+
+.Polaris-ExceptionList__Title + .Polaris-ExceptionList__Description::before{
+  content:'–';
+  margin:0 0.4rem; }
+
+.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Title,
+.Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Title{
+  font-weight:500; }
+
+.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Title{
+  color:#8a6116; }
+
+.Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Title{
+  color:#bf0711; }

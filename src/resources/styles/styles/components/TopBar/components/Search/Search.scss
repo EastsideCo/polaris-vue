@@ -1,0 +1,50 @@
+.Polaris-TopBar-Search{
+  position:absolute;
+  z-index:20;
+  left:0;
+  right:0;
+  top:5.6rem;
+  height:calc(100vh - 7.6rem);
+  visibility:hidden;
+  pointer-events:none;
+  padding:0;
+  width:100%; }
+  @media (min-width: 42.5em){
+    .Polaris-TopBar-Search{
+      top:4rem;
+      left:auto;
+      right:auto; } }
+
+.Polaris-TopBar-Search--visible{
+  visibility:initial;
+  pointer-events:all; }
+
+.Polaris-TopBar-Search__Overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  width:100%;
+  max-width:70rem;
+  min-width:45rem;
+  max-height:100%; }
+  .Polaris-TopBar-Search__Overlay > *{
+    flex:1 1 auto;
+    width:100%; }
+  @media (min-width: 42.5em){
+    .Polaris-TopBar-Search__Overlay{
+      position:relative; } }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-TopBar-Search__Overlay{
+      max-height:60vh; } }
+  @media (min-width: 30.625em){
+    .Polaris-TopBar-Search__Overlay{
+      max-height:60vh; } }
+  @media (max-width: 30.625em), (min-width: 48.0625em) and (max-width: 47.125em){
+    [data-has-navigation] .Polaris-TopBar-Search__Overlay{
+      min-width:100%; } }
+  @media (max-width: 30.625em){
+    .Polaris-TopBar-Search__Overlay{
+      min-width:100%; } }

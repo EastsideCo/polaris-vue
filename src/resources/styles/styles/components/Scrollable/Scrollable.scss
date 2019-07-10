@@ -1,0 +1,18 @@
+.Polaris-Scrollable{
+  -webkit-overflow-scrolling:touch;
+  position:relative; }
+
+.Polaris-Scrollable--horizontal{
+  overflow-x:auto; }
+
+.Polaris-Scrollable--vertical{
+  overflow-y:auto; }
+
+.Polaris-Scrollable--hasTopShadow{
+  box-shadow:inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.1); }
+
+.Polaris-Scrollable--hasBottomShadow{
+  box-shadow:inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.1); }
+
+.Polaris-Scrollable--hasTopShadow.Polaris-Scrollable--hasBottomShadow{
+  box-shadow:inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.1), inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.1); }

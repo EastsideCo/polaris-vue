@@ -1,3 +1,5 @@
+$navigation-width: 240px !default;
+
 ////
 /// Layout
 /// @group foundation/layout
@@ -6,29 +8,35 @@
 $layout-width-data: (
   primary: (
     min: rem(480px),
-    max: rem(672px)
+    max: rem(662px),
   ),
   secondary: (
     min: rem(240px),
-    max: rem(344px)
+    max: rem(320px),
+  ),
+  one-half-width: (
+    base: rem(450px),
+  ),
+  one-third-width: (
+    base: rem(240px),
   ),
   nav: (
-    base: rem(240px)
+    base: rem($navigation-width),
   ),
   page-with-nav: (
-    base: rem(700px)
+    base: rem(769px),
   ),
   page-content: (
     not-condensed: rem(680px),
-    partially-condensed: rem(450px)
+    partially-condensed: rem(450px),
   ),
   inner-spacing: (
-    base: spacing(loose)
+    base: spacing(),
   ),
   outer-spacing: (
     min: spacing(loose),
-    max: spacing(extra-loose)
-  )
+    max: spacing(extra-loose),
+  ),
 );
 
 /// Returns the widths of the specified column.
@@ -43,4 +51,18 @@ $layout-width-data: (
   } @else {
     @error 'Column `#{$name} - #{$value}` not found. Available columns: #{available-names($layout-width-data)}';
   }
+}
+
+$dismiss-icon-size: 32px;
+
+@function top-bar-height() {
+  @return rem(56px);
+}
+
+@function mobile-nav-width() {
+  @return calc(100vw - #{rem($dismiss-icon-size) + spacing() * 2});
+}
+
+@function nav-min-window-corrected() {
+  @return rem(769px);
 }

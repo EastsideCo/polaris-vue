@@ -1,0 +1,17 @@
+.Polaris-SettingAction{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:-1.6rem;
+  margin-left:-1.6rem; }
+
+.Polaris-SettingAction__Setting,
+.Polaris-SettingAction__Action{
+  flex:0 0 auto;
+  margin-top:1.6rem;
+  margin-left:1.6rem;
+  max-width:calc(100% - 1.6rem);
+  min-width:0; }
+
+.Polaris-SettingAction__Setting{
+  flex:1 0 35rem; }

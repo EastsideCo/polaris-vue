@@ -1,0 +1,125 @@
+.Polaris-ActionList{
+  list-style:none;
+  margin:0;
+  padding:0.8rem 0; }
+
+.Polaris-ActionList__Section--withoutTitle:not(:first-child){
+  border-top:0.1rem solid #dfe3e8;
+  margin-top:0.8rem;
+  padding-top:0.8rem; }
+
+.Polaris-ActionList__Actions{
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-ActionList > .Polaris-ActionList__Section--withoutTitle .Polaris-ActionList__Actions,
+.Polaris-ActionList__Section:first-child > .Polaris-ActionList__Section--withoutTitle .Polaris-ActionList__Actions{
+  border-top:none; }
+
+.Polaris-ActionList__Title{
+  font-size:1.3rem;
+  font-weight:700;
+  line-height:1.6rem;
+  text-transform:uppercase;
+  padding:1.2rem 1.6rem; }
+  @media (min-width: 40em){
+    .Polaris-ActionList__Title{
+      font-size:1.2rem; } }
+
+.Polaris-ActionList__Item{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  color:inherit;
+  text-decoration:none;
+  display:block;
+  width:100%;
+  min-height:4rem;
+  padding:1rem 1.6rem;
+  text-align:left;
+  cursor:pointer;
+  border-radius:0; }
+  .Polaris-ActionList__Item:focus{
+    outline:none; }
+  .Polaris-ActionList__Item:visited{
+    color:inherit; }
+  .Polaris-ActionList__Item.Polaris-ActionList--active{
+    background-image:linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)); }
+  .Polaris-ActionList__Item:active{
+    background-image:linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)); }
+    .Polaris-ActionList__Item:active:hover{
+      background-image:linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+      .Polaris-ActionList__Item:active:hover:focus{
+        box-shadow:inset 0.2rem 0 0 #5c6ac4;
+        background-image:linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .Polaris-ActionList__Item:hover{
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+    .Polaris-ActionList__Item:hover:focus{
+      box-shadow:inset 0.2rem 0 0 #5c6ac4;
+      background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .Polaris-ActionList__Item:focus{
+    box-shadow:inset 0.2rem 0 0 #5c6ac4;
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .Polaris-ActionList__Item.Polaris-ActionList--destructive{
+    color:#bf0711; }
+    .Polaris-ActionList__Item.Polaris-ActionList--destructive:active{
+      background-image:linear-gradient(rgba(220, 56, 37, 0.03), rgba(220, 56, 37, 0.03)); }
+      .Polaris-ActionList__Item.Polaris-ActionList--destructive:active:hover{
+        background-image:linear-gradient(rgba(220, 56, 37, 0.03), rgba(220, 56, 37, 0.03)), linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)); }
+        .Polaris-ActionList__Item.Polaris-ActionList--destructive:active:hover:focus{
+          box-shadow:inset 0.2rem 0 0 #de3618;
+          background-image:linear-gradient(rgba(220, 56, 37, 0.03), rgba(220, 56, 37, 0.03)), linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)), linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)); }
+    .Polaris-ActionList__Item.Polaris-ActionList--destructive:hover{
+      background-image:linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)); }
+      .Polaris-ActionList__Item.Polaris-ActionList--destructive:hover:focus{
+        box-shadow:inset 0.2rem 0 0 #de3618;
+        background-image:linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)), linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)); }
+    .Polaris-ActionList__Item.Polaris-ActionList--destructive:focus{
+      box-shadow:inset 0.2rem 0 0 #de3618;
+      background-image:linear-gradient(rgba(251, 234, 229, 0.4), rgba(251, 234, 229, 0.4)); }
+  .Polaris-ActionList__Item.Polaris-ActionList--disabled{
+    background-image:linear-gradient(#f9fafb, #f9fafb);
+    color:#919eab;
+    pointer-events:none; }
+    .Polaris-ActionList__Item.Polaris-ActionList--disabled .Polaris-ActionList__Image{
+      color:white; }
+      .Polaris-ActionList__Item.Polaris-ActionList--disabled .Polaris-ActionList__Image svg{
+        fill:#919eab; }
+  .Polaris-ActionList__Item::-moz-focus-inner{
+    border:none; }
+
+.Polaris-ActionList__Content{
+  display:flex;
+  align-items:center; }
+
+.Polaris-ActionList__Image{
+  color:white;
+  display:flex;
+  flex:0 0 auto;
+  justify-content:center;
+  align-items:center;
+  height:2rem;
+  width:2rem;
+  border-radius:3px;
+  margin:-1rem 1.6rem -1rem 0;
+  background-size:cover;
+  background-position:center center; }
+  .Polaris-ActionList__Image svg{
+    fill:#454f5b; }
+
+.Polaris-ActionList__Text{
+  min-width:0;
+  max-width:100%;
+  flex:1 1 auto; }
+
+.Polaris-ActionList__BadgeWrapper{
+  margin-left:1.6rem; }

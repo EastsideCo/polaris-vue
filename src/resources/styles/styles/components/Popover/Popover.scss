@@ -1,0 +1,86 @@
+.Polaris-Popover{
+  max-width:calc(100vw - 3.2rem);
+  margin:0.5rem 0.8rem 1.6rem;
+  box-shadow:0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08);
+  border-radius:3px;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity, left, top; }
+
+.Polaris-Popover--entering{
+  opacity:0; }
+
+.Polaris-Popover--entered{
+  opacity:1;
+  transition:opacity 200ms cubic-bezier(0.36, 0, 1, 1); }
+
+.Polaris-Popover--exiting{
+  opacity:1; }
+
+.Polaris-Popover--exited{
+  opacity:0;
+  transition:opacity 200ms cubic-bezier(0, 0, 0.42, 1); }
+
+.Polaris-Popover--measuring:not(.Polaris-Popover--exiting){
+  opacity:0; }
+
+.Polaris-Popover--fullWidth{
+  margin:0;
+  margin-top:0.5rem; }
+  .Polaris-Popover--fullWidth .Polaris-Popover__Content{
+    max-width:none; }
+
+.Polaris-Popover--measuring .Polaris-Popover__Content{
+  display:block; }
+
+.Polaris-Popover--positionedAbove{
+  margin:1.6rem 0 0.5rem 0.8rem; }
+  .Polaris-Popover--positionedAbove.Polaris-Popover--fullWidth{
+    margin:0 0 0.5rem; }
+
+.Polaris-Popover__Wrapper{
+  position:relative;
+  overflow:hidden;
+  background-color:white;
+  border-radius:3px; }
+  @media (-ms-high-contrast: active){
+    .Polaris-Popover__Wrapper{
+      box-shadow:inset 0 0 0 0.1rem windowText; } }
+
+.Polaris-Popover__Content{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  border-radius:3px;
+  max-width:40rem;
+  max-height:29.5rem; }
+  .Polaris-Popover__Content:focus{
+    outline:none; }
+
+.Polaris-Popover__Content--fullHeight{
+  max-height:none; }
+
+.Polaris-Popover__Pane{
+  flex:1 1;
+  max-width:100%; }
+  .Polaris-Popover__Pane + .Polaris-Popover__Pane{
+    border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-Popover__Pane--fixed{
+  overflow:visible;
+  flex:0 0 auto; }
+
+.Polaris-Popover__Section{
+  padding:1.6rem; }
+  .Polaris-Popover__Section + .Polaris-Popover__Section{
+    border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-Popover__FocusTracker{
+  position:absolute !important;
+  top:0;
+  clip:rect(1px, 1px, 1px, 1px) !important;
+  overflow:hidden !important;
+  height:1px !important;
+  width:1px !important;
+  padding:0 !important;
+  border:0 !important; }

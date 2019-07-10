@@ -1,0 +1,51 @@
+.Polaris-Tag{
+  display:inline-flex;
+  max-width:100%;
+  align-items:center;
+  min-height:2.8rem;
+  padding-left:0.8rem;
+  background-color:#dfe3e8;
+  border-radius:3px;
+  color:#212b36; }
+  .Polaris-Tag.Polaris-Tag--disabled{
+    transition:none;
+    background:linear-gradient(to bottom, #f4f6f8, #f4f6f8);
+    color:#919eab; }
+    .Polaris-Tag.Polaris-Tag--disabled svg{
+      fill:#919eab; }
+  .Polaris-Tag .Polaris-Tag__TagText{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap; }
+
+.Polaris-Tag__Button{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  display:block;
+  height:2.8rem;
+  width:2.8rem;
+  margin-left:0.4rem;
+  border-radius:0 3px 3px 0; }
+  .Polaris-Tag__Button svg{
+    fill:#637381; }
+  .Polaris-Tag__Button:focus{
+    outline:none; }
+  .Polaris-Tag__Button:hover, .Polaris-Tag__Button:focus, .Polaris-Tag__Button:active{
+    background:#c4cdd5; }
+    .Polaris-Tag__Button:hover svg, .Polaris-Tag__Button:focus svg, .Polaris-Tag__Button:active svg{
+      fill:#212b36; }
+  .Polaris-Tag__Button:disabled{
+    cursor:default;
+    pointer-events:none; }
+    .Polaris-Tag__Button:disabled svg{
+      fill:#919eab; }
+  .Polaris-Tag__Button:active{
+    background:rgba(145, 158, 171, 0.6); }

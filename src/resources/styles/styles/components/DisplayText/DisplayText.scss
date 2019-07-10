@@ -1,0 +1,38 @@
+.Polaris-DisplayText{
+  margin:0; }
+
+.Polaris-DisplayText--sizeSmall{
+  font-size:1.6rem;
+  font-weight:400;
+  line-height:2.4rem; }
+  @media (min-width: 40em){
+    .Polaris-DisplayText--sizeSmall{
+      font-size:2rem;
+      line-height:2.8rem; } }
+
+.Polaris-DisplayText--sizeMedium{
+  font-size:2.1rem;
+  font-weight:400;
+  line-height:2.8rem; }
+  @media (min-width: 40em){
+    .Polaris-DisplayText--sizeMedium{
+      font-size:2.6rem;
+      line-height:3.2rem; } }
+
+.Polaris-DisplayText--sizeLarge{
+  font-size:2.4rem;
+  font-weight:600;
+  line-height:2.8rem; }
+  @media (min-width: 40em){
+    .Polaris-DisplayText--sizeLarge{
+      font-size:2.8rem;
+      line-height:3.2rem; } }
+
+.Polaris-DisplayText--sizeExtraLarge{
+  font-size:2.7rem;
+  font-weight:600;
+  line-height:3.6rem; }
+  @media (min-width: 40em){
+    .Polaris-DisplayText--sizeExtraLarge{
+      font-size:4.2rem;
+      line-height:4.4rem; } }

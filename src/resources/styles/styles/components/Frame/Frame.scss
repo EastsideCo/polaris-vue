@@ -1,0 +1,229 @@
+.Polaris-Frame{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  background-color:#f4f6f8; }
+  @media print{
+    .Polaris-Frame{
+      background-color:none; } }
+
+.Polaris-Frame__Navigation{
+  position:fixed;
+  z-index:516;
+  top:0;
+  left:0;
+  display:none;
+  flex:0 0 auto;
+  align-items:stretch;
+  height:100%;
+  outline:none;
+  transform:translateX(0%); }
+  @media print{
+    .Polaris-Frame__Navigation{
+      display:none !important; } }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame__Navigation{
+      z-index:1;
+      top:5.6rem;
+      display:flex;
+      height:calc(100% - 5.6rem); } }
+  .Polaris-Frame__Navigation:focus{
+    outline:none; }
+
+.Polaris-Frame__Navigation--enter,
+.Polaris-Frame__Navigation--enterActive,
+.Polaris-Frame__Navigation--exit,
+.Polaris-Frame__Navigation--exitActive{
+  display:flex; }
+
+.Polaris-Frame__Navigation--enter{
+  transform:translateX(-100%); }
+
+.Polaris-Frame__Navigation--enterActive{
+  transform:translateX(0%);
+  transition:transform 300ms cubic-bezier(0, 0, 0.42, 1); }
+
+.Polaris-Frame__Navigation--exit{
+  transform:translateX(0%); }
+
+.Polaris-Frame__Navigation--exitActive{
+  transform:translateX(-100%);
+  transition:transform 300ms cubic-bezier(0, 0, 0.42, 1); }
+
+.Polaris-Frame__NavigationDismiss{
+  position:absolute;
+  top:0;
+  left:100%;
+  width:3.2rem;
+  height:3.2rem;
+  margin:1.6rem;
+  padding:0;
+  border:none;
+  background:none;
+  opacity:0;
+  pointer-events:none;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity;
+  cursor:pointer;
+  transition:opacity 100ms cubic-bezier(0.64, 0, 0.35, 1); }
+  @media print{
+    .Polaris-Frame__NavigationDismiss{
+      display:none !important; } }
+  .Polaris-Frame__Navigation--visible .Polaris-Frame__NavigationDismiss{
+    pointer-events:all;
+    opacity:1; }
+  .Polaris-Frame__NavigationDismiss:focus{
+    border-radius:3px;
+    background-color:rgba(255, 255, 255, 0.16);
+    outline:none; }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame__NavigationDismiss{
+      display:none; } }
+
+.Polaris-Frame__TopBar{
+  position:fixed;
+  z-index:512;
+  top:0;
+  left:0;
+  width:100%; }
+  @media print{
+    .Polaris-Frame__TopBar{
+      display:none !important; } }
+
+.Polaris-Frame__ContextualSaveBar{
+  position:fixed;
+  z-index:513;
+  top:0;
+  left:0;
+  width:100%; }
+
+.Polaris-Frame__ContextualSaveBar--enter{
+  opacity:0; }
+
+.Polaris-Frame__ContextualSaveBar--enterActive{
+  opacity:1;
+  transition:opacity 200ms cubic-bezier(0, 0, 0.42, 1); }
+
+.Polaris-Frame__ContextualSaveBar--exit{
+  opacity:1; }
+
+.Polaris-Frame__ContextualSaveBar--exitActive{
+  opacity:0;
+  transition:opacity 200ms cubic-bezier(0, 0, 0.42, 1); }
+
+.Polaris-Frame__Main{
+  flex:1 1;
+  display:flex;
+  align-items:stretch;
+  min-width:0;
+  max-width:100%;
+  padding-right:0px;
+  padding-right:calc(0px + constant(safe-area-inset-right));
+  padding-right:calc(0px + env(safe-area-inset-right));
+  padding-left:0px;
+  padding-left:calc(0px + constant(safe-area-inset-left));
+  padding-left:calc(0px + env(safe-area-inset-left));
+  padding-bottom:0px;
+  padding-bottom:calc(0px + constant(safe-area-inset-bottom));
+  padding-bottom:calc(0px + env(safe-area-inset-bottom)); }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame--hasNav .Polaris-Frame__Main{
+      padding-left:24rem;
+      padding-left:24rem;
+      padding-left:calc(24rem + constant(safe-area-inset-left));
+      padding-left:calc(24rem + env(safe-area-inset-left)); } }
+  @media print and (min-width: 48.0625em){
+    .Polaris-Frame--hasNav .Polaris-Frame__Main{
+      padding-left:0; } }
+  .Polaris-Frame--hasTopBar .Polaris-Frame__Main{
+    padding-top:5.6rem; }
+    @media print{
+      .Polaris-Frame--hasTopBar .Polaris-Frame__Main{
+        padding-top:0; } }
+
+.Polaris-Frame__Content{
+  padding-bottom:var(--global-ribbon-height, 0);
+  flex:1 1;
+  min-width:0;
+  max-width:100%; }
+
+.Polaris-Frame__GlobalRibbonContainer{
+  position:fixed;
+  z-index:510;
+  bottom:0;
+  width:100%; }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame--hasNav .Polaris-Frame__GlobalRibbonContainer{
+      left:24rem;
+      left:24rem;
+      left:calc(24rem + constant(safe-area-inset-left));
+      left:calc(24rem + env(safe-area-inset-left));
+      width:calc(100% - 24rem); } }
+
+.Polaris-Frame__LoadingBar{
+  position:fixed;
+  z-index:514;
+  top:0;
+  right:0;
+  left:0; }
+  @media print{
+    .Polaris-Frame__LoadingBar{
+      display:none !important; } }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame--hasTopBar .Polaris-Frame__LoadingBar{
+      top:5.6rem;
+      z-index:511; } }
+
+.Polaris-Frame__Skip{
+  position:fixed;
+  z-index:517;
+  top:1rem;
+  left:0.8rem;
+  opacity:0;
+  pointer-events:none; }
+  .Polaris-Frame__Skip.Polaris-Frame--focused{
+    pointer-events:all;
+    opacity:1; }
+
+.Polaris-Frame__SkipAnchor{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:3.6rem;
+  min-width:3.6rem;
+  margin:0;
+  padding:0.7rem 1.6rem;
+  background:linear-gradient(to bottom, white, #f9fafb);
+  border:0.1rem solid #c4cdd5;
+  box-shadow:0 1px 0 0 rgba(22, 29, 37, 0.05);
+  border-radius:3px;
+  line-height:1;
+  color:#212b36;
+  text-align:center;
+  cursor:pointer;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  text-decoration:none;
+  transition-property:background, border, box-shadow;
+  transition-duration:200ms;
+  transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); }
+  .Polaris-Frame__SkipAnchor svg{
+    fill:#637381; }
+  .Polaris-Frame__SkipAnchor:hover{
+    background:linear-gradient(to bottom, #f9fafb, #f4f6f8);
+    border-color:#c4cdd5; }
+  .Polaris-Frame__SkipAnchor:focus{
+    border-color:#5c6ac4;
+    outline:0;
+    box-shadow:0 0 0 1px #5c6ac4; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Frame__SkipAnchor:focus{
+        outline:2px dotted; } }
+  .Polaris-Frame__SkipAnchor:active{
+    background:linear-gradient(to bottom, #f4f6f8, #f4f6f8);
+    border-color:#c4cdd5;
+    box-shadow:0 0 0 0 transparent, inset 0 1px 1px 0 rgba(99, 115, 129, 0.1), inset 0 1px 4px 0 rgba(99, 115, 129, 0.2); }

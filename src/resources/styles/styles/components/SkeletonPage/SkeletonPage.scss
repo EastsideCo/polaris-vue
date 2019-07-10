@@ -1,0 +1,130 @@
+.Polaris-SkeletonPage__Page{
+  margin:0 auto;
+  padding:0;
+  max-width:99.8rem; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-SkeletonPage__Page{
+      padding:0 2rem; } }
+  @media (min-width: 30.625em){
+    .Polaris-SkeletonPage__Page{
+      padding:0 2rem; } }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__Page{
+      padding:0 3.2rem; } }
+  @media (min-width: 46.5em){
+    .Polaris-SkeletonPage__Page{
+      padding:0 3.2rem; } }
+
+.Polaris-SkeletonPage--fullWidth{
+  max-width:none; }
+
+.Polaris-SkeletonPage--singleColumn{
+  max-width:66.2rem; }
+
+.Polaris-SkeletonPage__Content{
+  margin:2rem 0; }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__Content{
+      margin-top:2rem; } }
+  @media (min-width: 46.5em){
+    .Polaris-SkeletonPage__Content{
+      margin-top:2rem; } }
+
+.Polaris-SkeletonPage__Header{
+  padding:2rem 2rem 0;
+  padding-bottom:0.8rem; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-SkeletonPage__Header{
+      padding-left:0;
+      padding-right:0; } }
+  @media (min-width: 30.625em){
+    .Polaris-SkeletonPage__Header{
+      padding-left:0;
+      padding-right:0; } }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__Header{
+      padding-top:3.2rem; } }
+  @media (min-width: 46.5em){
+    .Polaris-SkeletonPage__Header{
+      padding-top:3.2rem; } }
+
+.Polaris-SkeletonPage__Header--hasSecondaryActions{
+  padding-top:2.4rem;
+  margin-top:0; }
+
+.Polaris-SkeletonPage__BreadcrumbAction{
+  padding-top:1.6rem;
+  padding-bottom:1.6rem;
+  margin-top:-0.4rem;
+  margin-bottom:-0.4rem; }
+
+.Polaris-SkeletonPage__TitleAndPrimaryAction{
+  display:flex; }
+  @media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__TitleAndPrimaryAction{
+      display:block; } }
+  @media (max-width: 46.5em){
+    .Polaris-SkeletonPage__TitleAndPrimaryAction{
+      display:block; } }
+
+.Polaris-SkeletonPage__Title{
+  flex:1 1; }
+
+.Polaris-SkeletonPage__PrimaryAction{
+  align-self:stretch; }
+  .Polaris-SkeletonPage__PrimaryAction > *{
+    height:3.6rem;
+    min-width:10rem; }
+  @media (max-width: 48.0625em), (min-width: 48.0625em) and (max-width: 65em){
+    [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:1.6rem;
+      margin-bottom:-0.8rem; } }
+  @media (max-width: 50em){
+    .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:1.6rem;
+      margin-bottom:-0.8rem; } }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0.8rem;
+      margin-bottom:-0.8rem; } }
+  @media (min-width: 30.625em){
+    .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0.8rem;
+      margin-bottom:-0.8rem; } }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0; } }
+  @media (min-width: 46.5em){
+    .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0; } }
+  @media (max-width: 48.0625em) and (min-width: 50em), (min-width: 65em){
+    [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0; } }
+  @media (min-width: 50em){
+    .Polaris-SkeletonPage__PrimaryAction{
+      margin-top:0; } }
+
+.Polaris-SkeletonPage__Actions{
+  margin-top:0.8rem;
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+  align-items:center; }
+
+.Polaris-SkeletonPage__Action{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:2.8rem;
+  padding-right:2.4rem;
+  margin-top:-0.4rem;
+  margin-bottom:-0.4rem;
+  padding-top:1.6rem; }
+  .Polaris-SkeletonPage__Action:first-child{
+    padding-right:0; }
+  @media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){
+    [data-has-navigation] .Polaris-SkeletonPage__Action:not(:last-child){
+      display:none; } }
+  @media (max-width: 46.5em){
+    .Polaris-SkeletonPage__Action:not(:last-child){
+      display:none; } }

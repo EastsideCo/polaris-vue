@@ -1,0 +1,84 @@
+.Polaris-RadioButton{
+  position:relative; }
+
+.Polaris-RadioButton__Input{
+  margin:0;
+  padding:0;
+  opacity:0; }
+  .Polaris-RadioButton__Input:focus + .Polaris-RadioButton__Backdrop, .Polaris-RadioButton__Input:active + .Polaris-RadioButton__Backdrop, .Polaris-RadioButton__Input:checked + .Polaris-RadioButton__Backdrop{
+    background:#5c6ac4; }
+  .Polaris-RadioButton__Input:checked ~ .Polaris-RadioButton__Icon{
+    transform:translate(-50%, -50%) scale(1); }
+  .Polaris-RadioButton__Input:focus + .Polaris-RadioButton__Backdrop, .Polaris-RadioButton__Input:active + .Polaris-RadioButton__Backdrop{
+    background:#5c6ac4;
+    box-shadow:0 0 0 1px #5c6ac4, 0 0 0 0 transparent; }
+    .Polaris-RadioButton__Input:focus + .Polaris-RadioButton__Backdrop::after, .Polaris-RadioButton__Input:active + .Polaris-RadioButton__Backdrop::after{
+      background:white; }
+    @media (-ms-high-contrast: active){
+      .Polaris-RadioButton__Input:focus + .Polaris-RadioButton__Backdrop::after, .Polaris-RadioButton__Input:active + .Polaris-RadioButton__Backdrop::after{
+        border:1px dashed buttonText; } }
+  .Polaris-RadioButton__Input:disabled + .Polaris-RadioButton__Backdrop{
+    background:#dfe3e8;
+    box-shadow:none; }
+    .Polaris-RadioButton__Input:disabled + .Polaris-RadioButton__Backdrop::after{
+      background:#f9fafb; }
+    @media (-ms-high-contrast: active){
+      .Polaris-RadioButton__Input:disabled + .Polaris-RadioButton__Backdrop{
+        color:grayText; } }
+  .Polaris-RadioButton__Input:disabled ~ .Polaris-RadioButton__Icon{
+    background-color:#c4cdd5; }
+
+.Polaris-RadioButton__Backdrop{
+  background-color:#c4cdd5;
+  border:0.1rem solid transparent;
+  box-shadow:0 0 0 1px transparent, 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  border-radius:3px;
+  transition-property:box-shadow, background-color;
+  transition-duration:200ms;
+  transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1);
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  border-radius:50%; }
+  .Polaris-RadioButton__Backdrop::after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:block;
+    background:linear-gradient(to bottom, white, #f9fafb);
+    border-radius:2px; }
+  @media (-ms-high-contrast: active){
+    .Polaris-RadioButton__Backdrop{
+      background:transparent;
+      border:2px solid buttonText;
+      transition:none;
+      color:rgba(223, 227, 232, 0.3); }
+      .Polaris-RadioButton__Backdrop::after{
+        top:-4px;
+        right:-4px;
+        bottom:-4px;
+        left:-4px;
+        background:none;
+        border-radius:4px; } }
+  .Polaris-RadioButton__Backdrop::after{
+    border-radius:50%; }
+
+.Polaris-RadioButton__Icon{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(0);
+  transform-origin:50% 50%;
+  height:50%;
+  width:50%;
+  background:#5c6ac4;
+  border-radius:50%;
+  transition:transform 100ms cubic-bezier(0.36, 0, 1, 1) cubic-bezier(0, 0, 0.42, 1); }
+  @media (-ms-high-contrast: active){
+    .Polaris-RadioButton__Icon{
+      background:windowText; } }

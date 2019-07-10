@@ -1,18 +1,26 @@
 /// Used to create the shimmer effect of skeleton components
 $skeleton-shimmer-duration: duration(slower) * 2;
 
-@keyframes skeletonShimmerAnimation {
-  0% {
-    opacity: 0.45;
-  }
+// Used by both Thumbnail and SkeletonThumbnail
+$small-thumbnail-size: rem(40px);
+$medium-thumbnail-size: rem(60px);
+$large-thumbnail-size: rem(80px);
 
-  100% {
-    opacity: 0.9;
-  }
+$thumbnail-sizes: (
+  small: $small-thumbnail-size,
+  medium: $medium-thumbnail-size,
+  large: $large-thumbnail-size,
+);
+
+@function thumbnail-size($size) {
+  @return map-get($thumbnail-sizes, $size);
 }
 
 @mixin skeleton-shimmer {
-  animation: skeletonShimmerAnimation $skeleton-shimmer-duration linear infinite alternate;
+  // This is a global animation, defined in /src/styles/global.scss
+    // stylelint-disable-next-line no-unknown-animations
+    animation: polaris-SkeletonShimmerAnimation $skeleton-shimmer-duration
+      linear infinite alternate;
   will-change: opacity;
 }
 
@@ -27,7 +35,28 @@ $skeleton-shimmer-duration: duration(slower) * 2;
     bottom: 0;
     left: 0;
     display: block;
-    background-color: color(sky);
+    background-color: color('sky');
     border-radius: border-radius();
+
+    @media screen and (-ms-high-contrast: active) {
+      background-color: ms-high-contrast-color('disabled-text');
+    }
   }
+}
+
+@mixin skeleton-page-secondary-actions-layout {
+  margin-top: spacing(tight);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin skeleton-page-header-has-secondary-actions {
+  padding-top: rem(24px);
+  margin-top: 0;
+}
+
+@mixin skeleton-page-header-layout {
+  padding-bottom: spacing(tight);
 }

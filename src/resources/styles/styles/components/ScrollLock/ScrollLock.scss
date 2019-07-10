@@ -1,0 +1,6 @@
+[data-lock-scrolling]{
+  overflow-y:scroll;
+  margin:0; }
+  [data-lock-scrolling] [data-lock-scrolling-wrapper]{
+    overflow:hidden;
+    height:100%; }

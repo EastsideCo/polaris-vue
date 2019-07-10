@@ -1,0 +1,238 @@
+.Polaris-Banner{
+  position:relative;
+  display:flex; }
+
+.Polaris-Banner--withinContentContainer{
+  border-radius:3px;
+  padding:0.8rem 1.2rem;
+  transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+  transition-delay:100ms;
+  background-color:#f4f6f8; }
+  @media (-ms-high-contrast: active){
+    .Polaris-Banner--withinContentContainer{
+      box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+  .Polaris-Banner--withinContentContainer:focus{
+    outline:none;
+    box-shadow:inset 0 3px 0 0 #637381, inset 0 0 0 3px #637381, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinContentContainer:focus{
+        box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinContentContainer.Polaris-Banner--statusSuccess{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    background-color:#eff7ed; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinContentContainer.Polaris-Banner--statusSuccess{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinContentContainer.Polaris-Banner--statusSuccess:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #50b83c, inset 0 0 0 3px #50b83c, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinContentContainer.Polaris-Banner--statusSuccess:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinContentContainer.Polaris-Banner--statusInfo{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    background-color:#eef9f9; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinContentContainer.Polaris-Banner--statusInfo{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinContentContainer.Polaris-Banner--statusInfo:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #47c1bf, inset 0 0 0 3px #47c1bf, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinContentContainer.Polaris-Banner--statusInfo:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinContentContainer.Polaris-Banner--statusWarning{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    background-color:#fdf7e3; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinContentContainer.Polaris-Banner--statusWarning{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinContentContainer.Polaris-Banner--statusWarning:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #eec200, inset 0 0 0 3px #eec200, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinContentContainer.Polaris-Banner--statusWarning:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinContentContainer.Polaris-Banner--statusCritical{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    background-color:#fdf3f0; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinContentContainer.Polaris-Banner--statusCritical{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinContentContainer.Polaris-Banner--statusCritical:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #de3618, inset 0 0 0 3px #de3618, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinContentContainer.Polaris-Banner--statusCritical:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinContentContainer + .Polaris-Banner{
+    margin-top:0.8rem; }
+  .Polaris-Banner--withinContentContainer .Polaris-Banner__Ribbon{
+    padding-right:1.2rem; }
+  .Polaris-Banner--withinContentContainer .Polaris-Banner__Actions{
+    padding:1.2rem 0 0.4rem 0; }
+  .Polaris-Banner--withinContentContainer .Polaris-Banner__Dismiss{
+    right:1.2rem;
+    top:1.2rem;
+    position:absolute; }
+
+.Polaris-Banner--withinPage{
+  border-radius:0 0 3px 3px;
+  padding:1.6rem;
+  transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+  transition-delay:100ms;
+  box-shadow:inset 0 3px 0 0 #637381, inset 0 0 0 0 transparent, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  background-color:#f4f6f8; }
+  @media (-ms-high-contrast: active){
+    .Polaris-Banner--withinPage{
+      box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+  .Polaris-Banner--withinPage:focus{
+    outline:none;
+    box-shadow:inset 0 3px 0 0 #637381, inset 0 0 0 3px #637381, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinPage:focus{
+        box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinPage.Polaris-Banner--statusSuccess{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    box-shadow:inset 0 3px 0 0 #50b83c, inset 0 0 0 0 transparent, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+    background-color:#eff7ed; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinPage.Polaris-Banner--statusSuccess{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinPage.Polaris-Banner--statusSuccess:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #50b83c, inset 0 0 0 3px #50b83c, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinPage.Polaris-Banner--statusSuccess:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinPage.Polaris-Banner--statusInfo{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    box-shadow:inset 0 3px 0 0 #47c1bf, inset 0 0 0 0 transparent, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+    background-color:#eef9f9; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinPage.Polaris-Banner--statusInfo{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinPage.Polaris-Banner--statusInfo:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #47c1bf, inset 0 0 0 3px #47c1bf, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinPage.Polaris-Banner--statusInfo:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinPage.Polaris-Banner--statusWarning{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    box-shadow:inset 0 3px 0 0 #eec200, inset 0 0 0 0 transparent, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+    background-color:#fdf7e3; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinPage.Polaris-Banner--statusWarning{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinPage.Polaris-Banner--statusWarning:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #eec200, inset 0 0 0 3px #eec200, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinPage.Polaris-Banner--statusWarning:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinPage.Polaris-Banner--statusCritical{
+    transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1);
+    transition-delay:100ms;
+    box-shadow:inset 0 3px 0 0 #de3618, inset 0 0 0 0 transparent, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+    background-color:#fdf3f0; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner--withinPage.Polaris-Banner--statusCritical{
+        box-shadow:inset 0 3px 0 0 windowText, inset 0 0 0.1rem 0.1rem windowText; } }
+    .Polaris-Banner--withinPage.Polaris-Banner--statusCritical:focus{
+      outline:none;
+      box-shadow:inset 0 3px 0 0 #de3618, inset 0 0 0 3px #de3618, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+      @media (-ms-high-contrast: active){
+        .Polaris-Banner--withinPage.Polaris-Banner--statusCritical:focus{
+          box-shadow:inset 0 0 0 3px windowText; } }
+  .Polaris-Banner--withinPage + .Polaris-Banner{
+    margin-top:2rem; }
+  .Polaris-Banner--withinPage .Polaris-Banner__Ribbon{
+    padding-right:1.6rem; }
+  .Polaris-Banner--withinPage .Polaris-Banner__Actions{
+    padding-top:1.6rem; }
+  .Polaris-Banner--withinPage .Polaris-Banner__Dismiss{
+    right:1.6rem;
+    top:2rem;
+    position:absolute; }
+
+.Polaris-Banner--hasDismiss{
+  padding-right:5.6rem; }
+
+.Polaris-Banner__Heading{
+  padding-top:0.2rem;
+  word-break:break-word; }
+
+.Polaris-Banner__Content{
+  word-wrap:break-word;
+  word-break:break-word;
+  overflow-wrap:break-word;
+  padding:0.4rem 0; }
+
+.Polaris-Banner__Ribbon{
+  flex:0 0 3.2rem; }
+
+.Polaris-Banner__PrimaryAction{
+  margin-right:0.6rem; }
+
+.Polaris-Banner__SecondaryAction{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  color:inherit;
+  text-decoration:none;
+  display:inline-block;
+  margin:-0.8rem -0.6rem;
+  padding:0.8rem 1.2rem;
+  color:#212b36;
+  padding-left:0.6rem; }
+  .Polaris-Banner__SecondaryAction:focus{
+    outline:none; }
+  .Polaris-Banner__SecondaryAction:visited{
+    color:inherit; }
+  .Polaris-Banner__SecondaryAction:hover > .Polaris-Banner__Text::after{
+    opacity:0.75; }
+  .Polaris-Banner__SecondaryAction:active > .Polaris-Banner__Text::after{
+    opacity:0; }
+  .Polaris-Banner__SecondaryAction:focus > .Polaris-Banner__Text{
+    padding:2px 5px;
+    margin:-2px -5px;
+    background:rgba(33, 43, 54, 0.1);
+    border-radius:3px;
+    transition:opacity 200ms cubic-bezier(0.64, 0, 0.35, 1); }
+    @media (-ms-high-contrast: active){
+      .Polaris-Banner__SecondaryAction:focus > .Polaris-Banner__Text{
+        outline:2px dotted; } }
+    .Polaris-Banner__SecondaryAction:focus > .Polaris-Banner__Text::after{
+      opacity:0; }
+
+.Polaris-Banner__Text{
+  position:relative; }
+  .Polaris-Banner__Text::after, .Polaris-Banner__Text::before{
+    content:'';
+    position:absolute; }
+  .Polaris-Banner__Text::after{
+    bottom:0;
+    left:0;
+    right:0;
+    display:block;
+    border:0.1rem solid currentColor;
+    opacity:0.25;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    will-change:opacity;
+    transition:opacity 200ms cubic-bezier(0.64, 0, 0.35, 1); }

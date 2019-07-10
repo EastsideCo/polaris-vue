@@ -16,13 +16,11 @@
 
 @mixin control-backdrop($style: base) {
   @if $style == base {
-    background: color(sky, dark);
+    background-color: color('sky', 'dark');
     border: border(transparent);
-    box-shadow:
-      0 0 0 1px transparent,
-      shadow(faint);
+    box-shadow: 0 0 0 1px transparent, shadow(faint);
     border-radius: border-radius();
-    transition-property: box-shadow, background;
+    transition-property: box-shadow, background-color;
     transition-duration: duration();
     transition-timing-function: easing();
 
@@ -34,30 +32,66 @@
       left: 0;
       right: 0;
       display: block;
-      background: linear-gradient(to bottom, color(white), color(sky, lighter));
-      border-radius: calc(#{border-radius()} - 1px);
+      background: linear-gradient(
+        to bottom,
+        color('white'),
+        color('sky', 'lighter')
+      );
+      border-radius: border-radius() - 1px;
+    }
+
+    @media (-ms-high-contrast: active) {
+      background: transparent;
+      border: 2px solid ms-high-contrast-color('button-text');
+      transition: none;
+      color: color('state', 'hover');
+
+      &::after {
+        top: -4px;
+        right: -4px;
+        bottom: -4px;
+        left: -4px;
+        background: none;
+        border-radius: border-radius() + 1px;
+      }
     }
   } @else if $style == focused {
-    background: color(indigo);
-    box-shadow:
-      0 0 0 1px color(indigo),
-      shadow(transparent);
+    background: color('indigo');
+    box-shadow: 0 0 0 1px color('indigo'), shadow(transparent);
 
-    &::after { background: color(white); }
+    &::after {
+      background: color('white');
+    }
+
+    @media (-ms-high-contrast: active) {
+      &::after {
+        border: 1px dashed ms-high-contrast-color('button-text');
+      }
+    }
   } @else if $style == error {
-    background: color(red);
+    background: color('red', 'dark');
     box-shadow: 0 0 0 1px transparent;
 
-    &::after { background: color(red, lighter); }
+    &::after {
+      background: color('red', 'lighter');
+    }
   } @else if $style == disabled {
-    background: color(sky);
+    background: color('sky');
     box-shadow: none;
 
-    &::after { background: color(sky, lighter); }
-  } @else if $style == focused-error {
-    background: color(indigo);
-    box-shadow: 0 0 0 1px color(indigo);
+    &::after {
+      background: color('sky', 'lighter');
+    }
 
-    &::after { background: color(red, lighter); }
+    @media (-ms-high-contrast: active) {
+      color: ms-high-contrast-color('disabled-text');
+    }
+  } @else if $style == focused-error {
+    background: color('indigo');
+    box-shadow: 0 0 0 1px color('indigo');
+
+    &::after {
+      background: color('red', 'lighter');
+    }
   }
 }

@@ -1,0 +1,122 @@
+.Polaris-DataTable{
+  position:relative;
+  max-width:100vw; }
+
+.Polaris-DataTable--condensed .Polaris-DataTable__Navigation{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  padding:1.6rem 0.8rem; }
+  @media (min-width: 48em){
+    .Polaris-DataTable--condensed .Polaris-DataTable__Navigation{
+      justify-content:flex-end; } }
+
+.Polaris-DataTable__Navigation{
+  display:none; }
+
+.Polaris-DataTable__Pip{
+  height:0.6rem;
+  width:0.6rem;
+  background:#919eab;
+  border-radius:3px; }
+  .Polaris-DataTable__Pip:not(:last-of-type){
+    margin-right:0.4rem; }
+
+.Polaris-DataTable__Pip--visible{
+  background:#212b36; }
+
+.Polaris-DataTable__ScrollContainer{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch; }
+
+.Polaris-DataTable__Table{
+  width:100%;
+  border-spacing:0; }
+
+@media (min-width: 48em){
+  .Polaris-DataTable__TableRow:hover .Polaris-DataTable__Cell{
+    background:#f9fafb; } }
+
+.Polaris-DataTable__Cell{
+  padding:1.6rem;
+  border-bottom:0.1rem solid #f4f6f8;
+  white-space:nowrap;
+  text-align:left;
+  transition:background-color 0.2s ease-in-out;
+  vertical-align:top; }
+
+.Polaris-DataTable__Cell--firstColumn{
+  font-weight:400;
+  color:#212b36;
+  text-align:left;
+  white-space:normal; }
+
+.Polaris-DataTable__Cell--numeric{
+  text-align:right; }
+
+.Polaris-DataTable__Cell--truncated{
+  white-space:nowrap;
+  overflow-x:hidden;
+  text-overflow:ellipsis;
+  max-width:14.5rem; }
+
+.Polaris-DataTable__Cell--header{
+  font-weight:400;
+  color:#212b36;
+  border-bottom:0.1rem solid #c4cdd5;
+  border-top:0; }
+
+.Polaris-DataTable__Cell--sortable{
+  padding:0; }
+
+.Polaris-DataTable__Icon{
+  display:flex;
+  align-self:flex-end;
+  opacity:0;
+  transition:opacity 200ms cubic-bezier(0.64, 0, 0.35, 1), fill 200ms cubic-bezier(0.64, 0, 0.35, 1); }
+
+.Polaris-DataTable__Heading{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  position:relative;
+  display:inline-flex;
+  justify-content:flex-end;
+  align-items:baseline;
+  transition:color 200ms cubic-bezier(0.64, 0, 0.35, 1);
+  padding:1.6rem;
+  cursor:pointer; }
+  .Polaris-DataTable__Heading:focus{
+    outline:none; }
+  .Polaris-DataTable__Heading:hover, .Polaris-DataTable__Heading:focus{
+    color:#5c6ac4; }
+    .Polaris-DataTable__Heading:hover svg, .Polaris-DataTable__Heading:focus svg{
+      fill:#5c6ac4; }
+    .Polaris-DataTable__Heading:hover .Polaris-DataTable__Icon, .Polaris-DataTable__Heading:focus .Polaris-DataTable__Icon{
+      opacity:1; }
+
+.Polaris-DataTable__Heading--left{
+  justify-content:flex-start;
+  flex-direction:row-reverse; }
+
+.Polaris-DataTable__Cell--sorted .Polaris-DataTable__Icon{
+  opacity:1; }
+
+.Polaris-DataTable__Cell--total{
+  font-weight:600;
+  background:#f9fafb;
+  border-bottom:0.1rem solid #dfe3e8; }
+
+.Polaris-DataTable__Footer{
+  padding:1.6rem;
+  background:#f4f6f8;
+  color:#637381;
+  text-align:center; }

@@ -1,0 +1,89 @@
+.Polaris-OptionList-Option{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  color:inherit;
+  text-decoration:none;
+  width:100%;
+  min-height:3.6rem;
+  text-align:left;
+  cursor:pointer; }
+  .Polaris-OptionList-Option:focus{
+    outline:none; }
+  .Polaris-OptionList-Option:visited{
+    color:inherit; }
+  .Polaris-OptionList-Option:hover{
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+
+.Polaris-OptionList-Option__SingleSelectOption{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  text-align:left; }
+  .Polaris-OptionList-Option__SingleSelectOption:focus{
+    outline:none; }
+  .Polaris-OptionList-Option__SingleSelectOption:not(.Polaris-OptionList-Option--disabled){
+    color:inherit; }
+  .Polaris-OptionList-Option__SingleSelectOption .Polaris-OptionList-Option__Media{
+    padding:0 0.8rem 0 0; }
+
+.Polaris-OptionList-Option__Label,
+.Polaris-OptionList-Option__SingleSelectOption{
+  display:flex;
+  align-items:center;
+  width:100%;
+  padding:0.8rem 1.6rem; }
+
+.Polaris-OptionList-Option__Checkbox{
+  box-sizing:border-box;
+  display:flex;
+  flex-shrink:0;
+  width:1.6rem;
+  height:1.6rem;
+  margin-right:0.8rem; }
+
+.Polaris-OptionList-Option--focused{
+  box-shadow:inset 0.2rem 0 0 #5c6ac4;
+  background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .Polaris-OptionList-Option--focused:hover{
+    box-shadow:inset 0.2rem 0 0 #5c6ac4;
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+
+.Polaris-OptionList-Option--disabled{
+  background-image:linear-gradient(#f9fafb, #f9fafb); }
+  .Polaris-OptionList-Option--disabled .Polaris-OptionList-Option__Media{
+    color:white; }
+    .Polaris-OptionList-Option--disabled .Polaris-OptionList-Option__Media svg{
+      fill:#919eab; }
+
+.Polaris-OptionList-Option--select{
+  background-image:linear-gradient(rgba(179, 188, 245, 0.15), rgba(179, 188, 245, 0.15)); }
+  .Polaris-OptionList-Option--select.Polaris-OptionList-Option--focused{
+    box-shadow:inset 0.2rem 0 0 #5c6ac4;
+    background-image:linear-gradient(rgba(179, 188, 245, 0.15), rgba(179, 188, 245, 0.15)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+    .Polaris-OptionList-Option--select.Polaris-OptionList-Option--focused:hover{
+      box-shadow:inset 0.2rem 0 0 #5c6ac4;
+      background-image:linear-gradient(rgba(179, 188, 245, 0.15), rgba(179, 188, 245, 0.15)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)), linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+
+.Polaris-OptionList-Option--active{
+  background-image:linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)); }
+
+.Polaris-OptionList-Option__Media{
+  color:white;
+  padding:0 0.8rem; }
+  .Polaris-OptionList-Option__Media svg{
+    fill:#454f5b; }

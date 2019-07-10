@@ -1,0 +1,164 @@
+.Polaris-Select{
+  position:relative; }
+  .Polaris-Select select::-ms-expand{
+    display:none; }
+
+.Polaris-Select--disabled .Polaris-Select__Content{
+  color:#919eab; }
+
+.Polaris-Select--disabled .Polaris-Select__InlineLabel{
+  color:inherit; }
+
+.Polaris-Select--disabled .Polaris-Select__Icon{
+  opacity:0.4; }
+
+.Polaris-Select--disabled .Polaris-Select__Backdrop{
+  background:#dfe3e8;
+  box-shadow:none; }
+  .Polaris-Select--disabled .Polaris-Select__Backdrop::after{
+    background:#f9fafb; }
+  @media (-ms-high-contrast: active){
+    .Polaris-Select--disabled .Polaris-Select__Backdrop{
+      color:grayText; } }
+
+.Polaris-Select--error .Polaris-Select__Backdrop{
+  background:#bf0711;
+  box-shadow:0 0 0 1px transparent; }
+  .Polaris-Select--error .Polaris-Select__Backdrop::after{
+    background:#fbeae5; }
+
+.Polaris-Select--error .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop{
+  background:#5c6ac4;
+  box-shadow:0 0 0 1px #5c6ac4; }
+  .Polaris-Select--error .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop::after{
+    background:#fbeae5; }
+
+.Polaris-Select--placeholder.Polaris-Select--error .Polaris-Select__Input{
+  color:#9c9798; }
+
+.Polaris-Select--placeholder.Polaris-Select--error .Polaris-Select__Input:-moz-focusring{
+  color:transparent;
+  text-shadow:0 0 0 #212b36; }
+
+.Polaris-Select__Content{
+  font-size:1.6rem;
+  font-weight:400;
+  line-height:2.4rem;
+  text-transform:initial;
+  letter-spacing:initial;
+  position:relative;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  width:100%;
+  min-height:3.6rem;
+  padding:0.5rem 0.8rem 0.5rem 1.2rem; }
+  @media (min-width: 40em){
+    .Polaris-Select__Content{
+      font-size:1.4rem; } }
+
+.Polaris-Select__InlineLabel{
+  color:#637381;
+  margin-right:0.4rem;
+  white-space:nowrap;
+  overflow:hidden; }
+
+.Polaris-Select__SelectedOption{
+  flex:1 1;
+  white-space:nowrap;
+  overflow:hidden; }
+
+.Polaris-Select__Icon svg{
+  fill:#637381; }
+
+.Polaris-Select__Backdrop{
+  background-color:#c4cdd5;
+  border:0.1rem solid transparent;
+  box-shadow:0 0 0 1px transparent, 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  border-radius:3px;
+  transition-property:box-shadow, background-color;
+  transition-duration:200ms;
+  transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1);
+  position:absolute;
+  z-index:10;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0; }
+  .Polaris-Select__Backdrop::after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:block;
+    background:linear-gradient(to bottom, white, #f9fafb);
+    border-radius:2px; }
+  @media (-ms-high-contrast: active){
+    .Polaris-Select__Backdrop{
+      background:transparent;
+      border:2px solid buttonText;
+      transition:none;
+      color:rgba(223, 227, 232, 0.3); }
+      .Polaris-Select__Backdrop::after{
+        top:-4px;
+        right:-4px;
+        bottom:-4px;
+        left:-4px;
+        background:none;
+        border-radius:4px; } }
+
+.Polaris-Select__Input{
+  font-size:1.6rem;
+  font-weight:400;
+  line-height:2.4rem;
+  text-transform:initial;
+  letter-spacing:initial;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:30;
+  width:100%;
+  height:100%;
+  margin:0;
+  opacity:0.001;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none; }
+  @media (min-width: 40em){
+    .Polaris-Select__Input{
+      font-size:1.4rem; } }
+  .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop{
+    background:#5c6ac4;
+    box-shadow:0 0 0 1px #5c6ac4, 0 0 0 0 transparent; }
+    .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop::after{
+      background:white; }
+    @media (-ms-high-contrast: active){
+      .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop::after{
+        border:1px dashed buttonText; } }
+
+@media (-ms-high-contrast: active){
+  .Polaris-Select__Content{
+    color:windowText;
+    -ms-high-contrast-adjust:none; }
+  .Polaris-Select__InlineLabel{
+    color:inherit; }
+    .Polaris-Select__InlineLabel::after{
+      content:':'; }
+  .Polaris-Select__SelectedOption{
+    color:inherit; }
+  .Polaris-Select__Icon svg{
+    fill:buttonText; }
+  .Polaris-Select__Backdrop::after{
+    display:none; }
+  .Polaris-Select__Input:focus ~ .Polaris-Select__Content{
+    color:highlightText; }
+  .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop{
+    background-color:highlight; }
+  .Polaris-Select--disabled .Polaris-Select__Content{
+    color:grayText; }
+  .Polaris-Select--disabled .Polaris-Select__Icon{
+    opacity:1; }
+    .Polaris-Select--disabled .Polaris-Select__Icon svg{
+      fill:grayText; } }

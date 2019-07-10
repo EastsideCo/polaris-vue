@@ -1,0 +1,46 @@
+.Polaris-Filters-ConnectedFilterControl__Item{
+  position:relative;
+  z-index:10; }
+
+.Polaris-Filters-ConnectedFilterControl__Item--focused{
+  z-index:20; }
+
+.Polaris-Filters-ConnectedFilterControl__ProxyButtonContainer{
+  position:absolute;
+  display:flex;
+  width:100%;
+  height:0;
+  visibility:hidden; }
+  .Polaris-Filters-ConnectedFilterControl__ProxyButtonContainer > *{
+    flex-shrink:0; }
+
+.Polaris-Filters-ConnectedFilterControl{
+  display:flex;
+  flex-grow:1; }
+  .Polaris-Filters-ConnectedFilterControl .Polaris-Filters-ConnectedFilterControl__CenterContainer{
+    flex:1 1 auto;
+    min-width:10rem; }
+  .Polaris-Filters-ConnectedFilterControl.Polaris-Filters-ConnectedFilterControl--right .Polaris-Filters-ConnectedFilterControl__CenterContainer *{
+    border-top-right-radius:0 !important;
+    border-bottom-right-radius:0 !important; }
+
+.Polaris-Filters-ConnectedFilterControl__RightContainer{
+  display:flex; }
+  .Polaris-Filters-ConnectedFilterControl__RightContainer .Polaris-Filters-ConnectedFilterControl__Item > * > *{
+    margin-left:-1px;
+    border-radius:0 !important; }
+  .Polaris-Filters-ConnectedFilterControl__RightContainer .Polaris-Filters-ConnectedFilterControl__Item{
+    flex-shrink:0; }
+
+.Polaris-Filters-ConnectedFilterControl__MoreFiltersButtonContainer *{
+  margin-left:-1px;
+  border-top-left-radius:0 !important;
+  border-bottom-left-radius:0 !important;
+  flex-shrink:0;
+  white-space:nowrap; }
+
+.Polaris-Filters-ConnectedFilterControl__Wrapper{
+  display:flex; }
+
+.Polaris-Filters-ConnectedFilterControl__AuxiliaryContainer{
+  flex-grow:0; }

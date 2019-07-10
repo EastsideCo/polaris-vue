@@ -1,0 +1,45 @@
+.Polaris-SkeletonDisplayText__DisplayText{
+  max-width:12rem;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity;
+  position:relative; }
+  .Polaris-SkeletonDisplayText__DisplayText{
+    animation:polaris-SkeletonShimmerAnimation 800ms linear infinite alternate; }
+  .Polaris-SkeletonDisplayText__DisplayText::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:block;
+    background-color:#dfe3e8;
+    border-radius:3px; }
+    @media screen and (-ms-high-contrast: active){
+      .Polaris-SkeletonDisplayText__DisplayText::after{
+        background-color:grayText; } }
+
+.Polaris-SkeletonDisplayText--sizeSmall{
+  height:2.4rem; }
+  @media (min-width: 40em){
+    .Polaris-SkeletonDisplayText--sizeSmall{
+      height:2.8rem; } }
+
+.Polaris-SkeletonDisplayText--sizeMedium{
+  height:2.8rem; }
+  @media (min-width: 40em){
+    .Polaris-SkeletonDisplayText--sizeMedium{
+      height:3.2rem; } }
+
+.Polaris-SkeletonDisplayText--sizeLarge{
+  height:2.8rem; }
+  @media (min-width: 40em){
+    .Polaris-SkeletonDisplayText--sizeLarge{
+      height:3.2rem; } }
+
+.Polaris-SkeletonDisplayText--sizeExtraLarge{
+  height:3.6rem; }
+  @media (min-width: 40em){
+    .Polaris-SkeletonDisplayText--sizeExtraLarge{
+      height:4.4rem; } }

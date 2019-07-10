@@ -1,0 +1,51 @@
+.Polaris-ButtonGroup{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:-0.8rem;
+  margin-left:-0.8rem; }
+
+.Polaris-ButtonGroup__Item{
+  margin-top:0.8rem;
+  margin-left:0.8rem; }
+
+.Polaris-ButtonGroup__Item--plain:not(:first-child){
+  margin-left:1.6rem; }
+
+.Polaris-ButtonGroup__Item--plain:not(:last-child){
+  margin-right:0.8rem; }
+
+.Polaris-ButtonGroup--segmented{
+  display:flex;
+  flex-wrap:nowrap;
+  margin-top:0;
+  margin-left:0; }
+  .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item{
+    position:relative;
+    z-index:10;
+    margin-top:0;
+    margin-left:0; }
+    .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item:not(:first-child){
+      margin-left:-0.1rem; }
+    .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item > *{
+      border-radius:0; }
+    .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item:first-child > *{
+      border-top-left-radius:3px;
+      border-bottom-left-radius:3px; }
+    .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item:last-child > *{
+      border-top-right-radius:3px;
+      border-bottom-right-radius:3px; }
+  .Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item--focused{
+    z-index:20; }
+
+.Polaris-ButtonGroup--fullWidth .Polaris-ButtonGroup__Item{
+  flex:1 1 auto; }
+  .Polaris-ButtonGroup--fullWidth .Polaris-ButtonGroup__Item > *{
+    display:flex;
+    width:100%; }
+
+.Polaris-ButtonGroup--connectedTop .Polaris-ButtonGroup__Item:first-child > *{
+  border-top-left-radius:0; }
+
+.Polaris-ButtonGroup--connectedTop .Polaris-ButtonGroup__Item:last-child > *{
+  border-top-right-radius:0; }

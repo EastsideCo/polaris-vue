@@ -1,0 +1,46 @@
+.Polaris-Frame-Toast{
+  font-size:1.6rem;
+  font-weight:400;
+  line-height:2.4rem;
+  display:inline-flex;
+  max-width:50rem;
+  padding:0.8rem 1.6rem;
+  border-radius:3px;
+  background:rgba(0, 0, 0, 0.88);
+  box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  color:white;
+  margin-bottom:2rem; }
+  @media (min-width: 40em){
+    .Polaris-Frame-Toast{
+      font-size:2rem;
+      line-height:2.8rem; } }
+  @media (min-width: 40em){
+    .Polaris-Frame-Toast{
+      padding:1.6rem; } }
+  @media (-ms-high-contrast: active){
+    .Polaris-Frame-Toast{
+      border:0.2rem solid windowText; } }
+
+.Polaris-Frame-Toast__Action{
+  margin-left:3.2rem;
+  margin-right:1.6rem; }
+
+.Polaris-Frame-Toast--error{
+  background:rgba(191, 7, 17, 0.88); }
+
+.Polaris-Frame-Toast__CloseButton{
+  display:flex;
+  align-self:flex-start;
+  flex-direction:column;
+  justify-content:flex-start;
+  margin:-0.8rem -1.6rem -0.8rem 0;
+  padding:1.2rem 1.6rem 0.8rem;
+  border:none;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  background:transparent;
+  fill:white;
+  cursor:pointer; }
+  .Polaris-Frame-Toast__CloseButton:focus{
+    outline:none; }

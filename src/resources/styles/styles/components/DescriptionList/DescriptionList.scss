@@ -1,0 +1,47 @@
+.Polaris-DescriptionList{
+  margin:0;
+  padding:0; }
+  @media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){
+    [data-has-navigation] .Polaris-DescriptionList{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start; } }
+  @media (min-width: 36.875em){
+    .Polaris-DescriptionList{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start; } }
+
+.Polaris-DescriptionList__Term{
+  font-weight:600;
+  padding:1.6rem 0 0.8rem; }
+  @media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){
+    [data-has-navigation] .Polaris-DescriptionList__Term{
+      flex:0 1 25%;
+      padding:1.6rem 1.6rem 1.6rem 0; }
+      .Polaris-DescriptionList__Description + [data-has-navigation] .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{
+        border-top:0.1rem solid #dfe3e8; } }
+  @media (min-width: 36.875em){
+    .Polaris-DescriptionList__Term{
+      flex:0 1 25%;
+      padding:1.6rem 1.6rem 1.6rem 0; }
+      .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{
+        border-top:0.1rem solid #dfe3e8; } }
+
+.Polaris-DescriptionList__Description{
+  margin-left:0;
+  padding:0 0 1.6rem; }
+  .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term{
+    border-top:0.1rem solid #dfe3e8; }
+  @media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){
+    [data-has-navigation] .Polaris-DescriptionList__Description{
+      flex:1 1 51%;
+      padding:1.6rem 0; }
+      [data-has-navigation] .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{
+        border-top:0.1rem solid #dfe3e8; } }
+  @media (min-width: 36.875em){
+    .Polaris-DescriptionList__Description{
+      flex:1 1 51%;
+      padding:1.6rem 0; }
+      .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{
+        border-top:0.1rem solid #dfe3e8; } }

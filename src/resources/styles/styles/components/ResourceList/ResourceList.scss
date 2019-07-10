@@ -1,0 +1,192 @@
+.Polaris-ResourceList__FiltersWrapper{
+  padding:1.2rem 1.2rem 1.6rem; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__FiltersWrapper{
+      padding:1.6rem; } }
+  .Polaris-ResourceList__FiltersWrapper + .Polaris-ResourceList{
+    border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-ResourceList__HeaderOuterWrapper{
+  position:relative;
+  background-color:white;
+  z-index:2; }
+  .Polaris-ResourceList__HeaderOuterWrapper + .Polaris-ResourceList{
+    border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-ResourceList__HeaderWrapper--disabled{
+  pointer-events:none; }
+
+.Polaris-ResourceList__HeaderWrapper--overlay{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:4;
+  background-color:rgba(255, 255, 255, 0.5); }
+
+.Polaris-ResourceList__FiltersWrapper + .Polaris-ResourceList__HeaderOuterWrapper{
+  margin-top:-1.6rem; }
+
+.Polaris-ResourceList__HeaderWrapper{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+  min-height:5.6rem;
+  padding:1rem 1.2rem;
+  background-color:white; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__HeaderWrapper{
+      flex-direction:row;
+      padding:1rem 1.6rem; } }
+
+.Polaris-ResourceList__HeaderWrapper--isSticky{
+  box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+
+.Polaris-ResourceList__HeaderContentWrapper{
+  position:absolute;
+  z-index:1;
+  right:1.2rem;
+  left:1.2rem;
+  display:flex;
+  min-height:3.6rem;
+  opacity:1;
+  transition:opacity cubic-bezier(0.64, 0, 0.35, 1) 200ms; }
+  .Polaris-ResourceList__HeaderWrapper--inSelectMode .Polaris-ResourceList__HeaderContentWrapper{
+    opacity:0; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__HeaderContentWrapper{
+      right:1.6rem;
+      left:1.6rem;
+      align-self:flex-start; } }
+
+.Polaris-ResourceList__SortWrapper,
+.Polaris-ResourceList__AlternateToolWrapper{
+  position:relative;
+  display:flex;
+  flex:1 1;
+  align-items:center; }
+  .Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__HeaderWrapper--hasSelect
+  .Polaris-ResourceList__AlternateToolWrapper{
+    padding-right:0.8rem; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__SortWrapper,
+    .Polaris-ResourceList__AlternateToolWrapper{
+      position:relative;
+      left:auto;
+      flex:0 1 auto;
+      margin-left:1.6rem; }
+      .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper,
+      .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect
+      .Polaris-ResourceList__AlternateToolWrapper,
+      .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect
+      .Polaris-ResourceList__AlternateToolWrapper{
+        padding-right:0; } }
+
+.Polaris-ResourceList__SortLabel{
+  margin-right:0.8rem;
+  display:none; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__SortLabel{
+      display:block; } }
+
+.Polaris-ResourceList__HeaderTitleWrapper{
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  flex:1 1;
+  padding-left:0.4rem;
+  align-self:center; }
+  .Polaris-ResourceList__HeaderWrapper--hasAlternateTool .Polaris-ResourceList__HeaderTitleWrapper,
+  .Polaris-ResourceList__HeaderWrapper--hasSort .Polaris-ResourceList__HeaderTitleWrapper{
+    display:none; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper,
+    .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper,
+    .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper{
+      display:none; }
+    .Polaris-ResourceList__HeaderWrapper--hasAlternateTool .Polaris-ResourceList__HeaderTitleWrapper,
+    .Polaris-ResourceList__HeaderWrapper--hasSort .Polaris-ResourceList__HeaderTitleWrapper{
+      display:block; } }
+
+.Polaris-ResourceList__BulkActionsWrapper{
+  position:relative;
+  z-index:2;
+  width:100%; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__BulkActionsWrapper{
+      flex:0 1 auto;
+      align-self:flex-start; } }
+
+.Polaris-ResourceList__CheckableButtonWrapper{
+  display:none; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__CheckableButtonWrapper{
+      flex:1 1;
+      display:block; } }
+
+.Polaris-ResourceList__SelectButtonWrapper{
+  position:relative;
+  flex:none; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList__SelectButtonWrapper{
+      display:none; } }
+
+.Polaris-ResourceList__EmptySearchResultWrapper{
+  padding-top:60px;
+  padding-bottom:60px; }
+  @media screen and (max-height: 600px){
+    .Polaris-ResourceList__EmptySearchResultWrapper{
+      padding-top:32px;
+      padding-bottom:32px; } }
+
+.Polaris-ResourceList__ResourceListWrapper{
+  position:relative; }
+
+.Polaris-ResourceList{
+  position:relative;
+  z-index:1;
+  margin:0;
+  padding:0;
+  list-style:none; }
+
+.Polaris-ResourceList__ItemWrapper{
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  max-width:100%; }
+  .Polaris-ResourceList__ItemWrapper + .Polaris-ResourceList__ItemWrapper{
+    border-top:0.1rem solid #dfe3e8; }
+
+.Polaris-ResourceList__ItemWrapper--isLoading{
+  min-height:6.4rem; }
+
+.Polaris-ResourceList__SpinnerContainer{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:3;
+  display:flex;
+  justify-content:center; }
+
+.Polaris-ResourceList__LoadingOverlay{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+  background-color:rgba(255, 255, 255, 0.5); }
+
+.Polaris-ResourceList__DisabledPointerEvents{
+  pointer-events:none; }
+
+.Polaris-ResourceList--disableTextSelection{
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none; }

@@ -1,0 +1,62 @@
+.Polaris-Badge{
+  display:inline-flex;
+  align-items:center;
+  padding:0 0.8rem;
+  background-color:#dfe3e8;
+  border:0.2rem solid white;
+  border-radius:2rem;
+  font-size:1.3rem;
+  line-height:2rem;
+  color:#454f5b; }
+  .Polaris-Badge .Polaris-Badge__Pip{
+    color:#919eab; }
+
+.Polaris-Badge--sizeSmall{
+  font-size:1.2rem;
+  line-height:1.8rem; }
+
+.Polaris-Badge--statusSuccess{
+  background-color:#bbe5b3;
+  color:#414f3e; }
+  .Polaris-Badge--statusSuccess .Polaris-Badge__Pip{
+    color:#108043; }
+
+.Polaris-Badge--statusInfo{
+  background-color:#b4e1fa;
+  color:#3e4e57; }
+  .Polaris-Badge--statusInfo .Polaris-Badge__Pip{
+    color:#084e8a; }
+
+.Polaris-Badge--statusAttention{
+  background-color:#ffea8a;
+  color:#595130; }
+  .Polaris-Badge--statusAttention .Polaris-Badge__Pip{
+    color:#8a6116; }
+
+.Polaris-Badge--statusWarning{
+  background-color:#ffc58b;
+  color:#594430; }
+  .Polaris-Badge--statusWarning .Polaris-Badge__Pip{
+    color:#c05717; }
+
+.Polaris-Badge--statusNew{
+  background-color:#dfe3e8;
+  color:#212b36;
+  font-weight:500;
+  border:none; }
+
+.Polaris-Badge--progressIncomplete .Polaris-Badge__Pip{
+  background:transparent; }
+
+.Polaris-Badge--progressPartiallyComplete .Polaris-Badge__Pip{
+  background:linear-gradient(to top, currentColor, currentColor 50%, transparent 50%, transparent); }
+
+.Polaris-Badge--progressComplete .Polaris-Badge__Pip{
+  background:currentColor; }
+
+.Polaris-Badge__Pip{
+  height:1rem;
+  width:1rem;
+  margin:0 0.4rem 0 -0.3rem;
+  border:0.2rem solid currentColor;
+  border-radius:50%; }

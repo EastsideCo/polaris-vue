@@ -1,0 +1,34 @@
+.Polaris-Link{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  display:inline;
+  text-align:inherit;
+  padding:0;
+  background:none;
+  border:0;
+  font-size:inherit;
+  color:#006fbb;
+  text-decoration:none;
+  cursor:pointer; }
+  .Polaris-Link:hover, .Polaris-Link:active{
+    color:#084e8a; }
+
+.Polaris-Link__IconLockup{
+  display:inline;
+  white-space:nowrap; }
+  .Polaris-Link__IconLockup svg{
+    fill:currentColor; }
+  .Polaris-Link__IconLockup::before{
+    content:'\2060'; }
+
+.Polaris-Link__IconLayout{
+  display:inline-flex; }
+  .Polaris-Link__IconLayout::before{
+    content:'\2060'; }
+
+.Polaris-Link--monochrome{
+  color:inherit;
+  text-decoration:underline; }
+  .Polaris-Link--monochrome:hover, .Polaris-Link--monochrome:focus, .Polaris-Link--monochrome:active{
+    color:inherit; }

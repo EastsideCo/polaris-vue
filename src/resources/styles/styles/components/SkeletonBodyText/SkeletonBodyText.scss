@@ -1,0 +1,27 @@
+.Polaris-SkeletonBodyText__SkeletonBodyTextContainer{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity; }
+  .Polaris-SkeletonBodyText__SkeletonBodyTextContainer{
+    animation:polaris-SkeletonShimmerAnimation 800ms linear infinite alternate; }
+
+.Polaris-SkeletonBodyText{
+  height:0.8rem;
+  position:relative; }
+  .Polaris-SkeletonBodyText::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:block;
+    background-color:#dfe3e8;
+    border-radius:3px; }
+    @media screen and (-ms-high-contrast: active){
+      .Polaris-SkeletonBodyText::after{
+        background-color:grayText; } }
+  .Polaris-SkeletonBodyText:last-child:not(:first-child){
+    width:80%; }
+  .Polaris-SkeletonBodyText + .Polaris-SkeletonBodyText{
+    margin-top:1.2rem; }

@@ -1,0 +1,156 @@
+.Polaris-Filters{
+  position:relative; }
+
+.Polaris-Filters__FiltersContainer{
+  position:relative;
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column; }
+
+.Polaris-Filters__FiltersContainerHeader{
+  top:0;
+  width:100%;
+  padding:1.6rem 2rem;
+  border-bottom:0.1rem solid #dfe3e8;
+  height:5.6rem;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:space-between; }
+
+.Polaris-Filters__FiltersDesktopContainerContent{
+  width:100%;
+  height:calc(100% - 12.6rem); }
+
+.Polaris-Filters__FiltersMobileContainerContent{
+  width:100%;
+  height:calc(100% - 5.6rem); }
+
+.Polaris-Filters__FiltersContainerFooter{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:1.4rem 1.6rem;
+  border-top:0.1rem solid #dfe3e8;
+  height:7rem;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:space-between; }
+
+.Polaris-Filters__FiltersMobileContainerFooter{
+  width:100%;
+  padding:1.4rem 1.6rem;
+  height:7rem;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:space-between; }
+
+.Polaris-Filters__EmptyFooterState{
+  border-top:0.1rem solid #dfe3e8;
+  padding-top:1.4rem;
+  width:100%;
+  display:flex;
+  justify-content:center; }
+
+.Polaris-Filters__FilterTriggerContainer{
+  position:relative; }
+
+.Polaris-Filters__FilterTrigger{
+  width:100%;
+  padding:1.4rem 2rem;
+  border:none;
+  background:none;
+  color:#212b36; }
+  .Polaris-Filters__FilterTrigger:hover{
+    cursor:pointer;
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .Polaris-Filters__FilterTrigger:focus{
+    outline:none;
+    box-shadow:inset 0.2rem 0 0 #5c6ac4;
+    background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+
+.Polaris-Filters__FilterTriggerTitle{
+  font-size:1.5rem;
+  font-weight:600; }
+
+.Polaris-Filters__AppliedFilterBadgeContainer{
+  padding-top:0.4rem;
+  display:flex; }
+  .Polaris-Filters--open .Polaris-Filters__AppliedFilterBadgeContainer{
+    display:none; }
+
+.Polaris-Filters__FilterTriggerLabelContainer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; }
+
+.Polaris-Filters--open::before, .Polaris-Filters--open::after{
+  content:'';
+  position:relative;
+  left:1.6rem;
+  width:calc(100% - 3.2rem);
+  height:0.1rem;
+  background-color:#dfe3e8;
+  display:block; }
+
+.Polaris-Filters--open::before{
+  top:0; }
+
+.Polaris-Filters--open::after{
+  bottom:0; }
+
+.Polaris-Filters--open.Polaris-Filters--first::after{
+  content:'';
+  bottom:0;
+  position:relative;
+  left:1.6rem;
+  width:calc(100% - 3.2rem);
+  height:0.1rem;
+  background-color:#dfe3e8;
+  display:block; }
+
+.Polaris-Filters--open.Polaris-Filters--first::before{
+  display:none; }
+
+.Polaris-Filters--open + .Polaris-Filters--open::before{
+  display:none; }
+
+.Polaris-Filters--open.Polaris-Filters--last::before{
+  content:'';
+  top:0;
+  position:relative;
+  left:1.6rem;
+  width:calc(100% - 3.2rem);
+  height:0.1rem;
+  background-color:#dfe3e8;
+  display:block; }
+
+.Polaris-Filters--open.Polaris-Filters--last::after{
+  display:none; }
+
+.Polaris-Filters__FilterNodeContainer{
+  padding:0.8rem 2rem 2rem 2rem; }
+
+.Polaris-Filters__SearchIcon{
+  fill:currentColor; }
+
+.Polaris-Filters__Backdrop{
+  position:fixed;
+  z-index:518;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:block;
+  opacity:0; }
+
+.Polaris-Filters__TagsContainer{
+  display:flex;
+  padding-top:0.8rem;
+  flex-wrap:wrap; }
+  .Polaris-Filters__TagsContainer > *{
+    margin-right:0.8rem;
+    margin-bottom:0.8rem; }

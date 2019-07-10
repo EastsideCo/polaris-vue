@@ -1,0 +1,32 @@
+.Polaris-SkeletonThumbnail{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity;
+  position:relative; }
+  .Polaris-SkeletonThumbnail{
+    animation:polaris-SkeletonShimmerAnimation 800ms linear infinite alternate; }
+  .Polaris-SkeletonThumbnail::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:block;
+    background-color:#dfe3e8;
+    border-radius:3px; }
+    @media screen and (-ms-high-contrast: active){
+      .Polaris-SkeletonThumbnail::after{
+        background-color:grayText; } }
+
+.Polaris-SkeletonThumbnail--sizeSmall{
+  height:4rem;
+  width:4rem; }
+
+.Polaris-SkeletonThumbnail--sizeMedium{
+  height:6rem;
+  width:6rem; }
+
+.Polaris-SkeletonThumbnail--sizeLarge{
+  height:8rem;
+  width:8rem; }

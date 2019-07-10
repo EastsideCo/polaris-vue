@@ -1,0 +1,325 @@
+.Polaris-Icon{
+  display:block;
+  height:2rem;
+  width:2rem;
+  max-height:100%;
+  max-width:100%;
+  margin:auto; }
+
+.Polaris-Icon--hasBackdrop{
+  position:relative;
+  display:flex;
+  align-items:center;
+  margin:0.4rem; }
+  .Polaris-Icon--hasBackdrop::after{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:-0.4rem;
+    bottom:-0.4rem;
+    left:-0.4rem;
+    right:-0.4rem;
+    border-radius:50%; }
+
+.Polaris-Icon--isColored{
+  color:white; }
+
+.Polaris-Icon--colorWhite{
+  color:transparent; }
+  .Polaris-Icon--colorWhite svg{
+    fill:white; }
+  .Polaris-Icon--colorWhite img{
+    -webkit-filter:brightness(0) saturate(100%) invert(100%);
+            filter:brightness(0) saturate(100%) invert(100%); }
+
+.Polaris-Icon--colorBlack svg{
+  fill:black; }
+
+.Polaris-Icon--colorBlack img{
+  -webkit-filter:brightness(0) saturate(100%);
+          filter:brightness(0) saturate(100%); }
+
+.Polaris-Icon--colorSkyLighter svg{
+  fill:#f9fafb; }
+
+.Polaris-Icon--colorSkyLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(159%) hue-rotate(170deg) brightness(99%) contrast(99%);
+          filter:brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(159%) hue-rotate(170deg) brightness(99%) contrast(99%); }
+
+.Polaris-Icon--colorSkyLight svg{
+  fill:#f4f6f8; }
+
+.Polaris-Icon--colorSkyLight img{
+  -webkit-filter:brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(467%) hue-rotate(174deg) brightness(99%) contrast(96%);
+          filter:brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(467%) hue-rotate(174deg) brightness(99%) contrast(96%); }
+
+.Polaris-Icon--colorSky svg{
+  fill:#dfe3e8; }
+
+.Polaris-Icon--colorSky img{
+  -webkit-filter:brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(336%) hue-rotate(175deg) brightness(97%) contrast(87%);
+          filter:brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(336%) hue-rotate(175deg) brightness(97%) contrast(87%); }
+
+.Polaris-Icon--colorSkyDark svg{
+  fill:#c4cdd5; }
+
+.Polaris-Icon--colorSkyDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(86%) sepia(4%) saturate(502%) hue-rotate(167deg) brightness(96%) contrast(91%);
+          filter:brightness(0) saturate(100%) invert(86%) sepia(4%) saturate(502%) hue-rotate(167deg) brightness(96%) contrast(91%); }
+
+.Polaris-Icon--colorInkLightest svg{
+  fill:#919eab; }
+
+.Polaris-Icon--colorInkLightest img{
+  -webkit-filter:brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(246%) hue-rotate(169deg) brightness(88%) contrast(90%);
+          filter:brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(246%) hue-rotate(169deg) brightness(88%) contrast(90%); }
+
+.Polaris-Icon--colorInkLighter svg{
+  fill:#637381; }
+
+.Polaris-Icon--colorInkLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(825%) hue-rotate(166deg) brightness(95%) contrast(90%);
+          filter:brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(825%) hue-rotate(166deg) brightness(95%) contrast(90%); }
+
+.Polaris-Icon--colorInkLighter::after{
+  background-color:#dfe3e8; }
+
+.Polaris-Icon--colorInkLight svg{
+  fill:#454f5b; }
+
+.Polaris-Icon--colorInkLight img{
+  -webkit-filter:brightness(0) saturate(100%) invert(32%) sepia(9%) saturate(1069%) hue-rotate(173deg) brightness(83%) contrast(84%);
+          filter:brightness(0) saturate(100%) invert(32%) sepia(9%) saturate(1069%) hue-rotate(173deg) brightness(83%) contrast(84%); }
+
+.Polaris-Icon--colorInk svg{
+  fill:#212b36; }
+
+.Polaris-Icon--colorInk img{
+  -webkit-filter:brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(2259%) hue-rotate(171deg) brightness(99%) contrast(84%);
+          filter:brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(2259%) hue-rotate(171deg) brightness(99%) contrast(84%); }
+
+.Polaris-Icon--colorInk::after{
+  background-color:#dfe3e8; }
+
+.Polaris-Icon--colorBlueLighter svg{
+  fill:#ebf5fa; }
+
+.Polaris-Icon--colorBlueLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(686%) hue-rotate(175deg) brightness(103%) contrast(96%);
+          filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(686%) hue-rotate(175deg) brightness(103%) contrast(96%); }
+
+.Polaris-Icon--colorBlueLight svg{
+  fill:#b4e1fa; }
+
+.Polaris-Icon--colorBlueLight img{
+  -webkit-filter:brightness(0) saturate(100%) invert(80%) sepia(7%) saturate(1832%) hue-rotate(178deg) brightness(108%) contrast(96%);
+          filter:brightness(0) saturate(100%) invert(80%) sepia(7%) saturate(1832%) hue-rotate(178deg) brightness(108%) contrast(96%); }
+
+.Polaris-Icon--colorBlue svg{
+  fill:#006fbb; }
+
+.Polaris-Icon--colorBlue img{
+  -webkit-filter:brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(1186%) hue-rotate(181deg) brightness(91%) contrast(103%);
+          filter:brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(1186%) hue-rotate(181deg) brightness(91%) contrast(103%); }
+
+.Polaris-Icon--colorBlueDark svg{
+  fill:#084e8a; }
+
+.Polaris-Icon--colorBlueDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(22%) sepia(70%) saturate(1308%) hue-rotate(182deg) brightness(94%) contrast(101%);
+          filter:brightness(0) saturate(100%) invert(22%) sepia(70%) saturate(1308%) hue-rotate(182deg) brightness(94%) contrast(101%); }
+
+.Polaris-Icon--colorBlueDark::after{
+  background-color:#b4e1fa; }
+
+.Polaris-Icon--colorBlueDarker svg{
+  fill:#001429; }
+
+.Polaris-Icon--colorBlueDarker img{
+  -webkit-filter:brightness(0) saturate(100%) invert(5%) sepia(33%) saturate(5606%) hue-rotate(195deg) brightness(97%) contrast(102%);
+          filter:brightness(0) saturate(100%) invert(5%) sepia(33%) saturate(5606%) hue-rotate(195deg) brightness(97%) contrast(102%); }
+
+.Polaris-Icon--colorIndigoLighter svg{
+  fill:#f4f5fa; }
+
+.Polaris-Icon--colorIndigoLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(1090%) hue-rotate(179deg) brightness(100%) contrast(96%);
+          filter:brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(1090%) hue-rotate(179deg) brightness(100%) contrast(96%); }
+
+.Polaris-Icon--colorIndigoLight svg{
+  fill:#b3bcf5; }
+
+.Polaris-Icon--colorIndigoLight img{
+  -webkit-filter:brightness(0) saturate(100%) invert(82%) sepia(37%) saturate(4261%) hue-rotate(194deg) brightness(111%) contrast(92%);
+          filter:brightness(0) saturate(100%) invert(82%) sepia(37%) saturate(4261%) hue-rotate(194deg) brightness(111%) contrast(92%); }
+
+.Polaris-Icon--colorIndigo svg{
+  fill:#5c6ac4; }
+
+.Polaris-Icon--colorIndigo img{
+  -webkit-filter:brightness(0) saturate(100%) invert(45%) sepia(17%) saturate(1966%) hue-rotate(194deg) brightness(88%) contrast(84%);
+          filter:brightness(0) saturate(100%) invert(45%) sepia(17%) saturate(1966%) hue-rotate(194deg) brightness(88%) contrast(84%); }
+
+.Polaris-Icon--colorIndigoDark svg{
+  fill:#202e78; }
+
+.Polaris-Icon--colorIndigoDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(17%) sepia(28%) saturate(4409%) hue-rotate(218deg) brightness(87%) contrast(98%);
+          filter:brightness(0) saturate(100%) invert(17%) sepia(28%) saturate(4409%) hue-rotate(218deg) brightness(87%) contrast(98%); }
+
+.Polaris-Icon--colorIndigoDarker svg{
+  fill:#000639; }
+
+.Polaris-Icon--colorIndigoDarker img{
+  -webkit-filter:brightness(0) saturate(100%) invert(5%) sepia(81%) saturate(5060%) hue-rotate(229deg) brightness(72%) contrast(111%);
+          filter:brightness(0) saturate(100%) invert(5%) sepia(81%) saturate(5060%) hue-rotate(229deg) brightness(72%) contrast(111%); }
+
+.Polaris-Icon--colorTealLighter svg{
+  fill:#e0f5f5; }
+
+.Polaris-Icon--colorTealLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(1124%) hue-rotate(173deg) brightness(114%) contrast(92%);
+          filter:brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(1124%) hue-rotate(173deg) brightness(114%) contrast(92%); }
+
+.Polaris-Icon--colorTealLight svg{
+  fill:#b7ecec; }
+
+.Polaris-Icon--colorTealLight img{
+  -webkit-filter:brightness(0) saturate(100%) invert(95%) sepia(12%) saturate(683%) hue-rotate(122deg) brightness(97%) contrast(91%);
+          filter:brightness(0) saturate(100%) invert(95%) sepia(12%) saturate(683%) hue-rotate(122deg) brightness(97%) contrast(91%); }
+
+.Polaris-Icon--colorTeal svg{
+  fill:#47c1bf; }
+
+.Polaris-Icon--colorTeal img{
+  -webkit-filter:brightness(0) saturate(100%) invert(72%) sepia(8%) saturate(2838%) hue-rotate(130deg) brightness(92%) contrast(87%);
+          filter:brightness(0) saturate(100%) invert(72%) sepia(8%) saturate(2838%) hue-rotate(130deg) brightness(92%) contrast(87%); }
+
+.Polaris-Icon--colorTeal::after{
+  background-color:white; }
+
+.Polaris-Icon--colorTealDark svg{
+  fill:#00848e; }
+
+.Polaris-Icon--colorTealDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(28%) sepia(83%) saturate(3919%) hue-rotate(168deg) brightness(93%) contrast(101%);
+          filter:brightness(0) saturate(100%) invert(28%) sepia(83%) saturate(3919%) hue-rotate(168deg) brightness(93%) contrast(101%); }
+
+.Polaris-Icon--colorTealDark::after{
+  background-color:#b7ecec; }
+
+.Polaris-Icon--colorTealDarker svg{
+  fill:#003135; }
+
+.Polaris-Icon--colorTealDarker img{
+  -webkit-filter:brightness(0) saturate(100%) invert(15%) sepia(23%) saturate(2237%) hue-rotate(141deg) brightness(96%) contrast(104%);
+          filter:brightness(0) saturate(100%) invert(15%) sepia(23%) saturate(2237%) hue-rotate(141deg) brightness(96%) contrast(104%); }
+
+.Polaris-Icon--colorGreenLighter svg{
+  fill:#e3f1df; }
+
+.Polaris-Icon--colorGreenLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(92%) sepia(51%) saturate(187%) hue-rotate(46deg) brightness(108%) contrast(89%);
+          filter:brightness(0) saturate(100%) invert(92%) sepia(51%) saturate(187%) hue-rotate(46deg) brightness(108%) contrast(89%); }
+
+.Polaris-Icon--colorGreen svg{
+  fill:#50b83c; }
+
+.Polaris-Icon--colorGreen img{
+  -webkit-filter:brightness(0) saturate(100%) invert(56%) sepia(10%) saturate(2637%) hue-rotate(64deg) brightness(106%) contrast(91%);
+          filter:brightness(0) saturate(100%) invert(56%) sepia(10%) saturate(2637%) hue-rotate(64deg) brightness(106%) contrast(91%); }
+
+.Polaris-Icon--colorGreen::after{
+  background-color:#e3f1df; }
+
+.Polaris-Icon--colorGreenDark svg{
+  fill:#108043; }
+
+.Polaris-Icon--colorGreenDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(18%) sepia(75%) saturate(6649%) hue-rotate(155deg) brightness(97%) contrast(87%);
+          filter:brightness(0) saturate(100%) invert(18%) sepia(75%) saturate(6649%) hue-rotate(155deg) brightness(97%) contrast(87%); }
+
+.Polaris-Icon--colorGreenDark::after{
+  background-color:#bbe5b3; }
+
+.Polaris-Icon--colorYellowLighter svg{
+  fill:#fcf1cd; }
+
+.Polaris-Icon--colorYellowLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(88%) sepia(27%) saturate(234%) hue-rotate(357deg) brightness(103%) contrast(98%);
+          filter:brightness(0) saturate(100%) invert(88%) sepia(27%) saturate(234%) hue-rotate(357deg) brightness(103%) contrast(98%); }
+
+.Polaris-Icon--colorYellow svg{
+  fill:#eec200; }
+
+.Polaris-Icon--colorYellow img{
+  -webkit-filter:brightness(0) saturate(100%) invert(65%) sepia(91%) saturate(530%) hue-rotate(5deg) brightness(100%) contrast(100%);
+          filter:brightness(0) saturate(100%) invert(65%) sepia(91%) saturate(530%) hue-rotate(5deg) brightness(100%) contrast(100%); }
+
+.Polaris-Icon--colorYellowDark svg{
+  fill:#8a6116; }
+
+.Polaris-Icon--colorYellowDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(37%) sepia(51%) saturate(709%) hue-rotate(0deg) brightness(93%) contrast(89%);
+          filter:brightness(0) saturate(100%) invert(37%) sepia(51%) saturate(709%) hue-rotate(0deg) brightness(93%) contrast(89%); }
+
+.Polaris-Icon--colorYellowDark::after{
+  background-color:#ffea8a; }
+
+.Polaris-Icon--colorOrange svg{
+  fill:#f49342; }
+
+.Polaris-Icon--colorOrange img{
+  -webkit-filter:brightness(0) saturate(100%) invert(54%) sepia(86%) saturate(416%) hue-rotate(340deg) brightness(105%) contrast(91%);
+          filter:brightness(0) saturate(100%) invert(54%) sepia(86%) saturate(416%) hue-rotate(340deg) brightness(105%) contrast(91%); }
+
+.Polaris-Icon--colorOrangeDark svg{
+  fill:#c05717; }
+
+.Polaris-Icon--colorOrangeDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(29%) sepia(94%) saturate(1431%) hue-rotate(5deg) brightness(96%) contrast(82%);
+          filter:brightness(0) saturate(100%) invert(29%) sepia(94%) saturate(1431%) hue-rotate(5deg) brightness(96%) contrast(82%); }
+
+.Polaris-Icon--colorRedLighter svg{
+  fill:#fbeae5; }
+
+.Polaris-Icon--colorRedLighter img{
+  -webkit-filter:brightness(0) saturate(100%) invert(89%) sepia(21%) saturate(137%) hue-rotate(324deg) brightness(102%) contrast(97%);
+          filter:brightness(0) saturate(100%) invert(89%) sepia(21%) saturate(137%) hue-rotate(324deg) brightness(102%) contrast(97%); }
+
+.Polaris-Icon--colorRed svg{
+  fill:#de3618; }
+
+.Polaris-Icon--colorRed img{
+  -webkit-filter:brightness(0) saturate(100%) invert(28%) sepia(67%) saturate(3622%) hue-rotate(353deg) brightness(89%) contrast(95%);
+          filter:brightness(0) saturate(100%) invert(28%) sepia(67%) saturate(3622%) hue-rotate(353deg) brightness(89%) contrast(95%); }
+
+.Polaris-Icon--colorRedDark svg{
+  fill:#bf0711; }
+
+.Polaris-Icon--colorRedDark img{
+  -webkit-filter:brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(5699%) hue-rotate(353deg) brightness(75%) contrast(101%);
+          filter:brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(5699%) hue-rotate(353deg) brightness(75%) contrast(101%); }
+
+.Polaris-Icon--colorRedDark::after{
+  background-color:#fead9a; }
+
+.Polaris-Icon--colorPurple svg{
+  fill:#9c6ade; }
+
+.Polaris-Icon--colorPurple img{
+  -webkit-filter:brightness(0) saturate(100%) invert(49%) sepia(77%) saturate(1864%) hue-rotate(229deg) brightness(91%) contrast(91%);
+          filter:brightness(0) saturate(100%) invert(49%) sepia(77%) saturate(1864%) hue-rotate(229deg) brightness(91%) contrast(91%); }
+
+.Polaris-Icon__Svg,
+.Polaris-Icon__Img{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:100%;
+  max-width:100%;
+  max-height:100%; }
+
+.Polaris-Icon__Placeholder{
+  padding-bottom:100%;
+  background:currentColor; }

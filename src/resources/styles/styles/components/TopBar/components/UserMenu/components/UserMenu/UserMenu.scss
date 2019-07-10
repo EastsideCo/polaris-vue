@@ -1,0 +1,38 @@
+.Polaris-UserMenu-UserMenu__Details{
+  max-width:16rem;
+  margin-left:0.8rem; }
+  @media (max-width: 48.0525em){
+    .Polaris-UserMenu-UserMenu__Details{
+      display:none; } }
+
+.Polaris-UserMenu-UserMenu__Name{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:1.5rem;
+  font-weight:400;
+  line-height:2rem;
+  text-transform:initial;
+  letter-spacing:initial;
+  font-weight:500;
+  line-height:1.6rem;
+  color:var(--top-bar-color);
+  text-align:left; }
+  @media (min-width: 40em){
+    .Polaris-UserMenu-UserMenu__Name{
+      font-size:1.4rem; } }
+
+.Polaris-UserMenu-UserMenu__Detail{
+  font-size:1.3rem;
+  font-weight:400;
+  line-height:2rem;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  opacity:0.7;
+  color:var(--top-bar-color);
+  text-align:left; }
+  @media (min-width: 40em){
+    .Polaris-UserMenu-UserMenu__Detail{
+      font-size:1.2rem;
+      line-height:1.6rem; } }

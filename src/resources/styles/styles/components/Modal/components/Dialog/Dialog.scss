@@ -1,0 +1,61 @@
+.Polaris-Modal-Dialog__Container{
+  position:fixed;
+  z-index:519;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end; }
+  @media (min-width: 48.0625em){
+    .Polaris-Modal-Dialog__Container{
+      justify-content:center; } }
+
+.Polaris-Modal-Dialog__Modal{
+  position:fixed;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  width:100vw;
+  max-height:calc(100vh - 60px);
+  background:white;
+  box-shadow:0 31px 41px 0 rgba(32, 42, 53, 0.2), 0 2px 16px 0 rgba(32, 42, 54, 0.08); }
+  @media (max-width: 48.0525em){
+    .Polaris-Modal-Dialog__Modal{
+      bottom:0;
+      max-height:100%; } }
+  .Polaris-Modal-Dialog__Modal:focus{
+    outline:0; }
+  @media (min-width: 48.0625em){
+    .Polaris-Modal-Dialog__Modal{
+      position:relative;
+      max-width:62rem;
+      margin:0 auto;
+      border-radius:6px; } }
+
+@media (min-width: 48.0625em) and (min-height: 660px){
+  .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--limitHeight{
+    max-height:600px; } }
+  @media (min-width: 48.0625em){
+    .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeLarge{
+      max-width:calc(100vw - 6.4rem); } }
+  @media (min-width: 65.25em){
+    .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeLarge{
+      max-width:98rem; } }
+
+.Polaris-Modal-Dialog--animateFadeUp{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:transform, opacity;
+  opacity:1;
+  transform:translateY(0);
+  transition:transform cubic-bezier(0.64, 0, 0.35, 1) 200ms, opacity cubic-bezier(0.64, 0, 0.35, 1) 200ms; }
+  .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--entering, .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--exiting, .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--exited{
+    opacity:0;
+    transform:translateY(20rem); }
+  .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--entered{
+    opacity:1;
+    transform:translateY(0); }

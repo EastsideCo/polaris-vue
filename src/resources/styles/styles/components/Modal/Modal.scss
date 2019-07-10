@@ -1,0 +1,21 @@
+.Polaris-Modal__BodyWrapper{
+  display:flex;
+  flex-grow:1;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch; }
+
+.Polaris-Modal__Body{
+  width:100%; }
+
+.Polaris-Modal__IFrame{
+  display:block;
+  width:62rem;
+  max-width:100vw;
+  border:none; }
+  @media (min-width: 48.0625em){
+    .Polaris-Modal__IFrame{
+      max-width:62rem; } }
+
+.Polaris-Modal__Spinner{
+  margin:1.6rem;
+  text-align:center; }

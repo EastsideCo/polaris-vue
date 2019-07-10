@@ -1,0 +1,18 @@
+.Polaris-List{
+  padding-left:2rem;
+  margin-top:0;
+  margin-bottom:0;
+  list-style:disc outside none; }
+  .Polaris-List + .Polaris-List{
+    margin-top:1.6rem; }
+
+.Polaris-List--typeNumber{
+  padding-left:3.2rem;
+  list-style:decimal outside none; }
+
+.Polaris-List__Item{
+  margin-bottom:0.8rem; }
+  .Polaris-List__Item:last-child{
+    margin-bottom:0; }
+  .Polaris-List__Item .Polaris-List:first-child{
+    margin-top:0.8rem; }

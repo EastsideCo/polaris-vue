@@ -1,34 +1,45 @@
+:root{
+  --polaris-version-number:'3.19.0'; }
+
 html,
-body {
-  @include text-style-body;
-  @include text-emphasis-normal;
-  font-family: font-family();
-}
+body{
+  font-size:1.5rem;
+  font-weight:400;
+  line-height:2rem;
+  text-transform:initial;
+  letter-spacing:initial;
+  font-weight:400;
+  color:#212b36; }
+  @media (min-width: 40em){
+    html,
+    body{
+      font-size:1.4rem; } }
 
-html {
-  position: relative;
-  box-sizing: border-box;
-  font-size: ($base-font-size / $default-browser-font-size) * 100%;
-  -webkit-font-smoothing: antialiased;
+html,
+body,
+button{
+  font-family:-apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif; }
 
-  // This needs to come after -webkit-font-smoothing
-  // stylelint-disable-next-line declaration-block-properties-order
-  -moz-osx-font-smoothing: grayscale;
+html{
+  position:relative;
+  font-size:62.5%;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-text-size-adjust:100%;
+      -ms-text-size-adjust:100%;
+          text-size-adjust:100%;
+  text-rendering:optimizeLegibility; }
 
-  text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-}
+body{
+  min-height:100%;
+  margin:0;
+  padding:0;
+  background-color:#f4f6f8; }
 
-body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: color(sky, light);
-}
-
-* {
-  box-sizing: inherit;
-}
+*,
+*::before,
+*::after{
+  box-sizing:border-box; }
 
 h1,
 h2,
@@ -36,20 +47,19 @@ h3,
 h4,
 h5,
 h6,
-p {
-  margin: 0;
-  font-size: 1em;
-  font-weight: 400;
-}
+p{
+  margin:0;
+  font-size:1em;
+  font-weight:400; }
 
-a:not([data-polaris-unstyled]) {
-  color: color(blue);
-  text-decoration: none;
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner{
+  border-style:none; }
 
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-    color: color(blue, dark);
-  }
-}
+@keyframes polaris-SkeletonShimmerAnimation{
+  0%{
+    opacity:0.45; }
+  100%{
+    opacity:0.9; } }

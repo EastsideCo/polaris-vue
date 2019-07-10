@@ -1,0 +1,61 @@
+.Polaris-Frame-ContextualSaveBar{
+  display:flex;
+  height:5.6rem;
+  background-color:white;
+  box-shadow:0 2px 4px rgba(0, 0, 0, 0.1); }
+  .Polaris-Frame-ContextualSaveBar::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    width:100%;
+    border-bottom:1px solid transparent; }
+
+.Polaris-Frame-ContextualSaveBar__LogoContainer{
+  display:none; }
+  @media (min-width: 48.0625em){
+    .Polaris-Frame-ContextualSaveBar__LogoContainer{
+      display:flex;
+      flex:0 0 24rem;
+      align-items:center;
+      height:100%;
+      padding:0 1.6rem;
+      border-right:1px solid #ebeef0;
+      background-color:#fafbfc; } }
+
+.Polaris-Frame-ContextualSaveBar__Contents{
+  display:flex;
+  flex:1 1 auto;
+  align-items:center;
+  min-width:1px;
+  max-width:99.8rem;
+  height:100%;
+  margin:0 auto;
+  padding:0 1.6rem; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-Frame-ContextualSaveBar__Contents{
+      padding:0 2rem; } }
+  @media (min-width: 30.625em){
+    .Polaris-Frame-ContextualSaveBar__Contents{
+      padding:0 2rem; } }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-Frame-ContextualSaveBar__Contents{
+      padding:0 3.2rem; } }
+  @media (min-width: 46.5em){
+    .Polaris-Frame-ContextualSaveBar__Contents{
+      padding:0 3.2rem; } }
+
+.Polaris-Frame-ContextualSaveBar__Message{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:1.7rem;
+  font-weight:600;
+  line-height:2.4rem;
+  color:#637381;
+  flex-grow:1; }
+  @media (min-width: 40em){
+    .Polaris-Frame-ContextualSaveBar__Message{
+      font-size:1.6rem; } }
+
+.Polaris-Frame-ContextualSaveBar__Action{
+  margin-left:0.8rem; }

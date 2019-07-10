@@ -1,0 +1,92 @@
+.Polaris-ColorPicker{
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  display:flex; }
+
+.Polaris-ColorPicker__MainColor{
+  background-image:linear-gradient(45deg, #dfe3e8 25%, transparent 25%), linear-gradient(-45deg, #dfe3e8 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #dfe3e8 75%), linear-gradient(-45deg, transparent 75%, #dfe3e8 75%);
+  background-size:1.6rem 1.6rem;
+  background-position:0 0, 0 0.8rem, 0.8rem -0.8rem, -0.8rem 0;
+  position:relative;
+  overflow:hidden;
+  height:16rem;
+  width:16rem;
+  border-radius:4px;
+  cursor:pointer; }
+  .Polaris-ColorPicker__MainColor .Polaris-ColorPicker__Dragger{
+    right:0.9rem;
+    margin:0; }
+  .Polaris-ColorPicker__MainColor .Polaris-ColorPicker__ColorLayer{
+    box-shadow:inset 0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08);
+    border-radius:4px; }
+  .Polaris-ColorPicker__MainColor::after, .Polaris-ColorPicker__MainColor::before{
+    content:'';
+    position:absolute;
+    z-index:20;
+    top:0;
+    left:0;
+    display:block;
+    height:100%;
+    width:100%;
+    pointer-events:none;
+    border-radius:3px; }
+  .Polaris-ColorPicker__MainColor::before{
+    background:linear-gradient(to right, white, transparent); }
+  .Polaris-ColorPicker__MainColor::after{
+    background-image:linear-gradient(to top, black, transparent);
+    box-shadow:inset 0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08); }
+
+.Polaris-ColorPicker__Dragger{
+  position:relative;
+  z-index:30;
+  bottom:0.9rem;
+  transform:none;
+  height:1.8rem;
+  width:1.8rem;
+  margin:0 auto;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:transform;
+  background:transparent;
+  border:3px solid white;
+  box-shadow:0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08), inset 0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08);
+  border-radius:50%;
+  pointer-events:none; }
+
+.Polaris-ColorPicker__HuePicker,
+.Polaris-ColorPicker__AlphaPicker{
+  position:relative;
+  overflow:hidden;
+  height:16rem;
+  width:2.4rem;
+  margin-left:0.8rem;
+  border-width:3px;
+  border-radius:8rem; }
+
+.Polaris-ColorPicker__HuePicker{
+  background-image:linear-gradient(to bottom, red 1.8rem, yellow, lime, cyan, blue, magenta, red 14.2rem);
+  box-shadow:inset 0 0 2px 0 rgba(0, 0, 0, 0.5); }
+
+.Polaris-ColorPicker__AlphaPicker{
+  background-image:linear-gradient(45deg, #dfe3e8 25%, transparent 25%), linear-gradient(-45deg, #dfe3e8 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #dfe3e8 75%), linear-gradient(-45deg, transparent 75%, #dfe3e8 75%);
+  background-size:1.6rem 1.6rem;
+  background-position:0 0, 0 0.8rem, 0.8rem -0.8rem, -0.8rem 0; }
+  .Polaris-ColorPicker__AlphaPicker .Polaris-ColorPicker__ColorLayer{
+    border-radius:8rem; }
+
+.Polaris-ColorPicker__ColorLayer{
+  position:absolute;
+  z-index:10;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  box-shadow:inset 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  pointer-events:none; }
+
+.Polaris-ColorPicker__Slidable{
+  height:100%;
+  width:100%;
+  cursor:pointer; }

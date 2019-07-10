@@ -1,11 +1,15 @@
 $typography-condensed: em(640px);
 
 @mixin when-typography-not-condensed {
-  @include breakpoint-after($typography-condensed) { @content; }
+  @include breakpoint-after($typography-condensed) {
+    @content;
+  }
 }
 
 @mixin when-typography-condensed {
-  @include breakpoint-before($typography-condensed) { @content; }
+  @include breakpoint-before($typography-condensed) {
+    @content;
+  }
 }
 
 @mixin text-style-caption {
@@ -137,11 +141,11 @@ $typography-condensed: em(640px);
 }
 
 @mixin text-emphasis-placeholder() {
-  color: color(ink, lightest);
+  color: color('ink', 'lightest');
 }
 
 @mixin text-emphasis-subdued($for-background: null) {
-  color: color(ink, lighter, $for-background: $for-background);
+  color: color('ink', 'lighter', $for-background: $for-background);
 }
 
 @mixin text-emphasis-strong {
@@ -151,4 +155,23 @@ $typography-condensed: em(640px);
 @mixin text-emphasis-normal($for-background: null) {
   font-weight: 400;
   color: color(ink, $for-background: $for-background);
+}
+
+@mixin text-breakword {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin print-hidden {
+  @media print {
+    // stylelint-disable-next-line declaration-no-important
+    display: none !important;
+  }
 }

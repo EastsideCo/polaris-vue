@@ -1,0 +1,36 @@
+.Polaris-CalloutCard{
+  display:flex;
+  align-items:center; }
+
+.Polaris-CalloutCard__Image{
+  display:none;
+  flex:0 0 auto;
+  width:10rem; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-CalloutCard__Image{
+      display:block;
+      margin-left:2rem; } }
+  @media (min-width: 30.625em){
+    .Polaris-CalloutCard__Image{
+      display:block;
+      margin-left:2rem; } }
+
+.Polaris-CalloutCard__DismissImage{
+  margin-right:2rem; }
+
+.Polaris-CalloutCard__Content{
+  flex:1 1 auto; }
+
+.Polaris-CalloutCard__Title{
+  margin-bottom:2rem; }
+
+.Polaris-CalloutCard__Buttons{
+  margin-top:2rem; }
+
+.Polaris-CalloutCard__Container{
+  position:relative; }
+
+.Polaris-CalloutCard__Dismiss{
+  right:1.6rem;
+  top:1.6rem;
+  position:absolute; }

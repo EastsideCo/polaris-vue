@@ -1,0 +1,10 @@
+.Polaris-PageActions{
+  margin:0 auto;
+  padding:2rem;
+  border-top:0.1rem solid #dfe3e8; }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-PageActions{
+      padding:2rem 0; } }
+  @media (min-width: 30.625em){
+    .Polaris-PageActions{
+      padding:2rem 0; } }

@@ -1,0 +1,122 @@
+.Polaris-TopBar{
+  position:relative;
+  display:flex;
+  height:5.6rem;
+  background-color:var(--top-bar-background); }
+  .Polaris-TopBar::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    width:100%;
+    border-bottom:1px solid transparent; }
+
+.Polaris-TopBar__LogoContainer{
+  display:none; }
+  @media (min-width: 48.0625em){
+    .Polaris-TopBar__LogoContainer{
+      display:flex;
+      flex:0 0 24rem;
+      align-items:center;
+      height:100%;
+      padding:0 0.8rem 0 1.6rem;
+      flex-basis:24rem;
+      flex-basis:calc(24rem + constant(safe-area-inset-left));
+      flex-basis:calc(24rem + env(safe-area-inset-left));
+      padding-left:1.6rem;
+      padding-left:calc(1.6rem + constant(safe-area-inset-left));
+      padding-left:calc(1.6rem + env(safe-area-inset-left)); } }
+
+.Polaris-TopBar__ContextControl{
+  display:none; }
+  @media (min-width: 48.0625em){
+    .Polaris-TopBar__ContextControl{
+      width:24rem;
+      display:block; } }
+  @media (min-width: 87.5em){
+    .Polaris-TopBar__ContextControl{
+      width:28rem; } }
+
+.Polaris-TopBar__Logo,
+.Polaris-TopBar__LogoLink{
+  display:block; }
+
+.Polaris-TopBar__NavigationIcon{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  position:relative;
+  align-self:center;
+  margin-left:1rem;
+  margin-right:0.8rem;
+  padding:0.8rem;
+  border-radius:3px; }
+  .Polaris-TopBar__NavigationIcon:focus{
+    outline:none; }
+  .Polaris-TopBar__NavigationIcon.Polaris-TopBar--focused{
+    background-color:rgba(255, 255, 255, 0.16); }
+  .Polaris-TopBar__NavigationIcon.Polaris-TopBar--focused:active{
+    background-color:rgba(0, 0, 0, 0.28); }
+  .Polaris-TopBar__NavigationIcon:hover{
+    background-color:rgba(255, 255, 255, 0.08); }
+  .Polaris-TopBar__NavigationIcon::after{
+    content:'';
+    position:absolute;
+    top:-0.8rem;
+    left:-0.8rem;
+    width:calc(100% + 2rem);
+    height:calc(100% + 2rem); }
+  @media (min-width: 48.0625em){
+    .Polaris-TopBar__NavigationIcon{
+      display:none; } }
+
+.Polaris-TopBar__Contents{
+  z-index:10;
+  display:flex;
+  flex:1 1 auto;
+  align-items:center;
+  justify-content:flex-end;
+  height:100%; }
+  @media (min-width: 42.5em){
+    .Polaris-TopBar__Contents{
+      position:relative; } }
+
+.Polaris-TopBar__SearchField{
+  margin:0 auto;
+  padding:0;
+  max-width:99.8rem;
+  width:100%;
+  margin:0;
+  max-width:none;
+  margin-left:calc((100% - 99.8rem)/2); }
+  @media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){
+    [data-has-navigation] .Polaris-TopBar__SearchField{
+      padding:0 2rem; } }
+  @media (min-width: 30.625em){
+    .Polaris-TopBar__SearchField{
+      padding:0 2rem; } }
+  @media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){
+    [data-has-navigation] .Polaris-TopBar__SearchField{
+      padding:0 3.2rem; } }
+  @media (min-width: 46.5em){
+    .Polaris-TopBar__SearchField{
+      padding:0 3.2rem; } }
+  @media (min-width: 87.5em){
+    .Polaris-TopBar__SearchField{
+      margin-left:calc((100% - 103.8rem)/2); } }
+  @media (max-width: 1268px){
+    .Polaris-TopBar__SearchField{
+      margin-left:0; } }
+  @media (min-width: 42.5em){
+    .Polaris-TopBar__SearchField{
+      position:relative; } }
+
+@media (max-width: 48.0525em){
+  .Polaris-TopBar__SecondaryMenu{
+    display:none; } }

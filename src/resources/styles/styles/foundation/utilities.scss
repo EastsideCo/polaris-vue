@@ -8,7 +8,9 @@ $base-font-size: 10px;
 @function rem($value) {
   $unit: unit($value);
 
-  @if $unit == 'rem' {
+  @if $value == 0 {
+    @return 0;
+  } @else if $unit == 'rem' {
     @return $value;
   } @else if $unit == 'px' {
     @return $value / $base-font-size * 1rem;
@@ -26,7 +28,9 @@ $base-font-size: 10px;
 @function px($value) {
   $unit: unit($value);
 
-  @if $unit == 'px' {
+  @if $value == 0 {
+    @return 0;
+  } @else if $unit == 'px' {
     @return $value;
   } @else if $unit == 'em' {
     @return ($value / 1em) * $base-font-size;
@@ -37,7 +41,7 @@ $base-font-size: 10px;
   }
 }
 
-/// Returns the value in pixels for a given pixel value. Note that this
+/// Returns the value in ems for a given pixel value. Note that this
 /// only works for elements that have had no font-size changes.
 /// @param {Number} $value - The pixel value to be converted.
 /// @return {Number} The converted value in ems.
@@ -45,7 +49,9 @@ $base-font-size: 10px;
 @function em($value) {
   $unit: unit($value);
 
-  @if $unit == 'em' {
+  @if $value == 0 {
+    @return 0;
+  } @else if $unit == 'em' {
     @return $value;
   } @else if $unit == 'rem' {
     @return $value / 1rem * 1em * ($base-font-size / $default-browser-font-size);
@@ -71,7 +77,8 @@ $base-font-size: 10px;
 
   @if $level == 1 {
     @each $key, $value in $map {
-      $output: $output + '#{$newline}- #{$key} #{available-names($value, $level + 1)}';
+      $output: $output +
+        '#{$newline}- #{$key} #{available-names($value, $level + 1)}';
     }
   } @else {
     $output: '(';
@@ -87,4 +94,27 @@ $base-font-size: 10px;
   }
 
   @return $output;
+}
+
+// Merge multiple maps into one.
+// @param {Map} $map - Initial default map.
+// @param {ArgList} $maps - Other maps to merge.
+// @return {Map} The final merged map.
+@function map-extend($map, $maps...) {
+  @for $i from 1 through length($maps) {
+    @each $key, $value in nth($maps, $i) {
+      $map: map-merge(
+        $map,
+        (
+          $key: $value,
+        )
+      );
+
+      @if (type-of($value) == map) and (type-of(map-get($map, $key)) == map) {
+        $value: map-extend(map-get($map, $key), $value);
+      }
+    }
+  }
+
+  @return $map;
 }

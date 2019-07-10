@@ -1,0 +1,27 @@
+@keyframes Polaris-Spinner--loading{
+  to{
+    transform:rotate(360deg); } }
+
+.Polaris-Spinner{
+  animation:Polaris-Spinner--loading 500ms linear infinite;
+  color:transparent; }
+
+.Polaris-Spinner--sizeSmall{
+  height:2rem;
+  width:2rem; }
+
+.Polaris-Spinner--sizeLarge{
+  height:4.4rem;
+  width:4.4rem; }
+
+.Polaris-Spinner--colorWhite{
+  -webkit-filter:brightness(0) saturate(100%) invert(100%);
+          filter:brightness(0) saturate(100%) invert(100%); }
+
+.Polaris-Spinner--colorTeal{
+  -webkit-filter:brightness(0) saturate(100%) invert(72%) sepia(8%) saturate(2838%) hue-rotate(130deg) brightness(92%) contrast(87%);
+          filter:brightness(0) saturate(100%) invert(72%) sepia(8%) saturate(2838%) hue-rotate(130deg) brightness(92%) contrast(87%); }
+
+.Polaris-Spinner--colorInkLightest{
+  -webkit-filter:brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(246%) hue-rotate(169deg) brightness(88%) contrast(90%);
+          filter:brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(246%) hue-rotate(169deg) brightness(88%) contrast(90%); }

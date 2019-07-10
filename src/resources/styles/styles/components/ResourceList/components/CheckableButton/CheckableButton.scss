@@ -1,0 +1,70 @@
+.Polaris-ResourceList-CheckableButton{
+  font-size:1.5rem;
+  font-weight:400;
+  line-height:1.6rem;
+  text-transform:initial;
+  letter-spacing:initial;
+  display:inline-flex;
+  align-items:center;
+  min-height:3.6rem;
+  min-width:3.6rem;
+  margin:0;
+  padding:0.7rem 1.6rem;
+  line-height:1;
+  cursor:pointer;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  text-decoration:none;
+  flex:1 1;
+  text-align:left;
+  background:white;
+  border:0.1rem solid #c4cdd5;
+  border-radius:3px 0 0 3px;
+  border-right-color:transparent; }
+  @media (min-width: 40em){
+    .Polaris-ResourceList-CheckableButton{
+      font-size:1.4rem; } }
+  .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--measuring{
+    font-size:1.5rem;
+    font-weight:700; }
+    .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--measuring::before{
+      content:'';
+      display:inline-block;
+      width:1.5rem; }
+  @media (min-width: 28.625em){
+    .Polaris-ResourceList-CheckableButton{
+      flex:0 1 auto; }
+      .Polaris-ResourceList-CheckableButton:only-child{
+        border-radius:3px;
+        border:0.1rem solid #c4cdd5; } }
+  .Polaris-ResourceList-CheckableButton:hover, .Polaris-ResourceList-CheckableButton:active{
+    border-right-color:transparent; }
+  .Polaris-ResourceList-CheckableButton:focus{
+    outline:none; }
+  .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--plain{
+    border:0.1rem solid transparent;
+    border-radius:3px; }
+  .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--selectMode{
+    color:#637381;
+    font-weight:600; }
+  .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--selected{
+    color:#5c6ac4; }
+    @media (min-width: 28.625em){
+      .Polaris-ResourceList-CheckableButton.Polaris-ResourceList-CheckableButton__CheckableButton--selected{
+        border-color:#c4cdd5; } }
+
+.Polaris-ResourceList-CheckableButton__Checkbox{
+  pointer-events:none;
+  height:1.6rem;
+  width:1.6rem;
+  margin-left:-0.9rem; }
+
+.Polaris-ResourceList-CheckableButton__Label{
+  margin-left:2rem;
+  flex:1 1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  padding:0.1rem 0; }

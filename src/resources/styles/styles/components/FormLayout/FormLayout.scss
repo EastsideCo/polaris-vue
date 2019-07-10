@@ -1,0 +1,26 @@
+.Polaris-FormLayout{
+  margin-top:-1.6rem;
+  margin-left:-2rem; }
+
+.Polaris-FormLayout__Title{
+  margin-bottom:-0.8rem;
+  padding:1.6rem 2rem 0; }
+
+.Polaris-FormLayout__Items{
+  display:flex;
+  flex-wrap:wrap; }
+
+.Polaris-FormLayout__HelpText{
+  color:#637381;
+  padding:0.8rem 2rem 0; }
+
+.Polaris-FormLayout__Item{
+  flex:1 1 22rem;
+  margin-top:1.6rem;
+  margin-left:2rem;
+  max-width:calc(100% - 2rem); }
+  .Polaris-FormLayout--grouped .Polaris-FormLayout__Item{
+    min-width:22rem; }
+  .Polaris-FormLayout--condensed .Polaris-FormLayout__Item{
+    flex-basis:11rem;
+    min-width:11rem; }

@@ -1,0 +1,26 @@
+.Polaris-Backdrop{
+  position:fixed;
+  z-index:518;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:block;
+  background-color:rgba(33, 43, 54, 0.4);
+  animation:Polaris-Backdrop__fade--in 200ms 1 forwards;
+  opacity:1;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity; }
+
+.Polaris-Backdrop--transparent{
+  background-color:transparent; }
+
+.Polaris-Backdrop--belowNavigation{
+  z-index:515; }
+
+@keyframes Polaris-Backdrop__fade--in{
+  0%{
+    opacity:0; }
+  100%{
+    opacity:1; } }

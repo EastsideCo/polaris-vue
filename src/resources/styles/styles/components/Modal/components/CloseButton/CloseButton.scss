@@ -1,0 +1,23 @@
+.Polaris-Modal-CloseButton{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  margin-left:2rem;
+  margin-right:-0.8rem;
+  padding:0.8rem; }
+  .Polaris-Modal-CloseButton:focus{
+    outline:none; }
+  .Polaris-Modal-CloseButton:focus, .Polaris-Modal-CloseButton:active{
+    border-radius:6px;
+    background:rgba(33, 43, 54, 0.1); }
+
+.Polaris-Modal-CloseButton--withoutTitle{
+  position:absolute;
+  right:0.8rem; }

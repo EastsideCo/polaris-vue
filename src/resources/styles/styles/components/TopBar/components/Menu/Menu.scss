@@ -1,0 +1,50 @@
+.Polaris-TopBar-Menu__ActivatorWrapper{
+  height:5.6rem;
+  display:flex;
+  align-items:center; }
+
+.Polaris-TopBar-Menu__Activator{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  cursor:pointer;
+  color:var(--top-bar-color);
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-width:3.6rem;
+  padding:0.6rem 0.8rem;
+  border:0;
+  cursor:pointer;
+  transition:background-color 0.1s;
+  margin-right:0.8rem;
+  border-radius:3px; }
+  .Polaris-TopBar-Menu__Activator:focus{
+    outline:none; }
+  .Polaris-TopBar-Menu__Activator:focus{
+    background-color:rgba(255, 255, 255, 0.16);
+    outline:none; }
+  .Polaris-TopBar-Menu__Activator:hover{
+    background-color:rgba(255, 255, 255, 0.08); }
+  .Polaris-TopBar-Menu__Activator:active, .Polaris-TopBar-Menu__Activator[aria-expanded='true']{
+    background-color:rgba(0, 0, 0, 0.28);
+    outline:none;
+    transition:none; }
+  @media (max-width: 48.0525em){
+    .Polaris-TopBar-Menu__Activator{
+      margin:0 0.4rem; }
+      .Polaris-TopBar-Menu__Activator:focus, .Polaris-TopBar-Menu__Activator:hover, .Polaris-TopBar-Menu__Activator:active, .Polaris-TopBar-Menu__Activator[aria-expanded='true']{
+        background-color:transparent;
+        opacity:0.85; } }
+
+.Polaris-TopBar-Menu__Section{
+  margin-top:0.8rem;
+  padding-top:0.8rem;
+  border-top:0.1rem solid #dfe3e8; }

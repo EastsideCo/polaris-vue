@@ -1,0 +1,41 @@
+.Polaris-Tooltip{
+  margin:0.4rem 1.6rem 1.6rem;
+  opacity:1;
+  box-shadow:0 0 0 1px rgba(6, 44, 82, 0.1), 0 2px 16px rgba(33, 43, 54, 0.08);
+  border-radius:3px;
+  pointer-events:none;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity, left, top;
+  transition:opacity 200ms cubic-bezier(0.36, 0, 1, 1) 100ms; }
+  @media screen and (-ms-high-contrast: active){
+    .Polaris-Tooltip{
+      border:0.2rem solid windowText; } }
+
+.Polaris-Tooltip--measuring{
+  opacity:0; }
+
+.Polaris-Tooltip--positionedAbove{
+  margin:1.6rem 1.6rem 0.4rem; }
+
+.Polaris-Tooltip--light .Polaris-Tooltip__Wrapper{
+  background:white;
+  color:#212b36; }
+
+.Polaris-Tooltip__Wrapper{
+  position:relative;
+  display:flex;
+  background-color:#212b36;
+  border-radius:3px;
+  color:white;
+  max-height:10rem; }
+
+.Polaris-Tooltip__Content{
+  position:relative;
+  border-radius:3px;
+  max-width:20rem;
+  max-height:10rem; }
+
+.Polaris-Tooltip__Label{
+  padding:0.4rem 0.8rem;
+  word-break:break-word; }

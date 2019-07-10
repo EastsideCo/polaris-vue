@@ -1,0 +1,9 @@
+.Polaris-ActionMenu:not(.Polaris-ActionMenu--rollup){
+  margin-left:-1.2rem; }
+
+.Polaris-ActionMenu__ActionsLayout{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center; }
+  .Polaris-ActionMenu__ActionsLayout > *{
+    flex:0 0 auto; }

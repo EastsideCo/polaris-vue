@@ -1,16 +1,24 @@
 $actions-vertical-spacing: spacing(tight);
 
+@mixin page-padding-not-fully-condensed {
+  padding: 0 spacing(loose);
+}
+
+@mixin page-padding-not-partially-condensed {
+  padding: 0 spacing(extra-loose);
+}
+
 @mixin page-layout {
   margin: 0 auto;
   padding: 0;
-  max-width: layout-width(primary, max) + layout-width(secondary, max) + layout-width(inner-spacing);
+  max-width: $page-max-width;
 
   @include page-content-when-not-fully-condensed {
-    padding: 0 spacing(loose);
+    @include page-padding-not-fully-condensed;
   }
 
   @include page-content-when-not-partially-condensed {
-    padding: 0 spacing(extra-loose);
+    @include page-padding-not-partially-condensed;
   }
 }
 
@@ -18,7 +26,22 @@ $actions-vertical-spacing: spacing(tight);
   margin: spacing(loose) 0;
 
   @include page-content-when-not-partially-condensed {
-  margin-top: spacing(loose);
+    margin-top: spacing(loose);
+  }
+}
+
+@mixin page-title-layout {
+  @include layout-flex-fix;
+  @include text-breakword;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: -1 * spacing(tight);
+  margin-left: -1 * spacing(tight);
+
+  > * {
+    margin-top: spacing(tight);
+    margin-left: spacing(tight);
   }
 }
 
@@ -35,14 +58,21 @@ $actions-vertical-spacing: spacing(tight);
   }
 }
 
-@mixin page-header-has-secondaryactions {
+@mixin page-header-has-navigation {
+  padding-top: rem(32px);
+}
+
+@mixin page-header-without-navigation {
+  margin-top: unset;
+}
+
+@mixin page-header-has-secondary-actions {
   padding-top: rem(24px);
 }
 
 @mixin page-actions-layout {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 2 * $actions-vertical-spacing;
 

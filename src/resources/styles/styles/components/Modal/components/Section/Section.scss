@@ -1,0 +1,11 @@
+.Polaris-Modal-Section{
+  flex:0 0 auto;
+  padding:1.6rem 2rem; }
+  .Polaris-Modal-Section:first-of-type{
+    padding-top:2rem; }
+  .Polaris-Modal-Section:not(:last-of-type){
+    border-bottom:0.1rem solid #dfe3e8; }
+  .Polaris-Modal-Section.Polaris-Modal-Section--subdued{
+    background:#f4f6f8; }
+  .Polaris-Modal-Section.Polaris-Modal-Section--flush{
+    padding:0; }

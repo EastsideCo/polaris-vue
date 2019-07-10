@@ -1,0 +1,120 @@
+.Polaris-Pagination{
+  display:inline-flex; }
+  @media (max-width: 30.625em), (min-width: 48.0625em) and (max-width: 47.125em){
+    [data-has-navigation] .Polaris-Pagination:not(.Polaris-Pagination--plain){
+      display:flex;
+      width:100%; }
+      [data-has-navigation] .Polaris-Pagination:not(.Polaris-Pagination--plain) .Polaris-Pagination__Button{
+        flex:1 0 auto; } }
+  @media (max-width: 30.625em){
+    .Polaris-Pagination:not(.Polaris-Pagination--plain){
+      display:flex;
+      width:100%; }
+      .Polaris-Pagination:not(.Polaris-Pagination--plain) .Polaris-Pagination__Button{
+        flex:1 0 auto; } }
+
+.Polaris-Pagination--plain .Polaris-Pagination__Button{
+  position:relative;
+  margin-top:-0.4rem;
+  margin-bottom:-0.4rem;
+  padding-top:0.8rem;
+  padding-bottom:0.8rem;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  box-shadow:none; }
+  .Polaris-Pagination--plain .Polaris-Pagination__Button:hover, .Polaris-Pagination--plain .Polaris-Pagination__Button:active{
+    background:transparent;
+    border:none;
+    box-shadow:none; }
+    .Polaris-Pagination--plain .Polaris-Pagination__Button:hover svg, .Polaris-Pagination--plain .Polaris-Pagination__Button:active svg{
+      fill:#212b36; }
+  .Polaris-Pagination--plain .Polaris-Pagination__Button:focus{
+    border:none;
+    box-shadow:none; }
+    .Polaris-Pagination--plain .Polaris-Pagination__Button:focus::after{
+      background:rgba(33, 43, 54, 0.1); }
+  .Polaris-Pagination--plain .Polaris-Pagination__Button:disabled{
+    background:transparent;
+    border:none;
+    box-shadow:none; }
+    .Polaris-Pagination--plain .Polaris-Pagination__Button:disabled svg{
+      fill:#c4cdd5; }
+  .Polaris-Pagination--plain .Polaris-Pagination__Button::after{
+    content:'';
+    position:absolute;
+    top:0.4rem;
+    right:0;
+    left:0;
+    display:block;
+    height:2.8rem;
+    border-radius:3px;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    will-change:background;
+    transition-property:background;
+    transition-duration:200ms;
+    transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); }
+
+.Polaris-Pagination--plain .Polaris-Pagination__PreviousButton{
+  margin-left:-0.8rem; }
+
+.Polaris-Pagination--plain .Polaris-Pagination__NextButton{
+  margin-right:-0.8rem;
+  margin-left:0.2rem; }
+
+.Polaris-Pagination__Button{
+  position:relative;
+  z-index:10;
+  display:inline-block;
+  min-width:3.6rem;
+  margin:0;
+  padding:0.7rem 0.8rem;
+  background:linear-gradient(to bottom, white, #f9fafb);
+  border:0.1rem solid #c4cdd5;
+  border-radius:3px;
+  line-height:1;
+  color:#212b36;
+  text-align:center;
+  cursor:pointer;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  text-decoration:none;
+  transition-property:color, background, border, box-shadow;
+  transition-duration:200ms;
+  transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); }
+  .Polaris-Pagination__Button svg{
+    fill:#637381; }
+  .Polaris-Pagination__Button:hover{
+    background:linear-gradient(to bottom, #f9fafb, #f4f6f8);
+    border-color:#c4cdd5; }
+  .Polaris-Pagination__Button:focus{
+    z-index:20;
+    border-color:#5c6ac4;
+    outline:0;
+    box-shadow:0 0 0 1px #5c6ac4; }
+  .Polaris-Pagination__Button:active{
+    background:linear-gradient(to bottom, #f4f6f8, #f4f6f8);
+    border-color:#c4cdd5;
+    box-shadow:0 0 0 0 transparent, inset 0 1px 1px 0 rgba(99, 115, 129, 0.1), inset 0 1px 4px 0 rgba(99, 115, 129, 0.2); }
+  .Polaris-Pagination__Button:disabled{
+    background:#f4f6f8;
+    color:#919eab;
+    cursor:default;
+    box-shadow:none; }
+    .Polaris-Pagination__Button:disabled svg{
+      fill:#919eab; }
+
+.Polaris-Pagination__PreviousButton{
+  border-top-right-radius:0;
+  border-bottom-right-radius:0; }
+
+.Polaris-Pagination__NextButton{
+  margin-left:-1px;
+  border-top-left-radius:0;
+  border-bottom-left-radius:0; }
