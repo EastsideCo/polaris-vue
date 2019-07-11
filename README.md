@@ -1,3 +1,5 @@
+![Polaris-Vue-Eastside Co](test/esc_polaris_logos.png)
+
 Allows you to use [Shopify Polaris](http://polaris.shopify.com/) components in [Vue 2](http://vuejs.org/).
 
 This library currently contains components up-to-date with: _@shopify/polaris `v3.18.0`_
