@@ -3,6 +3,7 @@ import styles from './resources/styles/styles.css'; // eslint-disable-line no-un
 
 import PolarisAccountConnection from './components/PolarisAccountConnection.vue';
 import PolarisActionList from './components/PolarisActionList.vue';
+import PolarisAutocomplete from './components/PolarisAutocomplete.vue';
 import PolarisButton from './components/PolarisButton.vue';
 import PolarisButtonGroup from './components/PolarisButtonGroup.vue';
 import PolarisSettingToggle from './components/PolarisSettingToggle.vue';
@@ -16,6 +17,7 @@ import PolarisThumbnail from './components/PolarisThumbnail.vue';
 import PolarisBanner from './components/PolarisBanner.vue';
 import PolarisSpinner from './components/PolarisSpinner.vue';
 import PolarisProgressBar from './components/PolarisProgressBar.vue';
+import PolarisOptionDescriptor from './components/PolarisOptionDescriptor.vue'
 
 import PolarisCalloutCard from './components/PolarisCalloutCard.vue';
 import PolarisCard from './components/PolarisCard.vue';
@@ -117,9 +119,11 @@ export default {
             // Main components
             AccountConnection:      PolarisAccountConnection,
             ActionList:             PolarisActionList,
+            Autocomplete:           PolarisAutocomplete,
             Button:                 PolarisButton,
             ButtonGroup:            PolarisButtonGroup,
             SettingToggle:          PolarisSettingToggle,
+            OptionDescriptor:       PolarisOptionDescriptor,
 
             Avatar:                 PolarisAvatar,
             Badge:                  PolarisBadge,

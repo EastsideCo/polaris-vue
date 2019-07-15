@@ -1,194 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <style>
-        .hljs {
-          display: block;
-          overflow-x: auto;
-          padding: 0.5em;
-          background: #f9fafb;
-        }
-
-        .hljs-built_in,
-        .hljs-selector-tag,
-        .hljs-section,
-        .hljs-link {
-          color: #8be9fd;
-        }
-
-        .hljs-keyword {
-          color: #5C6AC4;
-        }
-
-        .hljs {
-            color: #212B35;
-        }
-        .hljs-subst {
-            color:
-#43467F;
-        }
-
-        .hljs-attr {
-            color: #4059ff;
-        }
-
-        .hljs-tag {
-            color: #5C6AC4;
-        }
-
-        .hljs-title {
-            color: #50fa7b;
-        }
-
-        .hljs-string {
-            color:
-#43467F;
-        }
-
-        .hljs-meta,
-        .hljs-name,
-        .hljs-type,
-        .hljs-attribute,
-        .hljs-symbol,
-        .hljs-bullet,
-        .hljs-addition,
-        .hljs-variable,
-        .hljs-template-tag,
-        .hljs-template-variable {
-          color: #5b69c4;
-        }
-
-        .hljs-comment,
-        .hljs-quote,
-        .hljs-deletion {
-          color: #6272a4;
-        }
-
-        .hljs-keyword,
-        .hljs-selector-tag,
-        .hljs-literal,
-        .hljs-title,
-        .hljs-section,
-        .hljs-doctag,
-        .hljs-type,
-        .hljs-name,
-        .hljs-strong {
-          font-weight: bold;
-        }
-
-        .hljs-literal,
-        .hljs-number {
-          color: #bd93f9;
-        }
-
-        .hljs-emphasis {
-          font-style: italic;
-        }
-        </style>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
         <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-
         <script src="../lib/polaris-vue.js"></script>
         <link rel="stylesheet" href="../lib/polaris-vue.css"></link>
-
+        <link rel="stylesheet" href="./styles.css"></link>
         <script src="test.js"></script>
-
-        <style>
-            body {
-                padding: 0 40px;
-            }
-            #app {
-                max-width: 1400px;
-                margin: 0 auto;
-            }
-            .testSection {
-                margin: 20px 0;
-                margin-top: 60px;
-                font-size: 35px;
-                font-weight: bold;
-                margin-left: -30px;
-            }
-            .testHeader {
-                margin: 20px 0;
-                margin-top: 60px;
-                font-size: 20px;
-                font-weight: bold;
-                margin-left: -30px;
-            }
-            .testCase {
-                margin: 15px 0;
-
-                display: flex;
-            }
-            .testCase .example {
-                flex-shrink: 0;
-                flex-grow: 0;
-                width: 60%;
-                padding-right: 40px;
-            }
-            .testCase .code {
-                flex-shrink: 0;
-                flex-grow: 0;
-                width: 40%;
-                padding-left: 40px;
-                background: rgba(200,200,200);
-                color: black;
-                margin: 0;
-                padding: 0;
-                overflow-x: auto;
-                border-radius: 3px;
-                box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
-                background: #f9fafb;
-            }
-            .testCase .output {
-                flex-shrink: 0;
-                flex-grow: 0;
-                width: 100%;
-                padding-left: 40px;
-                background: rgba(200,200,200);
-                color: black;
-                margin: 0;
-                padding: 0;
-                overflow-x: auto;
-                border-radius: 3px;
-                box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
-                background: #f9fafb;
-            }
-
-            .testTitle {
-                margin: 20px 0;
-                margin-top: 60px;
-                font-size: 50px;
-                font-weight: normal;
-                margin-left: -30px;
-            }
-
-            .testSubtitle {
-                margin: 20px 0;
-                margin-top: 30px;
-                font-size: 20px;
-                font-weight: 50px;
-                margin-left: -30px;
-            }
-
-            .testDescription p {
-                margin-top: 20px;
-            }
-
-            .testImageHeader {
-                margin-top: 40px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-        </style>
-
-
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
+
     <body>
         <div id="app">
             <div class="testTitle">
@@ -223,7 +44,7 @@
                     <br>
                     Overridden slots always takes priority over the props.
                     <br>
-                    The <code>children</code> "prop" referenced in the Polaris docsisn't used:
+                    The <code>children</code> "prop" referenced in the Polaris docs isn't used-
                     just add your content as a child of the component.
                 </p>
                 <p>
@@ -255,11 +76,11 @@
             <div class="testCase">
                 <div class="example">
                     <polaris-vue-fade-up-transition>
-                        <div v-if="test0">
+                        <div v-if="test3">
                             Hi!
                         </div>
                     </polaris-vue-fade-up-transition>
-                    <button @click="test0 = !test0">
+                    <button @click="test3 = !test3">
                         Toggle
                     </button>
                 </div>
@@ -269,11 +90,11 @@
             <div class="testCase">
                 <div class="example">
                     <polaris-vue-collapse-transition>
-                        <div v-if="test0">
+                        <div v-if="test4">
                             Hi!
                         </div>
                     </polaris-vue-collapse-transition>
-                    <button @click="test0 = !test0">
+                    <button @click="test4 = !test4">
                         Toggle
                     </button>
                 </div>
@@ -377,16 +198,9 @@
 &lt;/polaris-setting-toggle&gt;</code></pre>
             </div>
 
-
-
-
-
-
             <div class="testSection">
                 Undocumented / Misc
             </div>
-
-
 
             <div class="testHeader">&lt;polaris-text-container&gt;</div>
             <div class="testCase">

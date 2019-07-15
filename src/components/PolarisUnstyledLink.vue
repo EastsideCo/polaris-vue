@@ -1,10 +1,10 @@
 <template>
-<a :href="url" 
-   :target="external ? '_blank' : ''"
-   :rel="external ? 'noopener noreferrer' : ''"
-   data-polaris-unstyled="true">
-    <slot></slot>
-</a>
+  <a :href="url"
+     :target="external ? '_blank' : ''"
+     :rel="external ? 'noopener noreferrer' : ''"
+     data-polaris-unstyled="true">
+      <slot></slot>
+  </a>
 </template>
 
 <script>

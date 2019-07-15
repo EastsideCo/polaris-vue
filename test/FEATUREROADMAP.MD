@@ -1,18 +1,16 @@
 ## Migration to Polaris 3: Feature List
 
-| Component Name        | Ported           | Working  |
-| ------------- |:-------------:| -----:|
-| AccountConnection|X||
-| ActionList |X||
-| ActionMenu |?||
-| AppProvider |||
-| AutoComplete |||
-| Avatar |X||
-| Backdrop |||
-| Badge |X||
+| Component Name|Ported|Working|Review/Notes|Docs|
+| --------------|:----:|:-----:|:--:||
+| AccountConnection|X|X|Done||
+| ActionList |X|X|Done|
+| AppProvider |||Complex implementation
+| AutoComplete |||Requires other dependencies before port
+| Avatar |X|X|Done|
+| Badge |X|X|Upgraded to 3|
 | Banner |X||
 | Breadcrumbs |X||
-| Button |X||
+| Button |X|||
 | ButtonGroup |X||
 | CalloutCard |X||
 | Caption |X||
