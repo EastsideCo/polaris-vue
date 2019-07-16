@@ -1,33 +1,37 @@
 <template>
-<dynamic-tag
-        :tag="url ? 'a' : 'button'"
-        :on="{
-            click: onClick,
-            blur: onBlur,
-            focus: onFocus
-        }"
-        :type="submit? 'submit' : 'button'" 
-        :aria-label="accessibilityLabel"
-        :class="classes"
-        :data-polaris-unstyled="url ? 'true' : ''"
-        :href="url"
-        :disabled="isDisabled"
-        :target="external ? '_blank' : ''"
-        :role="loading ? 'alert' : null"
-        :aria-busy="loading ? true : null">
-    <span v-if="loading" class="Polaris-Button__Spinner">
-        <polaris-spinner size="small" :color="spinnerColor" accessibility-label="Loading"/>
-    </span>
-    <span v-if="icon" class="Polaris-Button__Icon">
-        <polaris-icon :source="realIcon"></polaris-icon>
-    </span>
-    <span v-if="$slots.default" class="Polaris-Button__Content">
-        <slot></slot>
-    </span>
-    <span v-if="disclosure" class="Polaris-Button__Icon">
-        <polaris-icon :source="disclosureIcon"></polaris-icon>
-    </span>
-</dynamic-tag>
+    <dynamic-tag
+            :tag="url ? 'a' : 'button'"
+            :on="{
+                click: onClick,
+                blur: onBlur,
+                focus: onFocus,
+                keyup: onKeyUp,
+                keydown: onKeyDown
+            }"
+            :type="submit? 'submit' : 'button'"
+            :aria-label="accessibilityLabel"
+            :aria-controls="ariaControls"
+            :class="classes"
+            :data-polaris-unstyled="url ? 'true' : ''"
+            :href="url"
+            :disabled="isDisabled"
+            :target="external ? '_blank' : ''"
+            :role="loading ? 'alert' : null"
+            :aria-pressed="loading ? true : null"
+            :aria-expanded="ariaExpanded">
+        <span v-if="loading" class="Polaris-Button__Spinner">
+            <polaris-spinner size="small" :color="spinnerColor" accessibility-label="Loading"/>
+        </span>
+        <span v-if="icon" class="Polaris-Button__Icon">
+            <polaris-icon :source="realIcon"></polaris-icon>
+        </span>
+        <span v-if="$slots.default" class="Polaris-Button__Content">
+            <slot></slot>
+        </span>
+        <span v-if="disclosure" class="Polaris-Button__Icon">
+            <polaris-icon :source="disclosureIcon"></polaris-icon>
+        </span>
+    </dynamic-tag>
 </template>
 
 
@@ -50,10 +54,13 @@ export default {
     props: {
         url: String,
         primary: Boolean,
+        ariaControls: String,
+        ariaExpanded: Boolean,
         outline: Boolean,
         destructive: Boolean,
         disabled: Boolean,
         loading: Boolean,
+        download: [String, Boolean],
         size: {
             type: String,
             default: 'default',
@@ -61,6 +68,7 @@ export default {
                 return [
                     'default',
                     'slim',
+                    'medium',
                     'large'
                 ].indexOf(v) !== -1;
             }
@@ -73,8 +81,21 @@ export default {
         icon: String,
         accessibilityLabel: String,
         iconOnly: Boolean,
+        monochrome: Boolean,
+        textAlign: {
+            type: String,
+            default: 'center',
+            validator: (v) => {
+                return [
+
+                ]
+            }
+        }
     },
     computed: {
+        realId() {
+            return this.id || 'PolarisButton'+this._uid;
+        },
         disclosureIcon() {
             return this.loading ? 'placeholder' : 'caretDown';
         },
@@ -101,18 +122,18 @@ export default {
                 r['Polaris-Button--disabled'] = true;
             }
             return r;
-        }  
+        }
     },
     methods: {
         onClick(e) {
             if (this.disabled) {
                 return;
             }
-            
-            if (this.submit) { 
-                return true; 
+
+            if (this.submit) {
+                return true;
             }
-            
+
             this.$emit('click', e);
         },
         onFocus(e) {
@@ -120,6 +141,12 @@ export default {
         },
         onBlur(e) {
             this.$emit('blur', e);
+        },
+        onKeyDown(e) {
+            this.$emit('keydown', e)
+        },
+        onKeyUp(e) {
+            this.$emit('keyup', e)
         }
     }
 }

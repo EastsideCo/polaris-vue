@@ -8,8 +8,8 @@
 | AutoComplete |||Requires other dependencies before port
 | Avatar |X|X|Done|
 | Badge |X|X|Upgraded to 3|
-| Banner |X||
-| Breadcrumbs |X||
+| Banner |X|X|Done|
+| Breadcrumbs |X|?|Review as part of PolarisPage|
 | Button |X|||
 | ButtonGroup |X||
 | CalloutCard |X||
