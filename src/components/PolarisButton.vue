@@ -18,7 +18,8 @@
             :target="external ? '_blank' : ''"
             :role="loading ? 'alert' : null"
             :aria-pressed="loading ? true : null"
-            :aria-expanded="ariaExpanded">
+            :aria-expanded="ariaExpanded"
+            :download="download">
         <span v-if="loading" class="Polaris-Button__Spinner">
             <polaris-spinner size="small" :color="spinnerColor" accessibility-label="Loading"/>
         </span>
@@ -87,8 +88,10 @@ export default {
             default: 'center',
             validator: (v) => {
                 return [
-
-                ]
+                    'center',
+                    'left',
+                    'right'
+                ].indexOf(v) !== -1;
             }
         }
     },
@@ -117,6 +120,8 @@ export default {
                 'plain',
                 'size',
                 'iconOnly',
+                'monochrome',
+                'textAlign'
             ], this);
             if (this.isDisabled) {
                 r['Polaris-Button--disabled'] = true;
