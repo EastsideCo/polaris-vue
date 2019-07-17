@@ -11,7 +11,6 @@ export default {
                 }, [child]));
             }
         }
-        console.log({items});
 
         return createElement('div', {
             'class': this.classes
