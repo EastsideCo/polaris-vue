@@ -64,10 +64,9 @@ export default {
         download: [String, Boolean],
         size: {
             type: String,
-            default: 'default',
+            default: 'medium',
             validator: (v) => {
                 return [
-                    'default',
                     'slim',
                     'medium',
                     'large'

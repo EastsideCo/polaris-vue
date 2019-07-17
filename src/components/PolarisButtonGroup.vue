@@ -1,28 +1,37 @@
-<template>
-<div :class="classes">
-    <slot></slot>
-    <polaris-button-group-item v-for="slot, name in $slots" :key="name" v-if="name != 'default'">
-        <slot :name="name"></slot>
-    </polaris-button-group-item>
-</div>
-</template>
-
-
 <script>
 import PolarisButtonGroupItem from './PolarisButtonGroupItem.vue';
 
 export default {
+    render(createElement) {
+        var items = [];
+
+        for (let slot of Object.values(this.$slots)) {
+            for (let child of slot) {
+                items.push(createElement('polaris-button-group-item', {
+                }, [child]));
+            }
+        }
+        console.log({items});
+
+        return createElement('div', {
+            'class': this.classes
+        }, items)
+    },
     components: {
         PolarisButtonGroupItem
     },
     props: {
-        segmented: Boolean
+        segmented: Boolean,
+        fullWidth: Boolean,
+        connectedTop: Boolean
     },
     computed: {
         classes() {
             return {
                 'Polaris-ButtonGroup': true,
-                'Polaris-ButtonGroup--segmented': this.segmented
+                'Polaris-ButtonGroup--segmented': this.segmented,
+                'Polaris-ButtonGroup--fullWidth' : this.fullWidth,
+                'Polaris-ButtonGroup--connectedTop' : this.connectedTop
             };
         }
     }

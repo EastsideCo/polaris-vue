@@ -10,7 +10,7 @@
 | Badge |X|X|Upgraded to 3|
 | Banner |X|X|Done|
 | Breadcrumbs |X|?|Review as part of PolarisPage|
-| Button |X|||
+| Button |X|X|Done||
 | ButtonGroup |X||
 | CalloutCard |X||
 | Caption |X||
