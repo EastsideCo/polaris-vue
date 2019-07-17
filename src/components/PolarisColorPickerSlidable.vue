@@ -62,14 +62,14 @@ export default {
             if (!this.dragging) { return; }
             e.stopImmediatePropagation();
             e.stopPropagation();
-            e.preventDefault();
             
             if (e.type === 'mousemove') {
+                e.preventDefault();
                 this.handleDraggerMove(e.clientX, e.clientY);
                 return;
             }
             
-            this.handleDraggerMove(e.touches[0].clientX, e.touches[1].clientY);
+            this.handleDraggerMove(e.touches[0].clientX, e.touches[0].clientY);
         },
         
         endDrag() {
