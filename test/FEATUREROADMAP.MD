@@ -12,15 +12,15 @@
 | Breadcrumbs |X|?|Review as part of PolarisPage|
 | Button |X|X|Done||
 | ButtonGroup |X|X|Done|
-| CalloutCard |X|X|Done|
-| Caption |X||
-| Card |X||
-| Checkbox |X||
-| Choice |X||
-| ChoiceList |X||
-| Collapsible |X||
-| ColorPicker |X||
-| Connected |X||
+| CalloutCard |X|X|Upgraded to 3|
+| Caption |X|X|Done|
+| Card |X|X|Upgraded to 3|
+| Checkbox |X|X|Done|
+| Choice |X|X|Done|
+| ChoiceList |X|X|Done|
+| Collapsible |X|X|BUG|
+| ColorPicker |X|X|Done|
+| Connected |X|X|Deleted, not used
 | ContextualSaveBar |||
 | DataTable |||
 | DatePicker |X||

@@ -7,6 +7,7 @@ import PolarisAutocomplete from './components/PolarisAutocomplete.vue';
 import PolarisButton from './components/PolarisButton.vue';
 import PolarisButtonGroup from './components/PolarisButtonGroup.vue';
 import PolarisSettingToggle from './components/PolarisSettingToggle.vue';
+import PolarisContextualSaveBar from './components/PolarisContextualSaveBar';
 
 import PolarisAvatar from './components/PolarisAvatar.vue';
 import PolarisBadge from './components/PolarisBadge.vue';
@@ -88,6 +89,7 @@ import ComponentHelpers from './ComponentHelpers.js';
 import config from 'config/config.js';
 import log from 'util/log.js';
 import ConsoleLogger from 'util/loggers/ConsoleLogger.js';
+import PolarisContextualSaveBar from "./components/PolarisContextualSaveBar";
 
 const TAG = 'Bootstrap';
 
@@ -124,6 +126,7 @@ export default {
             ButtonGroup:            PolarisButtonGroup,
             SettingToggle:          PolarisSettingToggle,
             OptionDescriptor:       PolarisOptionDescriptor,
+            ContextualSaveBar:      PolarisContextualSaveBar,
 
             Avatar:                 PolarisAvatar,
             Badge:                  PolarisBadge,

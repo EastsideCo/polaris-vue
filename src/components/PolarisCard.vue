@@ -8,9 +8,9 @@
             </polaris-stack-item>
             <polaris-stack-item>
                 <polaris-button-group>
-                    <polaris-button v-for="action, index in actions" 
+                    <polaris-button v-for="action, index in actions"
                                     key="action"
-                                    :slot="index" 
+                                    :slot="index"
                                     :url="action.url"
                                     @click="handleAction(action)"
                                     :destructive="action.destructive"
@@ -34,20 +34,8 @@
     </template>
     <div v-if="primaryFooterAction" class="Polaris-Card__Footer">
         <polaris-button-group>
-            <template v-if="primaryFooterAction">
-                <polaris-button slot="1" 
-                                primary 
-                                @click="handleAction(primaryFooterAction)"
-                                :accessibility-label="primaryFooterAction.accessibilityLabel"
-                                :url="primaryFooterAction.url"
-                                :disabled="primaryFooterAction.disabled"
-                                :destructive="primaryFooterAction.destructive"
-                                :icon="primaryFooterAction.icon">
-                    {{ primaryFooterAction.content }}
-                </polaris-button>
-            </template>
-            <template v-if="secondaryFooterAction">
-                <polaris-button slot="2" 
+            <template v-if="secondaryFooterActions">
+                <polaris-button v-for="secondaryFooterAction in secondaryFooterActions"
                                 @click="handleAction(secondaryFooterAction)"
                                 :accessibility-label="secondaryFooterAction.accessibilityLabel"
                                 :url="secondaryFooterAction.url"
@@ -55,6 +43,17 @@
                                 :destructive="secondaryFooterAction.destructive"
                                 :icon="secondaryFooterAction.icon">
                     {{ secondaryFooterAction.content }}
+                </polaris-button>
+            </template>
+            <template v-if="primaryFooterAction">
+                <polaris-button primary
+                                @click="handleAction(primaryFooterAction)"
+                                :accessibility-label="primaryFooterAction.accessibilityLabel"
+                                :url="primaryFooterAction.url"
+                                :disabled="primaryFooterAction.disabled"
+                                :destructive="primaryFooterAction.destructive"
+                                :icon="primaryFooterAction.icon">
+                    {{ primaryFooterAction.content }}
                 </polaris-button>
             </template>
         </polaris-button-group>
@@ -77,7 +76,10 @@ export default {
         subdued: Boolean,
         sectioned: Boolean,
         primaryFooterAction: Object,
-        secondaryFooterAction: Object,
+        secondaryFooterActions: {
+            type: Array
+        },
+        secondaryFooterActionsDisclosureText: String,
         actions: {
             type: Array,
             default() {

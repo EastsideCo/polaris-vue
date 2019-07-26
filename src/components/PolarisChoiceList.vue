@@ -5,7 +5,7 @@
     </legend>
     <ul class="Polaris-ChoiceList__Choices">
         <li v-for="choice in choices">
-            <polaris-checkbox 
+            <polaris-checkbox
                 v-if="allowMultiple"
                 :name="finalName"
                 :value="choice.value"
@@ -15,12 +15,12 @@
                 :checked="choiceIsSelected(choice)"
                 @change="handleChange($event, choice)">
             </polaris-checkbox>
-            <polaris-radio-button 
+            <polaris-radio-button
                 v-if="!allowMultiple"
                 :name="finalName"
                 :value="choice.value"
                 :label="choice.label"
-                :helpText="choice.helpText" 
+                :helpText="choice.helpText"
                 :disabled="disabled"
                 :checked="choiceIsSelected(choice)"
                 @change="handleChange($event, choice)">
@@ -59,6 +59,7 @@ export default {
         name: String,
         allowMultiple: Boolean,
         disabled: Boolean,
+        error: String,
     },
     computed: {
         finalName() {
@@ -77,8 +78,8 @@ export default {
         },
         handleChange(e, choice) {
             var newSelected = [];
-            
-            
+
+
             if (e) {
                 if (this.allowMultiple) {
                     newSelected = (this.selected || []).slice();
@@ -91,10 +92,10 @@ export default {
                     return item !== choice.value;
                 });
             }
-            
+
             this.$emit('change', newSelected);
         }
     }
-    
+
 }
 </script>

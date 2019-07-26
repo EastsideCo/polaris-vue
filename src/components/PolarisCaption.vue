@@ -1,7 +1,7 @@
 <template>
-<p class="Polaris-Caption">
-    <slot></slot>
-</p>
+    <p class="Polaris-Caption">
+        <slot></slot>
+    </p>
 </template>
 
 <script>

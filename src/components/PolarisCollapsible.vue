@@ -1,12 +1,14 @@
 <template>
-<div :aria-hidden="!open"
-     :style="{ height: displayHeight }"
-     :class="classes"
-     ref="wrapper">
-    <div ref="heightNode">
-        <slot></slot>
+    <div :aria-hidden="!open"
+         :style="{ height: displayHeight }"
+         :class="classes"
+         ref="wrapper">
+         <polaris-vue-collapse-transition>
+            <div ref="heightNode">
+                <slot></slot>
+            </div>
+        </polaris-vue-collapse-transition>
     </div>
-</div>
 </template>
 
 
