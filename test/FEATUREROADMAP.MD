@@ -1,7 +1,7 @@
 ## Migration to Polaris 3: Feature List
 
 | Component Name|Ported|Working|Review/Notes|Docs|
-| --------------|:----:|:-----:|:--:||
+| --------------|:----:|:-----:|:----------:|:--:|
 | AccountConnection|X|X|Done||
 | ActionList |X|X|Done|
 | AppProvider |||Complex implementation
@@ -21,7 +21,7 @@
 | Collapsible |X|X|BUG|
 | ColorPicker |X|X|Done|
 | Connected |X|X|Deleted, not used
-| ContextualSaveBar |||
+| ContextualSaveBar |||On hold until PolarisFrame is started
 | DataTable |||
 | DatePicker |X||
 | DescriptionList |X||

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+        <script src="../lib/polaris-vue.js"></script>
+        <link rel="stylesheet" href="../lib/polaris-vue.css"></link>
+        <link rel="stylesheet" href="./styles.css"></link>
+        <script src="test.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <polaris-page title="Sandbox">
+                <polaris-card sectioned>
+                    <polaris-data-table
+                        :rows="[
+                            ['Emerald Silk Gown', '$875.00', 124689, 140, '$122,500.00'],
+                            ['Mauve Cashmere Scarf', '$230.00', 124533, 83, '$19,090.00'],
+                            ['Navy Merino Wool Blazer with khaki chinos and yellow belt','$445.00',124518,32,'$14,240.00']
+                        ]">
+                    </polaris-data-table>
+                </polaris-card>
+            </polaris-page>
+            </div>
+        </div>
+    </body>
+</html>
