@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+
         <style>
         .hljs {
           display: block;
@@ -9,43 +9,43 @@
           padding: 0.5em;
           background: #f9fafb;
         }
-        
+
         .hljs-built_in,
         .hljs-selector-tag,
         .hljs-section,
         .hljs-link {
           color: #8be9fd;
         }
-        
+
         .hljs-keyword {
           color: #5C6AC4;
         }
-        
+
         .hljs {
             color: #212B35;
         }
         .hljs-subst {
-            color: 
+            color:
 #43467F;
         }
-        
+
         .hljs-attr {
             color: #4059ff;
         }
-        
+
         .hljs-tag {
             color: #5C6AC4;
         }
-        
+
         .hljs-title {
             color: #50fa7b;
         }
-        
+
         .hljs-string {
-            color: 
+            color:
 #43467F;
         }
-        
+
         .hljs-meta,
         .hljs-name,
         .hljs-type,
@@ -58,13 +58,13 @@
         .hljs-template-variable {
           color: #5b69c4;
         }
-        
+
         .hljs-comment,
         .hljs-quote,
         .hljs-deletion {
           color: #6272a4;
         }
-        
+
         .hljs-keyword,
         .hljs-selector-tag,
         .hljs-literal,
@@ -76,35 +76,35 @@
         .hljs-strong {
           font-weight: bold;
         }
-        
+
         .hljs-literal,
         .hljs-number {
           color: #bd93f9;
         }
-        
+
         .hljs-emphasis {
           font-style: italic;
         }
         </style>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        
+
         <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-        
+
         <script src="../lib/polaris-vue.js"></script>
         <link rel="stylesheet" href="../lib/polaris-vue.css"></link>
-        
+
         <script src="test.js"></script>
-        
+
         <style>
             body {
                 padding: 0 40px;
             }
-            
+
             #app {
                 max-width: 1400px;
                 margin: 0 auto;
             }
-            
+
             .testSection {
                 margin: 20px 0;
                 margin-top: 60px;
@@ -112,7 +112,7 @@
                 font-weight: bold;
                 margin-left: -30px;
             }
-            
+
             .testHeader {
                 margin: 20px 0;
                 margin-top: 60px;
@@ -120,10 +120,10 @@
                 font-weight: bold;
                 margin-left: -30px;
             }
-            
+
             .testCase {
                 margin: 15px 0;
-                
+
                 display: flex;
             }
             .testCase .example {
@@ -139,12 +139,12 @@
                 padding-left: 40px;
                 background: rgba(200,200,200);
                 color: black;
-                
+
                 margin: 0;
                 padding: 0;
-                
+
                 overflow-x: auto;
-                
+
                 border-radius: 3px;
                 box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
                 background: #f9fafb;
@@ -156,17 +156,17 @@
                 padding-left: 40px;
                 background: rgba(200,200,200);
                 color: black;
-                
+
                 margin: 0;
                 padding: 0;
-                
+
                 overflow-x: auto;
-                
+
                 border-radius: 3px;
                 box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
                 background: #f9fafb;
             }
-            
+
             .testTitle {
                 margin: 20px 0;
                 margin-top: 60px;
@@ -174,7 +174,7 @@
                 font-weight: normal;
                 margin-left: -30px;
             }
-            
+
             .testSubtitle {
                 margin: 20px 0;
                 margin-top: 30px;
@@ -182,18 +182,18 @@
                 font-weight: 50px;
                 margin-left: -30px;
             }
-            
+
             .testDescription p {
                 margin-top: 20px;
             }
         </style>
-        
-        
+
+
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <div id="app">
-            
+
             <div class="testTitle">
                 Esc/polaris-vue pre-release
             </div>
@@ -210,11 +210,11 @@
                 <br>
                 <p>
                     Project aim is to have complete feature parity with the React version,
-                    only making small tweaks in order to stick to Vue conventions -- 
-                    developers familiar with Vue and the React/Sass Polaris docs should be 
+                    only making small tweaks in order to stick to Vue conventions --
+                    developers familiar with Vue and the React/Sass Polaris docs should be
                     comfortable using these components without further explaination.
                 </p>
-                
+
                 <p>
                     Prop names have been kept the same, but now follow Vue conventions,
                     (i.e. <code>help-text</code> in HTML vs. <code>helpText</code> in JS).
@@ -228,7 +228,7 @@
                     <br>
                     Overridden slots always takes priority over the props.
                     <br>
-                    The <code>children</code> "prop" referenced in the Polaris docsisn't used: 
+                    The <code>children</code> "prop" referenced in the Polaris docsisn't used:
                     just add your content as a child of the component.
                 </p>
                 <p>
@@ -269,7 +269,7 @@
                     </button>
                 </div>
             </div>
-                
+
             <div class="testHeader">&lt;polaris-vue-collapse-transition&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -283,11 +283,11 @@
                     </button>
                 </div>
             </div>
-            
+
             <div class="testSection">
                 Actions
             </div>
-            
+
             <p>
                 Actions can be used in many places. They can have icons,
                 on-click callbacks, links, accessibility labels,
@@ -296,19 +296,19 @@
             <div class="testHeader">Using Action in &lt;polaris-setting-toggle&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-setting-toggle 
+                    <polaris-setting-toggle
                         enabled
                         :action="{
-                            content: 'Disable', 
+                            content: 'Disable',
                             onAction: testAlert
                         }">
                         This setting is <polaris-text-style variation="strong">enabled</polaris-text-style>.
                     </polaris-setting-toggle>
                 </div>
-                <pre class="code"><code class="html">&lt;polaris-setting-toggle 
+                <pre class="code"><code class="html">&lt;polaris-setting-toggle
     enabled
     :action=&quot;{
-        content: 'Disable', 
+        content: 'Disable',
         onAction: testAlert
     }&quot;&gt;
     This setting is &lt;polaris-text-style variation=&quot;strong&quot;&gt;enabled&lt;/polaris-text-style&gt;.
@@ -316,20 +316,20 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-setting-toggle 
+                    <polaris-setting-toggle
                         enabled
                         :action="{
-                            content: 'Disable', 
+                            content: 'Disable',
                             onAction: testAlert,
                             icon: '&lt;svg class=&quot;Polaris-Icon__Svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;&lt;path d=&quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;/svg&gt;'
                         }">
                         This setting is <polaris-text-style variation="strong">enabled</polaris-text-style>.
                     </polaris-setting-toggle>
                 </div>
-                <pre class="code"><code class="html">&lt;polaris-setting-toggle 
+                <pre class="code"><code class="html">&lt;polaris-setting-toggle
         enabled
         :action=&quot;{
-            content: 'Disable', 
+            content: 'Disable',
             onAction: testAlert,
             icon: '&amp;lt;svg class=&amp;quot;Polaris-Icon__Svg&amp;quot; viewBox=&amp;quot;0 0 20 20&amp;quot;&amp;gt;&amp;lt;path d=&amp;quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&amp;quot; fill-rule=&amp;quot;evenodd&amp;quot;&amp;gt;&amp;lt;/path&amp;gt;&amp;lt;/svg&amp;gt;'
         }&quot;&gt;
@@ -339,20 +339,20 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-setting-toggle 
+                    <polaris-setting-toggle
                         enabled
                         :action="{
-                            content: 'Disable', 
+                            content: 'Disable',
                             onAction: testAlert,
                             destructive: true
                         }">
                         This setting is <polaris-text-style variation="strong">enabled</polaris-text-style>.
                     </polaris-setting-toggle>
                 </div>
-                <pre class="code"><code class="html">&lt;polaris-setting-toggle 
+                <pre class="code"><code class="html">&lt;polaris-setting-toggle
     enabled
     :action=&quot;{
-        content: 'Disable', 
+        content: 'Disable',
         onAction: testAlert,
         destructive: true
     }&quot;&gt;
@@ -361,38 +361,38 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-setting-toggle 
+                    <polaris-setting-toggle
                         enabled
                         :action="{
-                            content: 'Disable', 
+                            content: 'Disable',
                             onAction: testAlert,
                             disabled: true
                         }">
                         This setting is <polaris-text-style variation="strong">enabled</polaris-text-style>.
                     </polaris-setting-toggle>
                 </div>
-                <pre class="code"><code class="html">&lt;polaris-setting-toggle 
+                <pre class="code"><code class="html">&lt;polaris-setting-toggle
     enabled
     :action=&quot;{
-        content: 'Disable', 
+        content: 'Disable',
         onAction: testAlert,
         disabled: true
     }&quot;&gt;
     This setting is &lt;polaris-text-style variation=&quot;strong&quot;&gt;enabled&lt;/polaris-text-style&gt;.
 &lt;/polaris-setting-toggle&gt;</code></pre>
             </div>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <div class="testSection">
                 Undocumented / Misc
             </div>
-            
-            
-            
+
+
+
             <div class="testHeader">&lt;polaris-text-container&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -414,7 +414,7 @@
      Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text container Text containerText container
 &lt;/polaris-text-container&gt;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-text-style&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -466,9 +466,9 @@
     Negative text
 &lt;/polaris-text-style&gt;</code></pre>
             </div>
-            
-            
-            
+
+
+
             <div class="testHeader">&lt;polaris-setting-action&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -496,7 +496,7 @@
     &lt;/polaris-button&gt;
 &lt;/polaris-setting-action&gt;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-image&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -508,29 +508,29 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-image src="https://vuejs.org/images/logo.png" 
+                    <polaris-image src="https://vuejs.org/images/logo.png"
                                    alt="image with source sets"
                                    :source-set="[
-                                       { source: 'https://vuejs.org/images/logo.png?1', 
+                                       { source: 'https://vuejs.org/images/logo.png?1',
                                          descriptor: '800w' },
-                                       { source: 'https://coligo.io/vuejs-the-basics/cover-850x416.jpg?2', 
+                                       { source: 'https://coligo.io/vuejs-the-basics/cover-850x416.jpg?2',
                                          descriptor: '1200w' },
                                    ]">
                     </polaris-image>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-image src=&#x22;https://vuejs.org/images/logo.png&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-image src=&#x22;https://vuejs.org/images/logo.png&#x22;
                alt=&#x22;image with source sets&#x22;
                :source-set=&#x22;[
-                   { source: &#x27;https://vuejs.org/images/logo.png?1&#x27;, 
+                   { source: &#x27;https://vuejs.org/images/logo.png?1&#x27;,
                      descriptor: &#x27;800w&#x27; },
-                   { source: &#x27;https://coligo.io/vuejs-the-basics/cover-850x416.jpg?2&#x27;, 
+                   { source: &#x27;https://coligo.io/vuejs-the-basics/cover-850x416.jpg?2&#x27;,
                      descriptor: &#x27;1200w&#x27; },
                ]&#x22;&#x3E;
 &#x3C;/polaris-image&#x3E;</code></pre>
             </div>
-            
-            
-            
+
+
+
             <div class="testHeader">&lt;polaris-unstyled-link&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -542,9 +542,9 @@
     This is an unstyled link.
 &#x3C;/polaris-unstyled-link&#x3E;</code></pre>
             </div>
-            
-            
-            
+
+
+
             <div class="testHeader">&lt;polaris-breadcrumbs&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -560,43 +560,43 @@
                      ]&#x22;&#x3E;
 &#x3C;/polaris-breadcrumbs&#x3E;</code></pre>
             </div>
-            
-            
-            
-            
-            
+
+
+
+
+
             <div class="testSection">
                 Actions
             </div>
-            
+
             <div class="testHeader">&lt;polaris-account-connection&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-account-connection 
+                    <polaris-account-connection
                         title="Example app"
                         :action="{content: 'Connect', onAction: testAlert}"
                         details="No account connected">
                         <p>
-                            By clicking Connect, you agree to accept Sample App's 
-                            <polaris-link url="https://google.com/">Terms and conditions</polaris-link>. 
+                            By clicking Connect, you agree to accept Sample App's
+                            <polaris-link url="https://google.com/">Terms and conditions</polaris-link>.
                             You'll pay a commission rate of 15% on sales made through Example App.
                         </p>
                     </polaris-account-connection>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-account-connection 
+                <pre class="code"><code class="html">&#x3C;polaris-account-connection
     title=&#x22;Example app&#x22;
     :action=&#x22;{content: &#x27;Connect&#x27;, onAction: testAlert}&#x22;
     details=&#x22;No account connected&#x22;&#x3E;
     &#x3C;p&#x3E;
-        By clicking Connect, you agree to accept Sample App&#x27;s 
-        &#x3C;polaris-link url=&#x22;https://google.com/&#x22;&#x3E;Terms and conditions&#x3C;/polaris-link&#x3E;. 
+        By clicking Connect, you agree to accept Sample App&#x27;s
+        &#x3C;polaris-link url=&#x22;https://google.com/&#x22;&#x3E;Terms and conditions&#x3C;/polaris-link&#x3E;.
         You&#x27;ll pay a commission rate of 15% on sales made through Example App.
     &#x3C;/p&#x3E;
 &#x3C;/polaris-account-connection&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-account-connection 
+                    <polaris-account-connection
                         title="Example app"
                         :action="{content: 'Disconnect', onAction: testAlert}"
                         details="Connected"
@@ -605,7 +605,7 @@
                         terms-of-service="You'll pay a commission rate of 15% on sales made through Example App.">
                     </polaris-account-connection>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-account-connection 
+                <pre class="code"><code class="html">&#x3C;polaris-account-connection
     title=&#x22;Example app&#x22;
     :action=&#x22;{content: &#x27;Disconnect&#x27;, onAction: testAlert}&#x22;
     details=&#x22;Connected&#x22;
@@ -616,7 +616,7 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-account-connection 
+                    <polaris-account-connection
                         :action="{content: 'Disconnect', onAction: testAlert}"
                         connected
                         avatar-url="https://vuejs.org/images/logo.png">
@@ -624,8 +624,8 @@
                             Example <strong>app</strong>
                         </div>
                         <p slot="termsOfService">
-                            By clicking Connect, you agree to accept Sample App's 
-                            <polaris-link url="https://google.com/">Terms and conditions</polaris-link>. 
+                            By clicking Connect, you agree to accept Sample App's
+                            <polaris-link url="https://google.com/">Terms and conditions</polaris-link>.
                             You'll pay a commission rate of 15% on sales made through Example App.
                         </p>
                         <span slot="details">
@@ -633,7 +633,7 @@
                         </span>
                     </polaris-account-connection>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-account-connection 
+                <pre class="code"><code class="html">&#x3C;polaris-account-connection
     :action=&#x22;{content: &#x27;Disconnect&#x27;, onAction: testAlert}&#x22;
     connected
     avatar-url=&#x22;https://vuejs.org/images/logo.png&#x22;&#x3E;
@@ -641,8 +641,8 @@
         Example &#x3C;strong&#x3E;app&#x3C;/strong&#x3E;
     &#x3C;/div&#x3E;
     &#x3C;p slot=&#x22;termsOfService&#x22;&#x3E;
-        By clicking Connect, you agree to accept Sample App&#x27;s 
-        &#x3C;polaris-link url=&#x22;https://google.com/&#x22;&#x3E;Terms and conditions&#x3C;/polaris-link&#x3E;. 
+        By clicking Connect, you agree to accept Sample App&#x27;s
+        &#x3C;polaris-link url=&#x22;https://google.com/&#x22;&#x3E;Terms and conditions&#x3C;/polaris-link&#x3E;.
         You&#x27;ll pay a commission rate of 15% on sales made through Example App.
     &#x3C;/p&#x3E;
     &#x3C;span slot=&#x22;details&#x22;&#x3E;
@@ -650,7 +650,7 @@
     &#x3C;/span&#x3E;
 &#x3C;/polaris-account-connection&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-action-list&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -688,7 +688,7 @@
     ]},
 ]&#x22;&#x3E;&#x3C;/polaris-action-list&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-button&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -750,7 +750,7 @@
     &#x3C;b&#x3E;&#x3C;i&#x3E;HTML&#x3C;/i&#x3E;&#x3C;/b&#x3E; Content
 &#x3C;/polaris-button&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-button-group&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -832,8 +832,8 @@
     &#x3C;polaris-button slot=&#x22;3&#x22;&#x3E;Button 3&#x3C;/polaris-button&#x3E;
 &#x3C;/polaris-button-group&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-setting-toggle&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -855,51 +855,51 @@
     This setting is &#x3C;polaris-text-style variation=&#x22;strong&#x22;&#x3E;enabled&#x3C;/polaris-text-style&#x3E;.
 &#x3C;/polaris-setting-toggle&#x3E;</code></pre>
             </div>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <div class="testSection">
                 Images and icons
             </div>
-            
+
             <div class="testHeader">&lt;polaris-avatar&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-avatar 
+                    <polaris-avatar
                         source="https://vuejs.org/images/logo.png"
                         accessibility-label="avatar test">
                     </polaris-avatar>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-avatar 
+                <pre class="code"><code class="html">&#x3C;polaris-avatar
     source=&#x22;https://vuejs.org/images/logo.png&#x22;
     accessibility-label=&#x22;avatar test&#x22;&#x3E;
 &#x3C;/polaris-avatar&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-avatar 
+                    <polaris-avatar
                         initials="ESC"
                         accessibility-label="avatar test">
                     </polaris-avatar>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-avatar 
+                <pre class="code"><code class="html">&#x3C;polaris-avatar
     initials=&#x22;ESC&#x22;
     accessibility-label=&#x22;avatar test&#x22;&#x3E;
 &#x3C;/polaris-avatar&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-avatar 
+                    <polaris-avatar
                         customer
                         name="Kiran Price"
                         size="large"
                         accessibility-label="avatar test">
                     </polaris-avatar>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-avatar 
+                <pre class="code"><code class="html">&#x3C;polaris-avatar
     customer
     name=&#x22;Kiran Price&#x22;
     size=&#x22;large&#x22;
@@ -908,14 +908,14 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-avatar 
+                    <polaris-avatar
                         customer
                         name="John Smith"
                         size="small"
                         accessibility-label="avatar test">
                     </polaris-avatar>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-avatar 
+                <pre class="code"><code class="html">&#x3C;polaris-avatar
     customer
     name=&#x22;John Smith&#x22;
     size=&#x22;small&#x22;
@@ -953,17 +953,17 @@
     SSL Unavailable
 &#x3C;/polaris-badge&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-icon&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-icon 
+                    <polaris-icon
                         accessibility-label="Example icon"
                         color="teal"
                         source="&lt;svg class=&quot;Polaris-Icon__Svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;&lt;path d=&quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;/svg&gt;">
                     </polaris-icon>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-icon 
+                <pre class="code"><code class="html">&#x3C;polaris-icon
     accessibility-label=&#x22;Example icon&#x22;
     color=&#x22;teal&#x22;
     source=&#x22;&#x26;lt;svg class=&#x26;quot;Polaris-Icon__Svg&#x26;quot; viewBox=&#x26;quot;0 0 20 20&#x26;quot;&#x26;gt;&#x26;lt;path d=&#x26;quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&#x26;quot; fill-rule=&#x26;quot;evenodd&#x26;quot;&#x26;gt;&#x26;lt;/path&#x26;gt;&#x26;lt;/svg&#x26;gt;&#x22;&#x3E;
@@ -971,14 +971,14 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-icon 
+                    <polaris-icon
                         accessibility-label="Example icon"
                         backdrop
                         color="tealDark"
                         source="&lt;svg class=&quot;Polaris-Icon__Svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;&lt;path d=&quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;/svg&gt;">
                     </polaris-icon>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-icon 
+                <pre class="code"><code class="html">&#x3C;polaris-icon
     accessibility-label=&#x22;Example icon&#x22;
     backdrop
     color=&#x22;tealDark&#x22;
@@ -987,22 +987,22 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-icon 
+                    <polaris-icon
                         accessibility-label="Example icon"
                         backdrop
                         color="ink"
                         source="&lt;svg class=&quot;Polaris-Icon__Svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;&lt;path d=&quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;/svg&gt;">
                     </polaris-icon>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-icon 
+                <pre class="code"><code class="html">&#x3C;polaris-icon
     accessibility-label=&#x22;Example icon&#x22;
     backdrop
     color=&#x22;ink&#x22;
     source=&#x22;&#x26;lt;svg class=&#x26;quot;Polaris-Icon__Svg&#x26;quot; viewBox=&#x26;quot;0 0 20 20&#x26;quot;&#x26;gt;&#x26;lt;path d=&#x26;quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&#x26;quot; fill-rule=&#x26;quot;evenodd&#x26;quot;&#x26;gt;&#x26;lt;/path&#x26;gt;&#x26;lt;/svg&#x26;gt;&#x22;&#x3E;
 &#x3C;/polaris-icon&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-keyboard-key&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1014,59 +1014,59 @@
     Ctrl
 &#x3C;/polaris-keyboard-key&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-thumbnail&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-thumbnail 
-                        source="https://vuejs.org/images/logo.png" 
+                    <polaris-thumbnail
+                        source="https://vuejs.org/images/logo.png"
                         alt="Example">
                     </polaris-thumbnail>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-thumbnail 
-    source=&#x22;https://vuejs.org/images/logo.png&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-thumbnail
+    source=&#x22;https://vuejs.org/images/logo.png&#x22;
     alt=&#x22;Example&#x22;&#x3E;
 &#x3C;/polaris-thumbnail&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-thumbnail 
-                        source="https://vuejs.org/images/logo.png" 
+                    <polaris-thumbnail
+                        source="https://vuejs.org/images/logo.png"
                         alt="Example"
                         size="small">
                     </polaris-thumbnail>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-thumbnail 
-    source=&#x22;https://vuejs.org/images/logo.png&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-thumbnail
+    source=&#x22;https://vuejs.org/images/logo.png&#x22;
     alt=&#x22;Example&#x22;
     size=&#x22;small&#x22;&#x3E;
 &#x3C;/polaris-thumbnail&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-thumbnail 
-                        source="https://vuejs.org/images/logo.png" 
+                    <polaris-thumbnail
+                        source="https://vuejs.org/images/logo.png"
                         alt="Example"
                         size="large">
                     </polaris-thumbnail>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-thumbnail 
-    source=&#x22;https://vuejs.org/images/logo.png&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-thumbnail
+    source=&#x22;https://vuejs.org/images/logo.png&#x22;
     alt=&#x22;Example&#x22;
     size=&#x22;large&#x22;&#x3E;
 &#x3C;/polaris-thumbnail&#x3E;</code></pre>
             </div>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <div class="testSection">
                 Feedback indicators
             </div>
-            
+
             <div class="testHeader">&lt;polaris-banner&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1080,14 +1080,14 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-banner 
+                    <polaris-banner
                         title="Order archived"
                         icon="&lt;svg class=&quot;Polaris-Icon__Svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;&lt;path d=&quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;/svg&gt;"
                         status="warning">
                         <p>This order was archived on March 7, 2017 at 3:12pm EDT.</p>
                     </polaris-banner>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-banner 
+                <pre class="code"><code class="html">&#x3C;polaris-banner
     title=&#x22;Order archived&#x22;
     icon=&#x22;&#x26;lt;svg class=&#x26;quot;Polaris-Icon__Svg&#x26;quot; viewBox=&#x26;quot;0 0 20 20&#x26;quot;&#x26;gt;&#x26;lt;path d=&#x26;quot;M13.707 10.707a.997.997 0 0 1-1.414 0L11 9.414V17a1 1 0 1 1-2 0V9.414l-1.293 1.293a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2V4H4v9h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14z&#x26;quot; fill-rule=&#x26;quot;evenodd&#x26;quot;&#x26;gt;&#x26;lt;/path&#x26;gt;&#x26;lt;/svg&#x26;gt;&#x22;
     status=&#x22;warning&#x22;&#x3E;
@@ -1096,14 +1096,14 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-banner 
+                    <polaris-banner
                         title="Order archived"
                         :action="{content: 'Action', onAction: testAlert}"
                         status="success">
                         <p>This order was archived on March 7, 2017 at 3:12pm EDT.</p>
                     </polaris-banner>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-banner 
+                <pre class="code"><code class="html">&#x3C;polaris-banner
     title=&#x22;Order archived&#x22;
     :action=&#x22;{content: &#x27;Action&#x27;, onAction: testAlert}&#x22;
     status=&#x22;success&#x22;&#x3E;
@@ -1112,14 +1112,14 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-banner 
+                    <polaris-banner
                         title="Order archived"
                         :action="{content: 'Action', onAction: testAlert}"
                         status="success"
                         children="This order was archived on March 7, 2017 at 3:12pm EDT.">
                     </polaris-banner>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-banner 
+                <pre class="code"><code class="html">&#x3C;polaris-banner
     title=&#x22;Order archived&#x22;
     :action=&#x22;{content: &#x27;Action&#x27;, onAction: testAlert}&#x22;
     status=&#x22;success&#x22;
@@ -1128,7 +1128,7 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-banner 
+                    <polaris-banner
                         title="Order archived"
                         :action="{content: 'Action', onAction: testAlert}"
                         :secondary-action="{content: 'Secondary', onAction: testAlert}"
@@ -1136,7 +1136,7 @@
                         <p>This order was archived on March 7, 2017 at 3:12pm EDT.</p>
                     </polaris-banner>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-banner 
+                <pre class="code"><code class="html">&#x3C;polaris-banner
     title=&#x22;Order archived&#x22;
     :action=&#x22;{content: &#x27;Action&#x27;, onAction: testAlert}&#x22;
     :secondary-action=&#x22;{content: &#x27;Secondary&#x27;, onAction: testAlert}&#x22;
@@ -1144,7 +1144,7 @@
     &#x3C;p&#x3E;This order was archived on March 7, 2017 at 3:12pm EDT.&#x3C;/p&#x3E;
 &#x3C;/polaris-banner&#x3E;</code></pre>
             </div>
-            
+
 
             <div class="testHeader">&lt;polaris-spinner&gt;</div>
             <div class="testCase">
@@ -1189,8 +1189,8 @@
     size="large"
     color="white"/&gt;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-progress-bar&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1202,17 +1202,17 @@
                     <polaris-progress-bar :progress="30" size="small">
                 </div>
             </div>
-            
-            
-            
+
+
+
             <div class="testSection">
                 Structure
             </div>
-            
+
             <div class="testHeader">&lt;polaris-callout-card&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-callout-card 
+                    <polaris-callout-card
                         title="Customize the style of your checkout"
                         illustration="https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg"
                         :primary-action="{content:'Customize', onAction: testAlert}"
@@ -1220,7 +1220,7 @@
                         <p>Upload your store's logo, change colors and fonts, <b>and more</b>.</p>
                     </polaris-callout-card>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-callout-card 
+                <pre class="code"><code class="html">&#x3C;polaris-callout-card
     title=&#x22;Customize the style of your checkout&#x22;
     illustration=&#x22;https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg&#x22;
     :primary-action=&#x22;{content:&#x27;Customize&#x27;, onAction: testAlert}&#x22;
@@ -1230,7 +1230,7 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-callout-card 
+                    <polaris-callout-card
                         title="Customize the style of your checkout"
                         illustration="https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg"
                         :primary-action="{content:'Customize', onAction: testAlert}"
@@ -1238,7 +1238,7 @@
                         children="Upload your store's logo, change colors and fonts, and more.">
                     </polaris-callout-card>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-callout-card 
+                <pre class="code"><code class="html">&#x3C;polaris-callout-card
     title=&#x22;Customize the style of your checkout&#x22;
     illustration=&#x22;https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg&#x22;
     :primary-action=&#x22;{content:&#x27;Customize&#x27;, onAction: testAlert}&#x22;
@@ -1246,18 +1246,18 @@
     children=&#x22;Upload your store&#x27;s logo, change colors and fonts, and more.&#x22;&#x3E;
 &#x3C;/polaris-callout-card&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-card&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-card 
+                    <polaris-card
                         sectioned
                         title="Online store dashboard">
                         <p>View a summary of your online store's performance.</p>
                     </polaris-callout-card>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-card 
+                <pre class="code"><code class="html">&#x3C;polaris-card
     sectioned
     title=&#x22;Online store dashboard&#x22;&#x3E;
     &#x3C;p&#x3E;View a summary of your online store&#x27;s performance.&#x3C;/p&#x3E;
@@ -1333,7 +1333,7 @@
     &#x3C;/polaris-card-section&#x3E;
 &#x3C;/polaris-card&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-empty-state&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1359,7 +1359,7 @@
     &#x3C;p&#x3E;Track and receive your incoming inventory from suppliers.&#x3C;/p&#x3E;
 &#x3C;/polaris-empty-state&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-layout&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1465,7 +1465,7 @@
     &#x3C;/polaris-layout-annotated-section&#x3E;
 &#x3C;/polaris-layout&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-page&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1549,20 +1549,20 @@
                             {
                                 title: 'Promote',
                                 actions: [
-                                    { 
+                                    {
                                         content: 'Share on Facebook',
                                         onAction: testAlert
                                     },
                                 ]
                             },
-                            { 
+                            {
                                 title: 'Test A',
                                 actions: [
-                                    { 
+                                    {
                                         content: 'A',
                                         onAction: testAlert,
                                     },
-                                    { 
+                                    {
                                         content: 'B',
                                         onAction: testAlert,
                                     },
@@ -1575,28 +1575,28 @@
                     </polaris-page>
                 </div>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-page-actions&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-page-actions 
+                    <polaris-page-actions
                         :primary-action="{content: 'Save'}">
                     </polaris-page-actions>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-page-actions 
+                <pre class="code"><code class="html">&#x3C;polaris-page-actions
     :primary-action=&#x22;{content: &#x27;Save&#x27;}&#x22;&#x3E;
 &#x3C;/polaris-page-actions&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-page-actions 
+                    <polaris-page-actions
                         :primary-action="{content: 'Save'}"
                         :secondary-actions="[
                             {content: 'Duplicate', onAction: testAlert},
                         ]">
                     </polaris-page-actions>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-page-actions 
+                <pre class="code"><code class="html">&#x3C;polaris-page-actions
     :primary-action=&#x22;{content: &#x27;Save&#x27;}&#x22;
     :secondary-actions=&#x22;[
         {content: &#x27;Duplicate&#x27;, onAction: testAlert},
@@ -1605,7 +1605,7 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-page-actions 
+                    <polaris-page-actions
                         :primary-action="{content: 'Save'}"
                         :secondary-actions="[
                             {content: 'Duplicate', onAction: testAlert},
@@ -1613,7 +1613,7 @@
                         ]">
                     </polaris-page-actions>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-page-actions 
+                <pre class="code"><code class="html">&#x3C;polaris-page-actions
     :primary-action=&#x22;{content: &#x27;Save&#x27;}&#x22;
     :secondary-actions=&#x22;[
         {content: &#x27;Duplicate&#x27;, onAction: testAlert},
@@ -1621,7 +1621,7 @@
     ]&#x22;&#x3E;
 &#x3C;/polaris-page-actions&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-stack&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1765,17 +1765,17 @@
     &#x3C;polaris-badge&#x3E;Fulfilled&#x3C;/polaris-badge&#x3E;
 &#x3C;/polaris-stack&#x3E;</code></pre>
             </div>
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
             <div class="testSection">
                 Titles and text
             </div>
-            
+
             <div class="testHeader">&lt;polaris-caption&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1787,7 +1787,7 @@
     Test caption
 &#x3C;/polaris-caption&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-display-text&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1819,21 +1819,21 @@
     Test display text small
 &#x3C;/polaris-display-text&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-footer-help&gt;</div>
             <div class="testCase">
                 <div class="example">
                     <polaris-footer-help>
-                        Learn more about 
+                        Learn more about
                         <polaris-link url="https://help.shopify.com/manual/orders/fulfill-orders">fulfilling orders</polaris-link>.
                     </polaris-footer-help>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-footer-help&#x3E;
-    Learn more about 
+    Learn more about
     &#x3C;polaris-link url=&#x22;https://help.shopify.com/manual/orders/fulfill-orders&#x22;&#x3E;fulfilling orders&#x3C;/polaris-link&#x3E;.
 &#x3C;/polaris-footer-help&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-heading&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1855,7 +1855,7 @@
     Test heading as h1
 &#x3C;/polaris-heading&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-subheading&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1877,8 +1877,8 @@
     Test subheading as h4
 &#x3C;/polaris-subheading&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-visually-hidden&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1919,18 +1919,18 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-skeleton-page 
+                    <polaris-skeleton-page
                         title="Products"
                         full-width
                         :secondary-actions="[ {content: 'View inventory', url: 'https://google.com/'} ]"/>
                 </div>
             </div>
-            
-            
+
+
             <div class="testSection">
                 Forms
             </div>
-            
+
             <div class="testHeader">&lt;polaris-checkbox&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -1977,23 +1977,23 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-checkbox 
-                        label="Basic checkbox" 
+                    <polaris-checkbox
+                        label="Basic checkbox"
                         name="checkboxName"
                         value="on"
                         help-text="Help text">
                     </polaris-checkbox>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-checkbox 
-    label=&#x22;Basic checkbox&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-checkbox
+    label=&#x22;Basic checkbox&#x22;
     name=&#x22;checkboxName&#x22;
     value=&#x22;on&#x22;
     help-text=&#x22;Help text&#x22;&#x3E;
 &#x3C;/polaris-checkbox&#x3E;</code></pre>
             </div><div class="testCase">
                 <div class="example">
-                    <polaris-checkbox 
-                        label="Basic checkbox" 
+                    <polaris-checkbox
+                        label="Basic checkbox"
                         name="checkboxName"
                         value="on">
                         <p slot="helpText">
@@ -2001,8 +2001,8 @@
                         </p>
                     </polaris-checkbox>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-checkbox 
-    label=&#x22;Basic checkbox&#x22; 
+                <pre class="code"><code class="html">&#x3C;polaris-checkbox
+    label=&#x22;Basic checkbox&#x22;
     name=&#x22;checkboxName&#x22;
     value=&#x22;on&#x22;
     help-text=&#x22;Help text&#x22;&#x3E;
@@ -2010,33 +2010,33 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-checkbox 
+                    <polaris-checkbox
                         label="Basic checkbox"
                         :error="true">
                     </polaris-checkbox>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-checkbox 
+                <pre class="code"><code class="html">&#x3C;polaris-checkbox
     label=&#x22;Basic checkbox&#x22;
     :error=&#x22;true&#x22;&#x3E;
 &#x3C;/polaris-checkbox&#x3E;</code></pre>
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-checkbox 
+                    <polaris-checkbox
                         label="Basic checkbox"
                         error="You must agree to the terms and conditions.">
                     </polaris-checkbox>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-checkbox 
+                <pre class="code"><code class="html">&#x3C;polaris-checkbox
     label=&#x22;Basic checkbox&#x22;
     error=&#x22;You must agree to the terms and conditions.&#x22;&#x3E;
 &#x3C;/polaris-checkbox&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-choice-list&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-choice-list 
+                    <polaris-choice-list
                         name="test0"
                         title="Company name"
                         :choices="[
@@ -2048,7 +2048,7 @@
                     </polaris-choice-list>
                     <p>Value: {{ value1 }}</p>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-choice-list 
+                <pre class="code"><code class="html">&#x3C;polaris-choice-list
     name=&#x22;test0&#x22;
     title=&#x22;Company name&#x22;
     :choices=&#x22;[
@@ -2061,7 +2061,7 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-choice-list 
+                    <polaris-choice-list
                         name="test3"
                         title="Company name"
                         :title-hidden="true"
@@ -2073,7 +2073,7 @@
                         v-model="value3">
                     </polaris-choice-list>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-choice-list 
+                <pre class="code"><code class="html">&#x3C;polaris-choice-list
     name=&#x22;test0&#x22;
     title=&#x22;Company name&#x22;
     :title-hidden=&#x22;true&#x22;
@@ -2087,17 +2087,17 @@
             </div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-choice-list 
+                    <polaris-choice-list
                         name="test1"
                         title="While the customer is checking out"
                         :choices="[
-                            { 
-                                label: 'Use the shipping address as the billing address by default', 
+                            {
+                                label: 'Use the shipping address as the billing address by default',
                                 value: 'shipping',
                                 helpText: 'Reduces the number of fields required to check out. The billing address can still be edited.'
                             },
-                            { 
-                                label: 'Require a confirmation step', 
+                            {
+                                label: 'Require a confirmation step',
                                 value: 'confirmation',
                                 helpText: 'Customers must review their order details before purchasing.'
                             },
@@ -2107,17 +2107,17 @@
                     </polaris-choice-list>
                     <p>Value: {{ value2 }}</p>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-choice-list 
+                <pre class="code"><code class="html">&#x3C;polaris-choice-list
     name=&#x22;test1&#x22;
     title=&#x22;While the customer is checking out&#x22;
     :choices=&#x22;[
-        { 
-            label: &#x27;Use the shipping address as the billing address by default&#x27;, 
+        {
+            label: &#x27;Use the shipping address as the billing address by default&#x27;,
             value: &#x27;shipping&#x27;,
             helpText: &#x27;Reduces the number of fields required to check out. The billing address can still be edited.&#x27;
         },
-        { 
-            label: &#x27;Require a confirmation step&#x27;, 
+        {
+            label: &#x27;Require a confirmation step&#x27;,
             value: &#x27;confirmation&#x27;,
             helpText: &#x27;Customers must review their order details before purchasing.&#x27;
         },
@@ -2126,7 +2126,7 @@
     v-model=&#x22;value2&#x22;&#x3E;
 &#x3C;/polaris-choice-list&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-color-picker&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -2148,8 +2148,8 @@
                 <pre class="code"><code class="html">&#x3C;polaris-color-picker v-model=&#x22;colorValue&#x22; allow-alpha&#x3E;
 &#x3C;/polaris-color-picker&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-date-picker&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -2233,16 +2233,16 @@
     multi-month&#x3E;
 &#x3C;/polaris-date-picker&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-form-layout&gt;</div>
             <div class="testCase">
                 <div class="example">
                     <polaris-form-layout>
-                        <polaris-text-field 
+                        <polaris-text-field
                             label="Store name">
                         </polaris-text-field>
-                        <polaris-text-field 
+                        <polaris-text-field
                             label="Account email"
                             type="email"
                             disabled>
@@ -2250,10 +2250,10 @@
                     </polaris-form-layout>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-form-layout&#x3E;
-    &#x3C;polaris-text-field 
+    &#x3C;polaris-text-field
         label=&#x22;Store name&#x22;&#x3E;
     &#x3C;/polaris-text-field&#x3E;
-    &#x3C;polaris-text-field 
+    &#x3C;polaris-text-field
         label=&#x22;Account email&#x22;
         type=&#x22;email&#x22;
         disabled&#x3E;
@@ -2264,17 +2264,17 @@
                 <div class="example">
                     <polaris-form-layout>
                         <polaris-form-layout-group>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
@@ -2283,17 +2283,17 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-form-layout&#x3E;
     &#x3C;polaris-form-layout-group&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
@@ -2304,17 +2304,17 @@
                 <div class="example">
                     <polaris-form-layout>
                         <polaris-form-layout-group condensed>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
@@ -2323,17 +2323,17 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-form-layout&#x3E;
     &#x3C;polaris-form-layout-group condensed&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
@@ -2343,14 +2343,14 @@
             <div class="testCase">
                 <div class="example">
                     <polaris-form-layout>
-                        <polaris-form-layout-group 
+                        <polaris-form-layout-group
                             condensed
                             title="Basic options"
                             help-text="Helpful hint text">
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
@@ -2360,10 +2360,10 @@
                             <p slot="helpText">
                                 <a href="#">HTML</a> help text
                             </p>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Store name">
                             </polaris-text-field>
-                            <polaris-text-field 
+                            <polaris-text-field
                                 label="Account email"
                                 type="email">
                             </polaris-text-field>
@@ -2371,14 +2371,14 @@
                     </polaris-form-layout>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-form-layout&#x3E;
-    &#x3C;polaris-form-layout-group 
+    &#x3C;polaris-form-layout-group
         condensed
         title=&#x22;Basic options&#x22;
         help-text=&#x22;Helpful hint text&#x22;&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
@@ -2388,18 +2388,18 @@
         &#x3C;p slot=&#x22;helpText&#x22;&#x3E;
             &#x3C;a href=&#x22;#&#x22;&#x3E;HTML&#x3C;/a&#x3E; help text
         &#x3C;/p&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Store name&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
-        &#x3C;polaris-text-field 
+        &#x3C;polaris-text-field
             label=&#x22;Account email&#x22;
             type=&#x22;email&#x22;&#x3E;
         &#x3C;/polaris-text-field&#x3E;
     &#x3C;/polaris-form-layout-group&#x3E;
 &#x3C;/polaris-form-layout&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-radio-button</div>
             <div class="testCase">
                 <div class="example">
@@ -2474,9 +2474,9 @@
     disabled&#x3E;
 &#x3C;/polaris-radio-button&#x3E;</code></pre>
             </div>
-            
-            
-            
+
+
+
             <div class="testHeader">&lt;polaris-select&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -2562,8 +2562,8 @@
     disabled&#x3E;
 &#x3C;/polaris-select&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-tag&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -2571,16 +2571,16 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-tag&#x3E;Wholesale&#x3C;/polaris-tag&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-text-field&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-text-field 
+                    <polaris-text-field
                         v-model="value8"
                         label="Store name">
                     </polaris-text-field>
                 </div>
-                <pre class="code"><code class="html">&#x3C;polaris-text-field 
+                <pre class="code"><code class="html">&#x3C;polaris-text-field
     v-model=&#x22;value8&#x22;
     label=&#x22;Store name&#x22;&#x3E;
 &#x3C;/polaris-text-field&#x3E;</code></pre>
@@ -2603,12 +2603,16 @@
                 <div class="example">
                     <polaris-text-field
                         label="Email"
-                        type="email">
+                        type="email"
+                        max-length="60"
+                        min-length="6">
                     </polaris-text-field>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-text-field
     label=&#x22;Email&#x22;
     type=&#x22;email&#x22;&#x3E;
+    max-length=&#x22;60&#x22;&#x3E;
+    min-length=&#x22;6&#x22;&#x3E;
 &#x3C;/polaris-text-field&#x3E;</code></pre>
             </div>
             <div class="testCase">
@@ -2629,7 +2633,7 @@
                         label="Gift cards expire after"
                         label-hidden
                         value="12">
-                        <polaris-select 
+                        <polaris-select
                             slot="connectedRight"
                             label="Unit of time"
                             label-hidden
@@ -2645,7 +2649,7 @@
     label=&#x22;Gift cards expire after&#x22;
     label-hidden
     value=&#x22;12&#x22;&#x3E;
-    &#x3C;polaris-select 
+    &#x3C;polaris-select
         slot=&#x22;connectedRight&#x22;
         label=&#x22;Unit of time&#x22;
         label-hidden
@@ -2743,8 +2747,8 @@
     error=&#x22;Store name is required&#x22;&#x3E;
 &#x3C;/polaris-text-field&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testSection">Behaviors</div>
             <div class="testHeader">&lt;polaris-collapsible&gt;</div>
             <div class="testCase">
@@ -2763,35 +2767,35 @@
     &#x3C;p&#x3E;Example content&#x3C;/p&#x3E;
 &#x3C;/polaris-collapsible&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-scrollable&gt;</div>
             <div class="testCase">
                 <div class="example">
                     <polaris-card title="Terms of Service" sectioned>
-                        <polaris-scrollable 
-                            shadow 
+                        <polaris-scrollable
+                            shadow
                             :style="{ height: '100px' }">
                             <p>By signing up for the Shopify service ("Service") or any of the services of Shopify Inc. ("Shopify") you are agreeing to be bound by the following terms and conditions ("Terms of Service"). The Services offered by Shopify under the Terms of Service include various products and services to help you create and manage a retail store, whether an online store (Online Services), a physical retail store (POS Services), or both. Any new features or tools which are added to the current Service shall be also subject to the Terms of Service. You can review the current version of the Terms of Service at any time at https://www.shopify.com/legal/terms. Shopify reserves the right to update and change the Terms of Service by posting updates and changes to the Shopify website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.</p>
                         </polaris-scrollable>
                     </polaris-card>
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-card title=&#x22;Terms of Service&#x22; sectioned&#x3E;
-    &#x3C;polaris-scrollable 
-        shadow 
+    &#x3C;polaris-scrollable
+        shadow
         :style=&#x22;{ height: &#x27;100px&#x27; }&#x22;&#x3E;
         &#x3C;p&#x3E;By signing up for the Shopify service (&#x22;Service&#x22;) or any of the services of Shopify Inc. (&#x22;Shopify&#x22;) you are agreeing to be bound by the following terms and conditions (&#x22;Terms of Service&#x22;). The Services offered by Shopify under the Terms of Service include various products and services to help you create and manage a retail store, whether an online store (Online Services), a physical retail store (POS Services), or both. Any new features or tools which are added to the current Service shall be also subject to the Terms of Service. You can review the current version of the Terms of Service at any time at https://www.shopify.com/legal/terms. Shopify reserves the right to update and change the Terms of Service by posting updates and changes to the Shopify website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.&#x3C;/p&#x3E;
     &#x3C;/polaris-scrollable&#x3E;
 &#x3C;/polaris-card&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testSection">Lists</div>
             <div class="testHeader">&lt;polaris-description-list&gt;</div>
             <div class="testCase">
                 <div class="example">
                     <polaris-description-list
                         :items="[
-                                    { 
+                                    {
                                 term: 'Logistics',
                                 description: 'The management of products or other resources as they travel between a point of origin and a destination.',
                             },
@@ -2808,7 +2812,7 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-description-list
     :items=&#x22;[
-                { 
+                {
             term: &#x27;Logistics&#x27;,
             description: &#x27;The management of products or other resources as they travel between a point of origin and a destination.&#x27;,
         },
@@ -2823,7 +2827,7 @@
     ]&#x22;&#x3E;
 &#x3C;/polaris-description-list&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-list&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -2853,8 +2857,8 @@
     &#x3C;polaris-list-item&#x3E;Green shirt&#x3C;/polaris-list-item&#x3E;
 &#x3C;/polaris-list&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-resource-list&gt;</div>
             <p>
                 <strong>Important:</strong>
@@ -2993,7 +2997,7 @@
                                     },
                                 ]">
                         <template slot="item" scope="props">
-                            <polaris-resource-list-item 
+                            <polaris-resource-list-item
                                 :url="props.item.url"
                                 :media="props.item.media"
                                 :attribute-one="props.item.attributeOne"
@@ -3002,7 +3006,7 @@
                                 :exceptions="props.item.exceptions"
                                 :actions="props.item.actions"
                                 :persist-actions="props.item.persistActions">
-                                <polaris-text-style 
+                                <polaris-text-style
                                     slot="attributeThree"
                                     variation="subdued">
                                     {{ props.item.attributeThree }}
@@ -3030,7 +3034,7 @@
                 },
             ]&#x22;&#x3E;
     &#x3C;template slot=&#x22;item&#x22; scope=&#x22;props&#x22;&#x3E;
-        &#x3C;polaris-resource-list-item 
+        &#x3C;polaris-resource-list-item
             :url=&#x22;props.item.url&#x22;
             :media=&#x22;props.item.media&#x22;
             :attribute-one=&#x22;props.item.attributeOne&#x22;
@@ -3039,7 +3043,7 @@
             :exceptions=&#x22;props.item.exceptions&#x22;
             :actions=&#x22;props.item.actions&#x22;
             :persist-actions=&#x22;props.item.persistActions&#x22;&#x3E;
-            &#x3C;polaris-text-style 
+            &#x3C;polaris-text-style
                 slot=&#x22;attributeThree&#x22;
                 variation=&#x22;subdued&#x22;&#x3E;
                 {{ props.item.attributeThree }}
@@ -3072,8 +3076,8 @@
                                 ]"/>
                 </div>
             </div>
-            
-            
+
+
             <div class="testSection">Navigation</div>
             <div class="testHeader">&lt;polaris-link&gt;</div>
             <div class="testCase">
@@ -3088,8 +3092,8 @@
                 </div>
                 <pre class="code"><code class="html">&#x3C;polaris-link url=&#x22;//google.com&#x22; external&#x3E;a external link&#x3C;/polaris-link&#x3E;</code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-pagination&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -3119,7 +3123,7 @@
     next-url=&#x22;#&#x22;&#x3E;
 &#x3C;/polaris-pagination&#x3E;</code></pre>
             </div>
-            
+
             <div class="testHeader">&lt;polaris-tabs&gt;</div>
             <div class="testCase">
                 <div class="example">
@@ -3168,13 +3172,13 @@
                 </div>
                 <pre class="code"><code class="html"></code></pre>
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-popover&gt;</div>
             <div class="testCase">
                 <div class="example">
-                    <polaris-popover 
-                        :active="value9" 
+                    <polaris-popover
+                        :active="value9"
                         @close="value9 = false">
                         <template slot="activator" scope="props">
                             <polaris-button @click="value9 = !value9">
@@ -3191,8 +3195,8 @@
                         </template>
                     </polaris-popover>
                 </div>
-                <pre class="code"><code class="html">&lt;polaris-popover 
-    :active=&quot;value9&quot; 
+                <pre class="code"><code class="html">&lt;polaris-popover
+    :active=&quot;value9&quot;
     @close=&quot;value9 = false&quot;&gt;
     &lt;template slot=&quot;activator&quot; scope=&quot;props&quot;&gt;
         &lt;polaris-button @click=&quot;value9 = !value9&quot;&gt;
@@ -3209,27 +3213,27 @@
     &lt;/template&gt;
 &lt;/polaris-popover&gt;</code></pre>
             </div>
-            
-            
+
+
             <div class="testSection">
                 To do
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-link&gt;</div>
             <div class="testCase">
             </div>
-            
-            
+
+
             <div class="testHeader">&lt;polaris-link&gt;</div>
             <div class="testCase">
                 <p>
-                    This is 
+                    This is
                     <polaris-link url="//google.com" external>a link</polaris-link>
                     test.
                 </p>
             </div>
-            
+
         </div>
     </body>
 </html>

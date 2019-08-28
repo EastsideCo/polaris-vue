@@ -16,7 +16,7 @@
         <template slot="right">
             <slot name="connectedRight">{{ connectedRight }}</slot>
         </template>
-        <div 
+        <div
             :class="classes"
             @focus="onFocus"
             @blur="onBlur"
@@ -26,8 +26,8 @@
                  :id="realId+'Prefix'">
                 {{ prefix}}
             </div>
-            
-            <dynamic-tag 
+
+            <dynamic-tag
                 :tag="multiline ? 'textarea' : 'input'"
                 :name="name"
                 :id="realId"
@@ -36,8 +36,10 @@
                 :readonly="readOnly"
                 :autofocus="autoFocus"
                 :value="value"
+                :maxlength="maxLength"
+                :minlength="minLength"
                 :placeholder="placeholder"
-                :on="{ 
+                :on="{
                     change: handleChange
                 }"
                 :style="{ height: (multiline && height) ? height+'px' : null }"
@@ -48,20 +50,20 @@
                 :aria-labelledby="labelledBy"
                 :aria-invalid="Boolean(error)">
             </dynamic-tag>
-            
+
             <div v-if="suffix"
                  class="Polaris-TextField__Suffix"
                  :id="realId+'Suffix'">
                 {{ suffix }}
             </div>
-            
+
             <polaris-text-field-spinner
                 v-if="type === 'number' && !disabled"
                 @change="handleNumberChange">
             </polaris-text-field-spinner>
-            
+
             <div class="Polaris-TextField__Backdrop"></div>
-            
+
             <polaris-text-field-resizer
                 v-if="multiline"
                 :contents="value || placeholder"
@@ -171,15 +173,15 @@ export default {
                 'multiline',
                 'focus',
             ], this);
-            
+
             if (this.error) {
                 r['Polaris-TextField--error'] = true;
             }
-            
+
             if (this.value) {
                 r['Polaris-TextField--hasValue'] = true;
             }
-            
+
             return r;
         }
     },
@@ -209,17 +211,17 @@ export default {
         handleNumberChange(steps) {
             const numericValue = this.value ? parseFloat(this.value) : 0;
             if (isNaN(numericValue)) { return; }
-            
+
             var min = this.min || -Infinity;
             var max = this.max || +Infinity;
             var step = this.step || 1;
-            
+
             const newValue = Math.min(max, Math.max(min, numericValue + (steps * step)));
             console.log('newValue', newValue);
             console.log('numericValue', numericValue);
             this.$emit('change', newValue);
         }
     }
-    
+
 };
 </script>
