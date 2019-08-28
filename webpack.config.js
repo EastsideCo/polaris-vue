@@ -12,7 +12,7 @@ let libraryNameCamelCase= 'PolarisVue';
 let plugins = [], outputFile;
 
 if (env === 'build') {
-    plugins.push(new UglifyJsPlugin({ minimize: true }));
+    plugins.push(new UglifyJsPlugin({ minimize: true, compress: { drop_console: true } }));
     plugins.push(new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: '"production"'
