@@ -22,12 +22,13 @@
                 </div>
             </polaris-stack-item>
         </polaris-stack>
-        <polaris-button slot="action" 
-                        @click="handleAction(action)" 
-                        :primary="!connected" 
+        <polaris-button slot="action"
+                        @click="handleAction(action)"
+                        :primary="!connected"
                         :url="action.url"
                         :destructive="action.destructive"
                         :disabled="action.disabled"
+                        :loading="action.loading"
                         :icon="action.icon"
                         :accessibility-label="action.accessibilityLabel">
             {{ action.content }}
