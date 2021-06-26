@@ -26,10 +26,10 @@ export default {
             cancelSmall: cancelSmall
         };
     },
+    components: {
+        PolarisIcon
+    },
     methods: {
-        components: {
-            PolarisIcon
-        },
         onRemove() {
             this.$emit('remove');
         },
